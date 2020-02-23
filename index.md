@@ -13,10 +13,15 @@
 
 ### TypeScript
 
-- [TypeScript 分级日志 Logger](https://github.com/DoooReyn/logger-typescript)
+- [Logger: 分级日志系统](https://github.com/DoooReyn/logger-typescript)
+- [local-timer : 基于本地时间的定时器](https://github.com/DoooReyn/local-timer)
 
 ### Cocos Creator
 
 - [Cocos Creator 手势识别](https://github.com/DoooReyn/ccc-gesture-recognition)
-- [Cocos Creator 基于本地时间的定时器](https://github.com/DoooReyn/local-timer)
 - [Cocos Creator 屏幕适配方案](https://github.com/DoooReyn/CanvasAdapter)
+
+### Lua
+
+- [LuaArray 限定类型的数组](https://github.com/DoooReyn/LuaArray)
+- [LuaHashMap 限定类型的字典](https://github.com/DoooReyn/LuaHashMap)
