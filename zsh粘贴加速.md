@@ -18,3 +18,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 ```
 
 **问题指引**：[官方 issue](https://github.com/zsh-users/zsh-autosuggestions/issues/238)
+
+---
+
+[回到主页](./index.md)
