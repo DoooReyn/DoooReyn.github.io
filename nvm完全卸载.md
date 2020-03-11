@@ -30,3 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 ```
 
 第五步: 重启 shell
+
+---
+
+[回到主页](./index.md)
