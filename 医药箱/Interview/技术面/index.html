@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blog that records everything">
+    <meta name="author" content="DoooReyn">
+    <link rel="canonical" href="https://doooreyn.github.io/%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E6%8A%80%E6%9C%AF%E9%9D%A2/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>技术面 - DoooReynの星际航行日志</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">DoooReynの星际航行日志</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">关于我</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏城 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">游戏厅</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%A4%A7%E5%94%90%E7%9C%9F%E9%BE%99%E4%BC%A0/">大唐真龙传</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%85%83%E6%B0%94%E5%81%B6%E5%83%8F%E5%AD%A3/">元气偶像季</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E4%BC%A0%E5%A5%87%E7%B3%BB%E5%88%97/">传奇系列</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E7%94%B5%E5%A8%B1%E5%A4%A7%E5%8E%85/">电娱大厅</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%8D%B0%E5%B0%BC%E3%80%81%E6%B3%B0%E8%AF%AD%E6%A3%8B%E7%89%8C/">印尼/泰语棋牌</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">造轮子</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E7%9E%8E%E9%BC%93%E6%8D%A3%E6%BC%94%E7%A4%BA%E6%A1%88%E4%BE%8B/">瞎鼓捣演示案例</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/">手势识别与训练模型</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/PackManV2%E4%B8%80%E4%BD%93%E5%8C%96%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">PackManV2一体化打包工具</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20HTTP%20Server/">Cocos2d-x 嵌入本地 HTTP Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20WebSocket%20Server/">Cocos2d-x 嵌入本地 WebSocket Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E7%9B%AE%E5%BD%95%E7%9B%91%E8%A7%86%E5%99%A8/">Cocos2d-x 目录监视器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20FMOD%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Cocos2d-x FMOD 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E4%BD%BF%E7%94%A8%20spdlog%20%E6%97%A5%E5%BF%97%E5%BA%93/">Cocos2d-x 使用 spdlog 日志库</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E6%8E%A5%E5%85%A5%20lua-protobuf/">Cocos2d-x 接入 lua-protobuf</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Adjust%20%E7%AD%BE%E5%90%8D%E7%AC%AC%E4%BA%8C%E7%89%88%20Android%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Adjust 签名第二版 Android 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%96%B0%E6%B4%BB%E5%8A%A8%E4%B8%AD%E5%BF%83%E6%BC%94%E7%A4%BA/">新活动中心演示</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">知识点</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Cocos%20Creator%20Android%20%E6%89%93%E5%8C%85%E6%80%BB%E7%BB%93/">记一次 Cocos Creator Android 打包总结</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20Spine%20%C2%B7%20%E6%9B%B4%E6%8D%A2%E7%BA%B9%E7%90%86/">Cocos Creator Spine · 更换纹理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20%E6%BB%A4%E9%95%9C%20%C2%B7%20%E9%A9%AC%E8%B5%9B%E5%85%8B/">Cocos Creator 滤镜 · 马赛克</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20%E4%B8%AD%E7%9A%84%20Size/">Cocos 中的 Size</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/Lua%20%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0/">Lua 数组实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/Lua%20HashMap%20%E5%AE%9E%E7%8E%B0/">Lua HashMap 实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/Lua%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC%E5%AE%9E%E7%8E%B0/">Lua 字符串插值实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%20lua%20%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81/">更简洁的 lua 逻辑代码</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua API 浅析</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20Basic%20Types/">Lua_API Basic Types</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_absindex/">Lua_API lua_absindex</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_Alloc/">Lua_API lua_Alloc</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_arith%20%281%29/">Lua_API lua_arith (1)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_arith%20%282%29/">Lua_API lua_arith (2)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_atpanic/">Lua_API lua_atpanic</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_call%20%26%20lua_callk/">Lua_API lua_call & lua_callk</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">JavaScript</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/JavaScript/Faker.js%20%E5%88%86%E6%9E%90/">Faker.js 分析</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Python</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC/">如何用 Python 实现字符串插值</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/Pylint-%E4%BD%A0%E5%BE%88%E6%A3%92%EF%BC%8C%E4%BD%86%E6%88%91%E4%B8%8D%E6%83%B3%E8%B7%9F%E4%BD%A0%20PaPaPa/">Pylint-你很棒，但我不想跟你 PaPaPa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/Python%20%E7%88%AC%E5%8F%96%20gank.io%20%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%8E%A8/">Python 爬取 gank.io 今日力推</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">我有干货，你敢收吗？</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第一部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第三部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第二部分）</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">PHP</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/Windows%20%E5%AE%89%E8%A3%85%20PHP7.4/">Windows 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/CentOS%20%E5%AE%89%E8%A3%85%20PHP7.4/">CentOS 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E6%9F%A5%E7%9C%8B%20php.ini%20%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80/">查看 php.ini 存放地址</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E5%AE%89%E8%A3%85%20Composer/">安装 Composer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E5%AE%89%E8%A3%85%20MixPhp/">安装 MixPhp</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E5%AE%89%E8%A3%85%20Swoole/">安装 Swoole</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">工具箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%BE%AE%E8%AF%BB%E8%87%AA%E5%8A%A8%E9%98%85%E8%AF%BB%E5%99%A8/">微读自动阅读器</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%B7%A5%E8%B5%84%E6%98%8E%E7%BB%86%E5%8A%A9%E6%89%8B/">工资明细助手</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/BMFont%20Toolbox%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">BMFont Toolbox 使用指南</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%20md5%20sha1%20sha256%20%E5%80%BC/">查看文件 md5 sha1 sha256 值</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">医药箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Android</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Android/ADB%20%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">ADB 常用指令</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Android/ADB%20%E8%B0%83%E8%AF%95%E8%BF%9E%E6%8E%A5%E5%A4%9C%E7%A5%9E%E6%A8%A1%E6%8B%9F%E5%99%A8/">ADB 调试连接夜神模拟器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Android/Android%20NDK%20%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC/">Android NDK 历史版本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Android/Android%20SDK%20%E7%89%88%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">Android SDK 版本之间的关系</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Android/Android%20Studio%20%E5%8D%A0%E7%94%A8%E6%9E%81%E5%A4%A7%E5%86%85%E5%AD%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Android Studio 占用极大内存的解决方法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Android/Android%20Studio%20Clean%20%E4%B8%8E%20Rebuild%20%E7%9A%84%E5%8C%BA%E5%88%AB/">Android Studio Clean 与 Rebuild 的区别</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Mac</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Mac/AppleScript%20%E6%90%AD%E9%85%8D%20Alfred%20%E7%9C%9F%E4%B9%83%E5%88%A9%E5%99%A8/">AppleScript 搭配 Alfred 真乃利器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/Mac%20%E9%9F%B3%E9%87%8F%E5%BE%AE%E8%B0%83/">Mac 音量微调</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/Mac%20%E5%BA%94%E7%94%A8%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">Mac 应用已损坏解决方案</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/Mac%20nvm%20%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E6%8C%87%E5%8D%97/">Mac nvm 完全卸载指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/Mac%20zsh%20%E7%B2%98%E8%B4%B4%E5%8A%A0%E9%80%9F/">Mac zsh 粘贴加速</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/MacOS%20%E5%AE%89%E8%A3%85%20autojump/">MacOS 安装 autojump</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/MacOS%20%E5%AE%89%E8%A3%85%20Pillow/">MacOS 安装 Pillow</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/MacOS%20%E5%8D%B8%E8%BD%BD%20Java9/">MacOS 卸载 Java9</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Mac/MacOS%20Java%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">MacOS Java 版本管理</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Xcode error</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Mac/your%20session%20has%20expired%2C%20please%20log%20in/">your session has expired, please log in</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Git</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Git/Git%20%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">Git 设置代理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Git/%E8%A7%A3%E5%86%B3%20Github%20%E8%B4%A1%E7%8C%AE%E5%80%BC%E4%B8%8D%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98/">解决 Github 贡献值不计算问题</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Interview</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../HR%20%E9%9D%A2/">HR 面</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">技术面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../%E6%9F%A5%E7%9C%8B%20npm%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">查看 npm 安装位置</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../%E8%A7%A3%E5%86%B3%20Windows%20%E9%95%BF%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">解决 Windows 长路径问题</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">图书馆 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">算法</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法的时间与空间复杂度</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">查找算法直接及其算法实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%8F%8A%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93/">排序算法性能及选择总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">书籍</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/Github%E4%B8%8A%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/">Github上的电子书</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%BF%91%E4%B8%87%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%94%B5%E5%AD%90%E4%B9%A6%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/">近万本技术电子书免费下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%94%B5%E5%AD%90%E4%B9%A6%E4%B8%8B%E8%BD%BD/">游戏开发电子书下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/J%C2%B7%E5%B8%83%E7%BD%97%E5%85%8B%E6%9B%BC-%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%8D%81%E5%B9%B4/">J·布罗克曼-未来五十年</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8C%97%E5%B2%9B%E3%80%8A%E6%B3%A2%E5%85%B0%E6%9D%A5%E5%AE%A2%E3%80%8B/">北岛《波兰来客》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3%E3%80%8A%E4%BB%A3%E8%B0%A2%E5%A2%9E%E9%95%BF%E8%AE%BA%E3%80%8B/">陈平《代谢增长论》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3-%E8%87%AA%E7%94%B1%E7%9A%84%E5%AF%B9%E7%AB%8B%E9%9D%A2%E4%B8%8D%E6%98%AF%E4%B8%93%E6%94%BF%E6%98%AF%E8%87%AA%E5%BE%8B/">陈平-自由的对立面不是专政是自律</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9%20%E3%80%8A%E6%9B%BC%E5%B7%B4%E7%B2%BE%E7%A5%9E%EF%BC%9A%E7%A7%91%E6%AF%94%E8%87%AA%E4%BC%A0%E3%80%8B/">科比·布莱恩特 《曼巴精神:科比自传》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%82%AF%C2%B7%E7%BD%97%E5%AE%BE%E9%80%8A%20%E5%8D%A2%C2%B7%E9%98%BF%E7%BD%97%E5%B0%BC%E5%8D%A1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E6%95%99%E8%82%B2/">肯·罗宾逊 卢·阿罗尼卡-什么是最好的教育</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8A%B3%E4%BC%A6%E6%96%AF%C2%B7%E5%B8%83%E6%B4%9B%E5%85%8B-%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%85%AB%E7%99%BE%E4%B8%87%E7%A7%8D%E5%86%99%E6%B3%95/">劳伦斯·布洛克-小说的八百万种写法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%95%96-%E5%8C%97%E4%BA%AC%E6%B3%95%E6%BA%90%E5%AF%BA/">李敖-北京法源寺</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%B7%BC%C2%B7%E3%80%8A%E4%B8%89%E4%BD%93%E3%80%8B%E4%B8%AD%E7%9A%84%E7%89%A9%E7%90%86%E5%AD%A6/">李淼·《三体》中的物理学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7L.%E5%87%AF%E5%88%A9-%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E5%A7%8B/">罗伯特·L.凯利-第五次开始</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%90%95%E6%80%9D%E5%8B%89%E3%80%8A%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E3%80%8B%E7%BB%AA%E8%AE%BA/">吕思勉《中国通史》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%98%8E%E9%81%93-%E5%9B%BE%E8%A7%A3%E9%80%BB%E8%BE%91%E5%AD%A6/">明道-图解逻辑学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%9D%92%E5%B1%B1%E4%B8%83%E6%83%A0%E3%80%8A%20%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A5%BD%E5%A4%A9%E6%B0%94%E3%80%8B/">青山七惠·《一个人的好天气》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%85%E6%B0%B4%E8%8D%A3%E5%8F%B8%E3%80%8A%E8%AE%A4%E7%94%9F%E7%9A%84%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E3%80%8B/">清水荣司《认生的人:如何克服社交焦虑》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%91%9E%C2%B7%E8%BE%BE%E5%88%A9%E6%AC%A7%20%E3%80%8A%E5%8E%9F%E5%88%99%E3%80%8B/">瑞·达利欧 《原则》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8D%AB%E5%AE%AB%E5%A3%AB%E9%83%8E%20%E3%80%8AFateStay%20Night%20Unlimited%20Blade%20Works%E3%80%8B/">卫宫士郎 《FateStay Night Unlimited Blade Works》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%A9%E9%93%81%E5%86%9B%20%E3%80%8A%E4%B9%A1%E5%BB%BA%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%96%B0%E9%9D%92%E5%B9%B4%E4%B8%8E%E4%B9%A1%E6%9D%91%E7%9A%84%E7%94%9F%E5%91%BD%E5%AF%B9%E8%AF%9D%E3%80%8B/">温铁军 《乡建笔记:新青年与乡村的生命对话》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9%E3%80%8A%E6%9C%AA%E6%9D%A5%E7%AE%80%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E7%A5%9E%E3%80%8B/">尤瓦尔·赫拉利《未来简史:从智人到智神》</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../HR%20%E9%9D%A2/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">技术面</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<div><h2 id="_1">技术面<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>HTTP/WebSocket/Socket</p>
+<ul>
+<li>
+<p>单工、半双工、全双工</p>
+<ul>
+<li>单工：只能单向通信，如：电视、广播。</li>
+<li>半双工：可以双向通信，但不能同时，如：对讲机。</li>
+<li>全双工：可以同时双向通信，如：电话。</li>
+<li><code>HTTP1.1</code> 以下是单工，<code>HTTP1.1</code> 是半双工，<code>HTTP2.0</code> 是全双工。</li>
+</ul>
+</li>
+<li>
+<p>TCP/UDP</p>
+<ul>
+<li><code>TCP/UDP</code> 是传输层协议，解决数据在网络中的传输和组织方式。</li>
+<li><code>UDP</code> 不需要建立连接，数据是不可靠的，有丢包情况，因此无法保证数据的完整性，但是结构简单，资源占用少，传输速度快。</li>
+<li><code>TCP</code> 是面向连接的，建立连接需要三次握手，数据传输是可靠的，有序的，但结构较为复杂，且传输速度较慢，对系统资源要求多。</li>
+<li>短连接的优点是管理起来比较简单，存在的连接都是有用的连接，不需要额外的控制手段。</li>
+<li>长连接可以省去较多的 <code>TCP</code> 建立和关闭的操作，减少浪费，节约时间，对于频繁请求资源的客户端适合使用长连接，但需要维护连接，且连接多了占用资源。</li>
+</ul>
+</li>
+<li>
+<p>三次握手</p>
+<ul>
+<li>第一次：客户端向服务器发生 <code>Sync</code> 包，进入等待状态；（客户端说明都不能确认，服务器确认了对方发送正常，自己接收正常）</li>
+<li>第二次：服务器收到客户端的 <code>Sync</code> 包，确认之后向客户端发送 <code>Sync+Ack</code> 包，进入收到状态；（客户端确认了自己和对方发送和接收正常，服务器确认了对方发送正常，自己接收正常）</li>
+<li>第三次：客户端收到服务器的 <code>Sync+Ack</code> 包，向服务器发送 <code>Ack</code> 确认包，客户端和服务器即进入连接建立状态。（客户端和服务器分别确认了自己和对方发送和接收正常）</li>
+</ul>
+</li>
+<li>
+<p>四次挥手</p>
+<ul>
+<li>第一次：A 向 B 发送 <code>Fin</code> 终止包，同时停止发送数据，并进入终止等待状态；</li>
+<li>第二次：B 收到 A 的 <code>Fin</code> 包，发送 <code>ACK</code> 包予以确认，进入关闭等待状态；A 收到 B 的 Ack 包后进入终止等待状态 2；</li>
+<li>第三次：B 发送完有数据后，再给 A 发送 <code>Fin</code> 包予以确认表示可以断开连接了；</li>
+<li>第四次：A 收到 B 的 <code>Fin</code> 包，再发送 <code>Ack</code> 包给 B，此时 A 关闭到 B 的连接，B 收到包后也关闭到 A 的连接，连接彻底关闭。</li>
+</ul>
+</li>
+<li>
+<p>Socket</p>
+<ul>
+<li><code>Socket</code> 不属于协议层，它是一组对 <code>TCP/IP</code> 协议包装的接口。</li>
+</ul>
+</li>
+<li>
+<p>HTTP</p>
+<ul>
+<li><code>HTTP</code> 是应用层协议，主要解决如何包装数据。</li>
+<li><code>HTTP</code> 是短连接或伪长连接（<code>keep-alive</code>，它可以在一段时间内使用同一个 <code>TCP</code> 连接，但每个请求仍需单独发送 Header，且只能由客户端发起请求、服务器响应）。</li>
+<li>致命缺点：只能由客户端发起，做不到服务器主动向客户端推送消息。</li>
+</ul>
+</li>
+<li>
+<p>WebSocket</p>
+<ul>
+<li><code>WebSocket</code> 是基于 <code>HTTP</code> 的应用层协议，属于 <code>HTML5</code> 标准的一部分。</li>
+<li><code>WebSocket</code> 借用了 <code>Socket</code> 的概念，并模拟了 <code>Socket</code> 的接口，实现了双向通信，但与 <code>Socket</code> 完全是两个东西。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Protobuf/JSon/XML/Buffer</p>
+<ul>
+<li>JSon<ul>
+<li>可读性强，有类型，比 <code>XML</code> 小巧</li>
+<li>传输效率不高，比 <code>XML</code> 快，比 <code>PB</code> 慢</li>
+</ul>
+</li>
+<li>XML<ul>
+<li>格式统一，解析方便</li>
+<li>数据量大，传输效率低</li>
+</ul>
+</li>
+<li>Buffer<ul>
+<li>数据量小，传输效率高</li>
+<li>可读性差，需要一套成熟的解析器</li>
+</ul>
+</li>
+<li>PB<ul>
+<li>数据量小，有类型，解析快，效率高</li>
+<li>学习成本高，需要手写 <code>PB</code> 文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Cocos2d-x 内存优化</p>
+<ul>
+<li>使用静态合图</li>
+<li>按照从大到小的顺序加载合图</li>
+<li>使用对象池</li>
+<li>减少音频文件大小</li>
+<li>使用极少的内容使用完毕后立即释放</li>
+<li>切换场景时释放无用资源</li>
+<li>使用 <code>Spine</code> 骨骼动画替换序列帧动画</li>
+<li>使用预制体，且单个预制体不宜过大</li>
+<li>使用 <code>BMFont</code></li>
+<li>使用异步/分帧加载等多种方式，避免内存激增，导致性能下降</li>
+<li>减少 Mask 组件的使用</li>
+</ul>
+</li>
+<li>
+<p>Cocos2d-x Drawcall 优化</p>
+<ul>
+<li>使用静态合图</li>
+<li>UI 层级拆分和调整，分离图像节点和文本节点</li>
+<li>文本使用 <code>BMFont</code> 或开启 <code>char</code> 缓存模式</li>
+<li>需要使用一个 <code>Spine</code> 文件创建多个节点时，开启 Spine 的合批</li>
+<li>尽量减少使用 <code>shader</code> 和更换材质，因为它们都会打断合批</li>
+</ul>
+</li>
+<li>
+<p>Cocos2d-x 渲染过程</p>
+<ul>
+<li>导演类的 <code>mainLoop</code> 中会调用 <code>drawScene</code></li>
+<li>在 <code>drawScene</code> 中会调用场景类的 <code>render</code></li>
+<li><code>render</code> 中会递归执行节点类的 <code>visit</code></li>
+<li><code>visit</code> 中会调用精灵类的 <code>draw</code></li>
+<li><code>draw</code> 中会执行渲染类的 <code>addCommand</code> 将渲染指令加入渲染队列</li>
+<li>场景树遍历完成后，会对渲染队列进行排序，最后才调用 <code>OpenGL API</code> 进行渲染</li>
+<li>特别地，在生成材质的时候，如果 <code>ProgramState</code> 的 <code>Uniform</code> 数量大于 0，也就是设置了 <code>Uniform</code>，那么材质 ID 就会被赋值为 <code>MATERIAL_ID_DO_NOT_BATCH</code>，这是一个特殊的材质 ID，意为不可批次渲染。因为 <code>Uniform</code> 属于一个 <code>Shader</code> 的变量，每次使用同一个 <code>Shader</code> <code>进行渲染时，Uniform</code> 都可能不一样，这里进行合并的话，后面设置的变量就会失效，也就意味着，需要增加一个 <code>drawcall</code>。</li>
+</ul>
+</li>
+<li>
+<p>Lua</p>
+<ul>
+<li>轻量</li>
+<li>动态语言，语法简单，高效简洁</li>
+<li>支持热更新</li>
+<li>代码写起来约束少，较为灵活，但随着开发的深入，如果没有严谨的代码质量把关，会制造大量垃圾代码</li>
+<li>支持脚本加密</li>
+<li>扩展较少，需要疯狂造轮子</li>
+</ul>
+</li>
+<li>
+<p>A 星寻路</p>
+<ul>
+<li>公式：<code>F = G + H</code></li>
+<li>F：起点移动到当前点的总代价</li>
+<li>G: 起点移动到当前点的移动代价；</li>
+<li>H: 当前点移动到终点的预估代价，通常使用曼哈顿距离计算；</li>
+<li>A 星算法伪代码：<ul>
+<li>创建开放列表和封闭列表；</li>
+<li>首先将起点放入开放列表，将终点放入封闭列表；</li>
+<li>开始循环，从开放列表中找 <code>F</code> 值【总代价】最小的节点，设置为 <code>current；</code></li>
+<li>如果找到目标，则结束搜寻并回传结果；否则将它所有尚未检验过的所有相邻节点加入队列中；</li>
+<li>假如某邻近点既没有在开放列表或封闭列表里面，则计算出该邻近点的 <code>G</code> 值和 <code>H</code> 值，并设其父节点为 <code>P</code>，然后将其放入开放列表；</li>
+<li>继续循环，直至没有节点可以访问。</li>
+</ul>
+</li>
+<li>多拐点优化：改公式为 <code>F = G + H + E(拐点值)</code></li>
+</ul>
+</li>
+<li>
+<p>Cocos2d-x 与 Creator</p>
+<ul>
+<li><code>Cocos2d-x</code> 是游戏引擎</li>
+<li><code>Creator</code> 是游戏开发工作流一体化的方案，其内部引擎是 <code>Cocos2d-x</code></li>
+</ul>
+</li>
+<li>
+<p>JS 与 TS</p>
+<ul>
+<li>JS<ul>
+<li>动态语言</li>
+<li>运行时进行类型检查，类型约束差，代码较为自由</li>
+<li>开发环境无法提供丰富的帮助</li>
+<li>无成员访问控制权限</li>
+<li>无高级特性</li>
+</ul>
+</li>
+<li>TS<ul>
+<li>静态语言</li>
+<li>编译期进行类型检查，类型约束强，代码较为严谨</li>
+<li>开发环境能提供丰富的信息</li>
+<li>拥有完整的成员访问控制权限</li>
+<li>拥有泛型、装饰器等高级特性</li>
+<li><code>TS</code> 是 <code>JS</code> 的超集，最终运行时，<code>TS</code> 会转换为 <code>JS</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.jianshu.com/p/d8b052a950d1">Cocos2d-x 的事件分发机制</a></p>
+<ul>
+<li><code>EventDispatcher</code> 整个流程包含 3 个类，第一个是 <code>EventListener</code>，负责监听并实现事件触发后的回调，第二个是 <code>Event</code>，这是一个结构体，用于记录事件内容，作为参数传递到回调中，最后是 <code>EventDispatcher，用来管理事件和触发事件。</code></li>
+<li><code>EventDispatcher</code> 除了实现最基本的监听者管理和消息分发外，还实现了消息的优先级，以及监听者与节点的关联</li>
+<li><code>EventDispatcher</code> 将事件按照 <code>fixedPriority</code> 从小到大的顺序通知该监听者队列的所有监听者，所有绑定到节点的监听者的 <code>fixedPriority</code> 都为 0，<code>EventDispatcher</code> 会根据所关联节点的 <code>ZOrder</code> 从大到小的顺序进行回调</li>
+<li>实现一个消息派发类，说难不难，但也不简单，这种类一般都是底层类，所以特别注重两点，一是稳定性，二是效率。主要体现在注册了大量监听者之后，在事件回调中注册、注销，以及连环触发其他的事件等各种复杂的情况下能够不崩溃，并且保证程序运行效率。</li>
+</ul>
+</li>
+<li>
+<p>音频优化</p>
+<ul>
+<li>wav 文件大，占用空间，且只支持同时播放一个文件</li>
+<li>ogg 与 mp3 之争<ul>
+<li>ogg 可以支持多声道，而 mp3 最多支持双声道</li>
+<li>低码率下 ogg 音质较 mp3 好，且文件略小于 mp3</li>
+<li>mp3 会砍掉音频高频部分，导致频谱丢失，直接结果就是音质变差</li>
+<li>Android 支持 mp3 和 ogg，但是 iOS 不支持 ogg</li>
+<li>综合来看，建议 Android 使用 ogg，iOS 使用 mp3</li>
+</ul>
+</li>
+<li>减少声音文件大小<ul>
+<li>mp3 可能采用立体声，可以把它转换为单声道，这样可以减少一半大小</li>
+<li>在 iOS 设备上，任何比特率大于 192kbps 的声音都是浪费，所以尽量采用低比特率来获得最好的音质效果，一般来说 96~128kbps 是比较合适的</li>
+<li>采样率越低，声音文件越小，但是音质也会越差，常用的采样率有 11、22、44、48kHz，一般来说采用 22/44kHz 是比较合适的</li>
+</ul>
+</li>
+<li>SimpleAudioEngine / AudioEngine / FMOD<ul>
+<li>SimpleAudioEngine 只封装了各平台的简单 API，支持有限，特别明显的是在播放音效时无法获取状态，也无法在播放完成后回调</li>
+<li>AudioEngine 支持更多高级特性</li>
+<li>SimpleAudioEngine/AudioEngine 都存在一些问题，比如：<ul>
+<li>同时快速播放多个文件可能造成崩溃，</li>
+<li>存在播放卡顿问题</li>
+<li>播放长音效可能丢失</li>
+</ul>
+</li>
+<li>FMOD 跨平台，专业级的音频处理库，支持丰富的高级特性</li>
+</ul>
+</li>
+<li>音频优化<ul>
+<li>建议采用单声道，这样可以把文件大小和内存使用都减少一半</li>
+<li>尽量采用低比特率来获得最好的音质效果，一般来说，96~128kbps 对于 mp3 文件来说足够了</li>
+<li>降低文件的比特率可以减小声音文件的大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>图片优化</p>
+<ul>
+<li>
+<p>存储格式 <strong>（文件存储）</strong></p>
+<blockquote>
+<p>图片的文件格式决定了以何种方式来压缩图片
+图片内容越简单，压缩率越高，而越复杂的图片，压缩率越低
+单纯的文件压缩并不能减少其在内存中的占用，唯一的目的就是减小包体积。</p>
+</blockquote>
+<ul>
+<li>jpg<ul>
+<li>压缩率高，有损压缩，文件占用小</li>
+<li>不支持透明通道</li>
+<li>占用内存与 png 相当，画质却差很多</li>
+<li>解压所需时间和内存都比较高</li>
+</ul>
+</li>
+<li>png<ul>
+<li>压缩率较高，无损压缩，支持透明通道</li>
+</ul>
+</li>
+<li>tiff<ul>
+<li>比较复杂，高级特性比较多</li>
+<li>常用于印刷和扫描领域</li>
+</ul>
+</li>
+<li>tga<ul>
+<li>无损压缩，高质量，支持透明通道，接哦古简单，支持不规则图形</li>
+<li>常用于工业、影视领域</li>
+</ul>
+</li>
+<li>webp<ul>
+<li>有损压缩，在相同的质量下体积比 jpg 小 40%，但编码压缩时间比 jpg 场 8 倍</li>
+<li>目前在移动设备上加载效率比较低</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>纹理压缩格式</p>
+<blockquote>
+<p>正常纹理在加载的时候需要开辟内存进行解析，将文件解压成可渲染的像素格式
+而压缩纹理只需要进行简单的解析，即可载入 GPU 进行渲染，其存储大小即内存占用大小，效率自然快了很多
+占用内存更低，也可以起到一定压缩文件大小的作用</p>
+</blockquote>
+<ul>
+<li>pvrtc<ul>
+<li><code>pvrtc</code> iOS 直接支持，解压快，效率高，只支持方形贴图，非方形会被处理成方形，且必须为 POT</li>
+<li><code>pvrtc2</code> iOS 直接支持，解压快，效率高，相比 <code>pvrtc2</code> 质量高一些，支持 <code>NPOT</code></li>
+<li><code>pvr.ccz</code> 是压缩后的 <code>pvr</code> 格式，将大量的文件压缩为 <code>pvr.ccz</code> 能够有效的减小文件大小</li>
+</ul>
+</li>
+<li>etc<ul>
+<li><code>etc1</code> 仅支持安卓，压缩率高，不支持透明通道，部分显卡不支持 <code>NPOT</code></li>
+<li><code>etc2</code> 仅支持安卓，压缩率高，支持透明通道，支持 <code>NPOT</code>，需要 <code>OpenGL ES3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>显示 <em>（像素）</em> 格式 <strong>（内存存储）</strong></p>
+<blockquote>
+<p>像素格式决定了纹理所占用的内存大小，以及图片显示的质量
+计算公式：<code>占用内存 = 图片宽度 x 图片高度 x 纹理位数 / 8</code></p>
+</blockquote>
+<ul>
+<li><code>BGRA8888</code> 32 位，效果好，兼容性高</li>
+<li><code>RGBA8888</code> 32 位，效果好，兼容性较差，需要转换为 BGRA</li>
+<li><code>RGB888</code> 24 位，效果好，不支持透明通道</li>
+<li><code>RGB565</code> 16 位，效果较好，不支持透明通道</li>
+<li><code>RGB5A1</code> 16 位，色彩较好，半透明效果良好，不支持透明通道</li>
+<li><code>RGBA4444</code> 16 位，色彩比 RGB5A1 略差，但半透明效果良好</li>
+<li><code>RGBA5551</code> 16 位，色彩较好，但半透明效果很差</li>
+<li><code>RGBA5555</code> 20 位，色彩较好，半透明效果也不错</li>
+</ul>
+</li>
+<li>
+<p>总结</p>
+<ul>
+<li>逐帧载入游戏资源，避免内存高峰</li>
+<li>载入纹理是按照内存占用从大到小的顺序</li>
+<li>可以使用 Loading 来预加载，优化体验</li>
+<li>打包大图，减少 <code>drawcall</code></li>
+<li>避免载入超大纹理</li>
+<li>闲时或收到内存警告时释放空闲资源</li>
+<li>使用 <code>NPOT</code> 纹理，而非 <code>POT</code>，因为 <code>POT</code> 会占用额外内存</li>
+<li>在不影响画质的前提下，尽量使用低颜色深度的纹理</li>
+<li>优先考虑压缩纹理格式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Cocos2d-x 内存管理</p>
+<ul>
+<li>Cocos2d-x 的内存管理机制<ul>
+<li>首先，要想让对象参与 <code>Cocos2d-x</code> 的内存管理机制，必须继承 <code>CCRef</code> 类</li>
+<li>然后，调用对象的 <code>autorelease</code> 函数，对象就会被 内存管理机制盯上，在游戏的每一帧，内存管理机制都会扫描一遍被盯上的对象，一旦发现对象无人认领，就会将对象杀死！</li>
+<li>如果不想让对象被杀死，那么就要调用对象的 <code>retain</code> 函数，这样对象就被认领了，一旦对象被认领，就永远不会被内存管理机制杀掉</li>
+</ul>
+</li>
+<li>引用计数<ul>
+<li>构造函数中，引用计数成员变量被设置为 1</li>
+<li>当调用 <code>retain</code> 的时候，引用计数自增 1</li>
+<li>当调用 <code>release</code> 的时候，引用计数自减 1，并判断引用计数是否为 0，如是则执行 <code>delete this</code> 操作</li>
+<li>当调用 <code>autorelease</code> 时，引用技术自增 1，并在切换至下一帧时自动减 1</li>
+<li><code>retain</code> 和 <code>release</code> 需要成对地出现，一旦调用了该对象的 <code>retain</code> 方法，在不需要使用该对象时，必须调用该对象的 <code>release</code> 方法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Cocos2d-x 定时器 Schedule</p>
+<ul>
+<li><code>Schedule</code> 的整体结构由 <code>Schedule</code> 和 <code>Timer</code> 组成<ul>
+<li><code>Timer</code> 负责将一个回调封装为一个对象，管理回调的计时、触发、保存回调的状态。一共有 3 种 <code>Timer</code>：<ul>
+<li><code>TimerTargetSelector</code> 封装了对象回调</li>
+<li><code>TimerTargetCallback</code> 封装了函数回调</li>
+<li><code>TimerScriptHandler</code> 封装了脚本回调</li>
+</ul>
+</li>
+<li><code>Schedule</code> 管理着大量的 <code>Timer</code>，负责注册、注销，以及驱动执行回调等工作，是 <code>Timer</code> 的总调度室</li>
+</ul>
+</li>
+<li>在 <code>Cocos2d-x</code> 中共用一个 <code>Schedule</code> 对象，该 <code>Schedule</code> 对象由 <code>Director</code> 创建并维护。在 <code>Director</code> 启动的时候，会创建一个 <code>Schedule</code> 对象，通过 <code>Director::setScheduler</code> 可以获取到。可以自己创建一个 <code>Schedule</code> 对象来管理局部的某些计时回调，但一般直接使用全局的 <code>Schedule</code>。</li>
+<li><code>Director</code> 在每一帧的主循环中，都会调用全局 <code>Schedule</code> 的 <code>update</code>，来驱动 <code>Schedule</code> 内部的计时回调。</li>
+<li>当 <code>Director</code> 被销毁时（退出游戏的时候），全局的 <code>Schedule</code> 也会被销毁，同时清理 <code>Schedule</code> 自身的所有回调对象。</li>
+<li>在遍历的过程中动态地注册和注销都是安全的。对象回调、函数回调和脚本回调会在遍历的过程中被安全地移除，而 <code>update</code> 回调会在遍历完成之后，额外遍历一次，将标记为移除的回调移除。</li>
+<li><code>Schedule</code> 提供了一个比较实用的功能 <code>performFunctionInCocosThread</code>。该功能是 <code>Cocos2d-x 3.0</code> 之后新增的，用于线程安全。在其他线程中使用该方法可以安全地由主线程执行一些逻辑，因为当我们在其他线程中操作 <code>Cocos2d-x</code> 相关内容时，有可能会导致程序崩溃或出现一些渲染错误的问题。</li>
+<li>当节点被添加到场景里的时候，就会进入激活状态，而当节点从场景中删除的时候，就会进入非激活状态，甚至直接被销毁。<code>Node</code> 中有一个成员变量 <code>_running</code> 来标识这个状态，该变量的改变主要在 <code>onEnter</code> 和 <code>onExit</code> 中，在游戏设计的时候经常会继承，然后重写这两个方法，并且忘记调用父类的 <code>onEnter</code> 和 <code>onExit</code>，那么这个时候状态变量就没有被重置，而 <code>runAction</code>、<code>Schedule</code> 等一系列的函数，在注册 <code>Schedule</code> 时会根据该变量来判断回调是否暂停，默认是非激活状态，所以 <code>Schedule</code> 的回调不会被执行。</li>
+</ul>
+</li>
+<li>
+<p><a href="https://doooreyn.github.com/%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%8F%8A%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93/">排序算法性能及选择总结</a></p>
+</li>
+<li>
+<p><a href="https://doooreyn.github.com/%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">查找算法总结及其算法实现</a></p>
+</li>
+</ol></div></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright &copy; 2021 DoooReyn <a href="http://beian.miit.gov.cn" target="_blank">闽ICP备19014786号-1</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bat.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/c.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/cpp.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/lua.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/php.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/shell.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/typescript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

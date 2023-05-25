@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blog that records everything">
+    <meta name="author" content="DoooReyn">
+    <link rel="canonical" href="https://doooreyn.github.io/%E8%AF%AD%E8%A8%80/Lua/LUA_API%20Basic%20Types/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Lua_API Basic Types - DoooReynの星际航行日志</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">DoooReynの星际航行日志</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">关于我</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏城 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">游戏厅</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%A4%A7%E5%94%90%E7%9C%9F%E9%BE%99%E4%BC%A0/">大唐真龙传</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%85%83%E6%B0%94%E5%81%B6%E5%83%8F%E5%AD%A3/">元气偶像季</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E4%BC%A0%E5%A5%87%E7%B3%BB%E5%88%97/">传奇系列</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E7%94%B5%E5%A8%B1%E5%A4%A7%E5%8E%85/">电娱大厅</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%8D%B0%E5%B0%BC%E3%80%81%E6%B3%B0%E8%AF%AD%E6%A3%8B%E7%89%8C/">印尼/泰语棋牌</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">造轮子</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E7%9E%8E%E9%BC%93%E6%8D%A3%E6%BC%94%E7%A4%BA%E6%A1%88%E4%BE%8B/">瞎鼓捣演示案例</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/">手势识别与训练模型</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/PackManV2%E4%B8%80%E4%BD%93%E5%8C%96%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">PackManV2一体化打包工具</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20HTTP%20Server/">Cocos2d-x 嵌入本地 HTTP Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20WebSocket%20Server/">Cocos2d-x 嵌入本地 WebSocket Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E7%9B%AE%E5%BD%95%E7%9B%91%E8%A7%86%E5%99%A8/">Cocos2d-x 目录监视器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20FMOD%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Cocos2d-x FMOD 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E4%BD%BF%E7%94%A8%20spdlog%20%E6%97%A5%E5%BF%97%E5%BA%93/">Cocos2d-x 使用 spdlog 日志库</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E6%8E%A5%E5%85%A5%20lua-protobuf/">Cocos2d-x 接入 lua-protobuf</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Adjust%20%E7%AD%BE%E5%90%8D%E7%AC%AC%E4%BA%8C%E7%89%88%20Android%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Adjust 签名第二版 Android 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%96%B0%E6%B4%BB%E5%8A%A8%E4%B8%AD%E5%BF%83%E6%BC%94%E7%A4%BA/">新活动中心演示</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">知识点</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Cocos%20Creator%20Android%20%E6%89%93%E5%8C%85%E6%80%BB%E7%BB%93/">记一次 Cocos Creator Android 打包总结</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20Spine%20%C2%B7%20%E6%9B%B4%E6%8D%A2%E7%BA%B9%E7%90%86/">Cocos Creator Spine · 更换纹理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20%E6%BB%A4%E9%95%9C%20%C2%B7%20%E9%A9%AC%E8%B5%9B%E5%85%8B/">Cocos Creator 滤镜 · 马赛克</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20%E4%B8%AD%E7%9A%84%20Size/">Cocos 中的 Size</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../Lua%20%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0/">Lua 数组实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Lua%20HashMap%20%E5%AE%9E%E7%8E%B0/">Lua HashMap 实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Lua%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC%E5%AE%9E%E7%8E%B0/">Lua 字符串插值实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%20lua%20%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81/">更简洁的 lua 逻辑代码</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua API 浅析</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Lua_API Basic Types</a>
+</li>
+
+        
+            
+<li >
+    <a href="../LUA_API%20lua_absindex/">Lua_API lua_absindex</a>
+</li>
+
+        
+            
+<li >
+    <a href="../LUA_API%20lua_Alloc/">Lua_API lua_Alloc</a>
+</li>
+
+        
+            
+<li >
+    <a href="../LUA_API%20lua_arith%20%281%29/">Lua_API lua_arith (1)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../LUA_API%20lua_arith%20%282%29/">Lua_API lua_arith (2)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../LUA_API%20lua_atpanic/">Lua_API lua_atpanic</a>
+</li>
+
+        
+            
+<li >
+    <a href="../LUA_API%20lua_call%20%26%20lua_callk/">Lua_API lua_call & lua_callk</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">JavaScript</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../JavaScript/Faker.js%20%E5%88%86%E6%9E%90/">Faker.js 分析</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Python</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Python/%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC/">如何用 Python 实现字符串插值</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Python/Pylint-%E4%BD%A0%E5%BE%88%E6%A3%92%EF%BC%8C%E4%BD%86%E6%88%91%E4%B8%8D%E6%83%B3%E8%B7%9F%E4%BD%A0%20PaPaPa/">Pylint-你很棒，但我不想跟你 PaPaPa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Python/Python%20%E7%88%AC%E5%8F%96%20gank.io%20%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%8E%A8/">Python 爬取 gank.io 今日力推</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Python/%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">我有干货，你敢收吗？</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第一部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第三部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第二部分）</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">PHP</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../PHP/Windows%20%E5%AE%89%E8%A3%85%20PHP7.4/">Windows 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/CentOS%20%E5%AE%89%E8%A3%85%20PHP7.4/">CentOS 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E6%9F%A5%E7%9C%8B%20php.ini%20%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80/">查看 php.ini 存放地址</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20Composer/">安装 Composer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20MixPhp/">安装 MixPhp</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20Swoole/">安装 Swoole</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">工具箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%BE%AE%E8%AF%BB%E8%87%AA%E5%8A%A8%E9%98%85%E8%AF%BB%E5%99%A8/">微读自动阅读器</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%B7%A5%E8%B5%84%E6%98%8E%E7%BB%86%E5%8A%A9%E6%89%8B/">工资明细助手</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/BMFont%20Toolbox%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">BMFont Toolbox 使用指南</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%20md5%20sha1%20sha256%20%E5%80%BC/">查看文件 md5 sha1 sha256 值</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">医药箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Android</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">ADB 常用指令</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E8%B0%83%E8%AF%95%E8%BF%9E%E6%8E%A5%E5%A4%9C%E7%A5%9E%E6%A8%A1%E6%8B%9F%E5%99%A8/">ADB 调试连接夜神模拟器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20NDK%20%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC/">Android NDK 历史版本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20SDK%20%E7%89%88%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">Android SDK 版本之间的关系</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20%E5%8D%A0%E7%94%A8%E6%9E%81%E5%A4%A7%E5%86%85%E5%AD%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Android Studio 占用极大内存的解决方法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20Clean%20%E4%B8%8E%20Rebuild%20%E7%9A%84%E5%8C%BA%E5%88%AB/">Android Studio Clean 与 Rebuild 的区别</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Mac</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/AppleScript%20%E6%90%AD%E9%85%8D%20Alfred%20%E7%9C%9F%E4%B9%83%E5%88%A9%E5%99%A8/">AppleScript 搭配 Alfred 真乃利器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E9%9F%B3%E9%87%8F%E5%BE%AE%E8%B0%83/">Mac 音量微调</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E5%BA%94%E7%94%A8%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">Mac 应用已损坏解决方案</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20nvm%20%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E6%8C%87%E5%8D%97/">Mac nvm 完全卸载指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20zsh%20%E7%B2%98%E8%B4%B4%E5%8A%A0%E9%80%9F/">Mac zsh 粘贴加速</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20autojump/">MacOS 安装 autojump</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20Pillow/">MacOS 安装 Pillow</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%8D%B8%E8%BD%BD%20Java9/">MacOS 卸载 Java9</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20Java%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">MacOS Java 版本管理</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Xcode error</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/your%20session%20has%20expired%2C%20please%20log%20in/">your session has expired, please log in</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Git</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/Git%20%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">Git 设置代理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/%E8%A7%A3%E5%86%B3%20Github%20%E8%B4%A1%E7%8C%AE%E5%80%BC%E4%B8%8D%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98/">解决 Github 贡献值不计算问题</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Interview</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/HR%20%E9%9D%A2/">HR 面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E6%8A%80%E6%9C%AF%E9%9D%A2/">技术面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E6%9F%A5%E7%9C%8B%20npm%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">查看 npm 安装位置</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E8%A7%A3%E5%86%B3%20Windows%20%E9%95%BF%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">解决 Windows 长路径问题</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">图书馆 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">算法</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法的时间与空间复杂度</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">查找算法直接及其算法实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%8F%8A%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93/">排序算法性能及选择总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">书籍</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/Github%E4%B8%8A%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/">Github上的电子书</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%BF%91%E4%B8%87%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%94%B5%E5%AD%90%E4%B9%A6%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/">近万本技术电子书免费下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%94%B5%E5%AD%90%E4%B9%A6%E4%B8%8B%E8%BD%BD/">游戏开发电子书下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/J%C2%B7%E5%B8%83%E7%BD%97%E5%85%8B%E6%9B%BC-%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%8D%81%E5%B9%B4/">J·布罗克曼-未来五十年</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8C%97%E5%B2%9B%E3%80%8A%E6%B3%A2%E5%85%B0%E6%9D%A5%E5%AE%A2%E3%80%8B/">北岛《波兰来客》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3%E3%80%8A%E4%BB%A3%E8%B0%A2%E5%A2%9E%E9%95%BF%E8%AE%BA%E3%80%8B/">陈平《代谢增长论》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3-%E8%87%AA%E7%94%B1%E7%9A%84%E5%AF%B9%E7%AB%8B%E9%9D%A2%E4%B8%8D%E6%98%AF%E4%B8%93%E6%94%BF%E6%98%AF%E8%87%AA%E5%BE%8B/">陈平-自由的对立面不是专政是自律</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9%20%E3%80%8A%E6%9B%BC%E5%B7%B4%E7%B2%BE%E7%A5%9E%EF%BC%9A%E7%A7%91%E6%AF%94%E8%87%AA%E4%BC%A0%E3%80%8B/">科比·布莱恩特 《曼巴精神:科比自传》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%82%AF%C2%B7%E7%BD%97%E5%AE%BE%E9%80%8A%20%E5%8D%A2%C2%B7%E9%98%BF%E7%BD%97%E5%B0%BC%E5%8D%A1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E6%95%99%E8%82%B2/">肯·罗宾逊 卢·阿罗尼卡-什么是最好的教育</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8A%B3%E4%BC%A6%E6%96%AF%C2%B7%E5%B8%83%E6%B4%9B%E5%85%8B-%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%85%AB%E7%99%BE%E4%B8%87%E7%A7%8D%E5%86%99%E6%B3%95/">劳伦斯·布洛克-小说的八百万种写法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%95%96-%E5%8C%97%E4%BA%AC%E6%B3%95%E6%BA%90%E5%AF%BA/">李敖-北京法源寺</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%B7%BC%C2%B7%E3%80%8A%E4%B8%89%E4%BD%93%E3%80%8B%E4%B8%AD%E7%9A%84%E7%89%A9%E7%90%86%E5%AD%A6/">李淼·《三体》中的物理学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7L.%E5%87%AF%E5%88%A9-%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E5%A7%8B/">罗伯特·L.凯利-第五次开始</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%90%95%E6%80%9D%E5%8B%89%E3%80%8A%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E3%80%8B%E7%BB%AA%E8%AE%BA/">吕思勉《中国通史》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%98%8E%E9%81%93-%E5%9B%BE%E8%A7%A3%E9%80%BB%E8%BE%91%E5%AD%A6/">明道-图解逻辑学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%9D%92%E5%B1%B1%E4%B8%83%E6%83%A0%E3%80%8A%20%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A5%BD%E5%A4%A9%E6%B0%94%E3%80%8B/">青山七惠·《一个人的好天气》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%85%E6%B0%B4%E8%8D%A3%E5%8F%B8%E3%80%8A%E8%AE%A4%E7%94%9F%E7%9A%84%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E3%80%8B/">清水荣司《认生的人:如何克服社交焦虑》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%91%9E%C2%B7%E8%BE%BE%E5%88%A9%E6%AC%A7%20%E3%80%8A%E5%8E%9F%E5%88%99%E3%80%8B/">瑞·达利欧 《原则》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8D%AB%E5%AE%AB%E5%A3%AB%E9%83%8E%20%E3%80%8AFateStay%20Night%20Unlimited%20Blade%20Works%E3%80%8B/">卫宫士郎 《FateStay Night Unlimited Blade Works》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%A9%E9%93%81%E5%86%9B%20%E3%80%8A%E4%B9%A1%E5%BB%BA%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%96%B0%E9%9D%92%E5%B9%B4%E4%B8%8E%E4%B9%A1%E6%9D%91%E7%9A%84%E7%94%9F%E5%91%BD%E5%AF%B9%E8%AF%9D%E3%80%8B/">温铁军 《乡建笔记:新青年与乡村的生命对话》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9%E3%80%8A%E6%9C%AA%E6%9D%A5%E7%AE%80%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E7%A5%9E%E3%80%8B/">尤瓦尔·赫拉利《未来简史:从智人到智神》</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%20lua%20%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../LUA_API%20lua_absindex/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#lua_api_basic_types">Lua_API Basic Types</a></li>
+            <li class="second-level"><a href="#_1">开篇</a></li>
+                
+            <li class="second-level"><a href="#_2">解析</a></li>
+                
+                <li class="third-level"><a href="#_3">基本类型定义</a></li>
+                <li class="third-level"><a href="#_4">值类型判断</a></li>
+                <li class="third-level"><a href="#_6">值类型别名</a></li>
+            <li class="second-level"><a href="#_7">终了</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<div><h2 id="lua_api_basic_types">Lua_API Basic Types<a class="headerlink" href="#lua_api_basic_types" title="Permanent link">¶</a></h2>
+<h3 id="_1">开篇<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>介绍了基本运算之后，我们发现还没有正式地去介绍 Lua 的基本类型。今天我们趁机歇息一下，不往下讲新的 API，把基本类型认识一遍，就算达成今天的目标了。</p>
+</blockquote>
+<h3 id="_2">解析<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h4 id="_3">基本类型定义<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<p>为了便于理解，我们先行阅读官方的<a href="http://www.lua.org/manual/5.3/manual.html#2.1">参考手册</a>关于<strong>基本类型</strong>的说明：</p>
+<blockquote>
+<p>There are eight basic types in Lua: nil, boolean, number, string, function, userdata, thread, and table. The type nil has one single value, nil, whose main property is to be different from any other value; it usually represents the absence of a useful value. The type boolean has two values, false and true. Both nil and false make a condition false; any other value makes it true. The type number represents both integer numbers and real (floating-point) numbers. The type string represents immutable sequences of bytes. Lua is 8-bit clean: strings can contain any 8-bit value, including embedded zeros ('\0'). Lua is also encoding-agnostic; it makes no assumptions about the contents of a string.</p>
+<p><a href="http://cloudwu.github.io/lua53doc/manual.html#2.1">翻译</a>可以看云风的版本:</p>
+<p>Lua 中有八种基本类型： nil、boolean、number、string、function、userdata、 thread 和 table。 Nil 是值 nil 的类型， 其主要特征就是和其它值区别开；通常用来表示一个有意义的值不存在时的状态。 Boolean 是 false 与 true 两个值的类型。 nil 和 false 都会导致条件判断为假； 而其它任何值都表示为真。 Number 代表了整数和实数（浮点数）。 String 表示一个不可变的字节序列。 Lua 对 8 位是友好的： 字符串可以容纳任意 8 位值， 其中包含零 ('\0') 。 Lua 的字符串与编码无关； 它不关心字符串中具体内容。</p>
+</blockquote>
+<p>现在看 <code>lua.h</code> 中对基本类型的定义：</p>
+<pre class="codehilite"><code class="language-c linenums">/*
+** basic types
+*/
+#define LUA_TNONE       (-1)
+
+#define LUA_TNIL        0
+#define LUA_TBOOLEAN        1
+#define LUA_TLIGHTUSERDATA  2
+#define LUA_TNUMBER     3
+#define LUA_TSTRING     4
+#define LUA_TTABLE      5
+#define LUA_TFUNCTION       6
+#define LUA_TUSERDATA       7
+#define LUA_TTHREAD     8
+
+#define LUA_NUMTAGS     9   // 基本类型 tag 总数
+</code></pre>
+
+<p><code>LUA_NUMTAGS</code> 是基本类型总数，它计的是 <code>9</code> 种，没有算上 <code>LUA_TNONE</code>。<br>
+如何如何？如何不算 <code>LUA_TNONE</code> 呢？怎么说是 <code>9</code> 种而不是官方说的 <code>8</code> 种呢？<br>
+别急，我们先抛开疑惑，看下如何获取数据的基本类型。</p>
+<h4 id="_4">值类型判断<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<p><code>Lua</code> 提供了 <code>13</code> 个值类型判断的接口，其中 <code>8</code> 个基于 <code>lua_type</code> 接口完成：</p>
+<pre class="codehilite"><code class="language-c linenums">#define lua_isfunction(L,n) (lua_type(L, (n)) == LUA_TFUNCTION)
+#define lua_istable(L,n)    (lua_type(L, (n)) == LUA_TTABLE)
+#define lua_islightuserdata(L,n)    (lua_type(L, (n)) == LUA_TLIGHTUSERDATA)
+#define lua_isnil(L,n)      (lua_type(L, (n)) == LUA_TNIL)
+#define lua_isboolean(L,n)  (lua_type(L, (n)) == LUA_TBOOLEAN)
+#define lua_isthread(L,n)   (lua_type(L, (n)) == LUA_TTHREAD)
+#define lua_isnone(L,n)     (lua_type(L, (n)) == LUA_TNONE)
+#define lua_isnoneornil(L, n)   (lua_type(L, (n)) &lt;= 0)
+
+LUA_API int             (lua_isnumber) (lua_State *L, int idx);
+LUA_API int             (lua_isstring) (lua_State *L, int idx);
+LUA_API int             (lua_iscfunction) (lua_State *L, int idx);
+LUA_API int             (lua_isinteger) (lua_State *L, int idx);
+LUA_API int             (lua_isuserdata) (lua_State *L, int idx);
+
+LUA_API int             (lua_type) (lua_State *L, int idx);
+LUA_API const char     *(lua_typename) (lua_State *L, int tp);
+</code></pre>
+
+<h5 id="lua_type">lua_type<a class="headerlink" href="#lua_type" title="Permanent link">¶</a></h5>
+<p>首先来看看 <code>lua_type</code> 是怎么实现的：</p>
+<pre class="codehilite"><code class="language-c linenums">LUA_API int lua_type (lua_State *L, int idx) {
+  StkId o = index2addr(L, idx);
+  return (isvalid(o) ? ttnov(o) : LUA_TNONE);
+}
+
+// StkId
+typedef TValue *StkId;  /* index to stack elements */
+
+// isvalid
+#define isvalid(o)  ((o) != luaO_nilobject)
+
+// luaO_nilobject
+/*
+** (address of) a fixed nil value
+*/
+#define luaO_nilobject      (&amp;luaO_nilobject_)
+
+// luaO_nilobject_
+LUAI_DDEF const TValue luaO_nilobject_ = {NILCONSTANT};
+
+// NILCONSTANT
+/* macro defining a nil value */
+#define NILCONSTANT {NULL}, LUA_TNIL
+
+// ttnov
+/* type tag of a TValue with no variants (bits 0-3) */
+#define ttnov(o)    (novariant(rttype(o)))
+
+// rttype
+/* raw type tag of a TValue */
+#define rttype(o)   ((o)-&gt;tt_)
+
+// novariant
+/* tag with no variants (bits 0-3) */
+#define novariant(x)    ((x) &amp; 0x0F)
+</code></pre>
+
+<p>其中 <code>StdId</code> 是一个 <code>TValue *</code> 类型，由注释得知，<code>index2addr(L, idx);</code> 的原意是取出栈中对应索引处的元素<em>(原始值)</em>。</p>
+<h6 id="isvalid">isvalid<a class="headerlink" href="#isvalid" title="Permanent link">¶</a></h6>
+<p>现在假设我们从栈中取出了一个原始值，我们往下走到 <code>isvalid</code>。它将原始值与一个 <code>luaO_nilobject</code> 对象做比较，以此判定原始值是否有效；而 <code>luaO_nilobject</code> 对象的定义是一个地址，其中存储的是一个常量 <code>luaO_nilobject_</code>；<code>luaO_nilobject_</code> 是一个 <code>const TValue *</code> 类型，它的携带正体由 <code>NILCONSTANT</code> 规定；由于 <code>NILCONSTANT</code> 是一个宏定义，我们将其带入展开后得到 <code>luaO_nilobject_</code> 的完整定义：</p>
+<pre class="codehilite"><code class="language-c linenums">LUAI_DDEF const TValue luaO_nilobject_ = {{NULL}, LUA_TNIL};
+
+// LUAI_DDEF 定义为空，看来它只是 Lua 为了区别其他定义方式的一个标记而已
+#define LUAI_DDEF   /* empty */
+</code></pre>
+
+<p>也就是说，<code>luaO_nilobject_</code> 是一个原始值，且其 <code>value_</code> 域为 <code>{NULL}</code>，类型标记 <code>tt_</code> 域为 <code>LUA_TNIL</code>，这就是一个 <code>nil</code> 值的正体定义。<br>
+好，现在我们知道 <code>isvalid</code> 的机制是将原始值与 <code>nil</code> 原始值做比较，如果有效，原始值的类型就是 <code>ttnov(o)</code> 执行的结果，否则就是 <code>LUA_TNONE</code> 类型。</p>
+<h6 id="ttnov">ttnov<a class="headerlink" href="#ttnov" title="Permanent link">¶</a></h6>
+<p>我们接着看 <code>ttnov</code>，它取出原始值的类型标记 <code>tt_</code>，然后对其进行位运算，取出前四位。
+为什么是前四位？我们来深入考察一下 <code>tt_</code>，我们知道 <code>tt_</code> 是一个 <code>int</code> 类型的值，之前的对它的作用定义是携带原始值的类型标记，实际上它的功用远不止如此：</p>
+<pre class="codehilite"><code class="language-c linenums">// lobject.h 31
+/*
+** tags for Tagged Values have the following use of bits:
+** bits 0-3: actual tag (a LUA_T* value)
+** bits 4-5: variant bits
+** bit 6: whether value is collectable
+*/
+</code></pre>
+
+<p>通过注释我们了解到，<code>tt_</code> 被分成3个部分，其中：</p>
+<ul>
+<li>0 - 3 : 大类型标记</li>
+<li>4 - 5 : 子类型标记</li>
+<li>6 : 可回收标记</li>
+</ul>
+<p>我们找到子类型定义：</p>
+<pre class="codehilite"><code class="language-c linenums">// lobject.h 19
+/*
+** Extra tags for non-values
+*/
+#define LUA_TPROTO  LUA_NUMTAGS     /* function prototypes */
+#define LUA_TDEADKEY    (LUA_NUMTAGS+1)     /* removed keys in tables */
+
+/*
+** number of all possible tags (including LUA_TNONE but excluding DEADKEY)
+*/
+#define LUA_TOTALTAGS   (LUA_TPROTO + 2)
+
+// ...
+
+/* Variant tags for functions */
+#define LUA_TLCL    (LUA_TFUNCTION | (0 &lt;&lt; 4))  /* Lua closure */
+#define LUA_TLCF    (LUA_TFUNCTION | (1 &lt;&lt; 4))  /* light C function */
+#define LUA_TCCL    (LUA_TFUNCTION | (2 &lt;&lt; 4))  /* C closure */
+
+
+/* Variant tags for strings */
+#define LUA_TSHRSTR (LUA_TSTRING | (0 &lt;&lt; 4))  /* short strings */
+#define LUA_TLNGSTR (LUA_TSTRING | (1 &lt;&lt; 4))  /* long strings */
+
+
+/* Variant tags for numbers */
+#define LUA_TNUMFLT (LUA_TNUMBER | (0 &lt;&lt; 4))  /* float numbers */
+#define LUA_TNUMINT (LUA_TNUMBER | (1 &lt;&lt; 4))  /* integer numbers */
+
+
+/* Bit mark for collectable types */
+#define BIT_ISCOLLECTABLE   (1 &lt;&lt; 6)
+</code></pre>
+
+<p>将其与 <code>lua.h</code> 里定义的大类型归并整理后得到 <code>tt_</code> 可存储的所有 <code>tag</code> 定义：</p>
+<pre class="codehilite"><code class="language-c linenums">#define LUA_TNONE             (-1)  /* none : no value */
+#define LUA_TNIL              0     /* nil */
+#define LUA_TBOOLEAN          1     /* bool */
+#define LUA_TLIGHTUSERDATA    2     /* light userdata */
+#define LUA_TNUMBER           3     /* number */
+  #define LUA_TNUMFLT         (LUA_TNUMBER | (0 &lt;&lt; 4))  /* float numbers */
+  #define LUA_TNUMINT         (LUA_TNUMBER | (1 &lt;&lt; 4))  /* integer numbers */
+#define LUA_TSTRING           4     /* string */
+  #define LUA_TSHRSTR         (LUA_TSTRING | (0 &lt;&lt; 4))  /* short strings */
+  #define LUA_TLNGSTR         (LUA_TSTRING | (1 &lt;&lt; 4))  /* long strings */
+#define LUA_TTABLE            5     /* table */
+#define LUA_TFUNCTION         6     /* function */
+  #define LUA_TLCL            (LUA_TFUNCTION | (0 &lt;&lt; 4))  /* Lua closure */
+  #define LUA_TLCF            (LUA_TFUNCTION | (1 &lt;&lt; 4))  /* light C function */
+  #define LUA_TCCL            (LUA_TFUNCTION | (2 &lt;&lt; 4))  /* C closure */
+#define LUA_TUSERDATA         7     /* userdata */
+#define LUA_TTHREAD           8     /* thread */
+#define LUA_NUMTAGS           9     /* numtags */
+
+#define LUA_TPROTO            LUA_NUMTAGS       /* proto */
+#define LUA_TDEADKEY          (LUA_NUMTAGS+1)   /* table 中已移除的键，现在不甚懂 */
+#define LUA_TOTALTAGS         (LUA_TPROTO+2)    /* 大类总数 */
+#define BIT_ISCOLLECTABLE     (1 &lt;&lt; 6)          /* 使能可回收 */
+</code></pre>
+
+<p>回到 <code>ttnov</code>，现在可以清楚地知道它取 <code>tt_</code> 前四位的意义：<strong>得到原始值的大类型</strong>。</p>
+<h6 id="lua_type_1">lua_type 总结<a class="headerlink" href="#lua_type_1" title="Permanent link">¶</a></h6>
+<ul>
+<li><code>lua_type</code> 首先判断原始值是否有效，最后再根据有效结果返回原始值的大类型；</li>
+<li>通过将原始值与 <code>nil</code> 原始值进行比较，从而得到原始值是否有效；</li>
+<li>通过获取原始值类型标记 <code>tt_</code> 的前四位可以得到原始值的大类型。</li>
+</ul>
+<h5 id="_5">子类型判断<a class="headerlink" href="#_5" title="Permanent link">¶</a></h5>
+<p>由于 <code>lua_type</code> 只能用于原始值的大类型判断，而不能用于子类型。因此 Lua 单独分出了检查子类型的方法。而我们已经知道对原始值类型的判断的原理总是基于 <code>tt_</code> 域，就不展开讲了：</p>
+<pre class="codehilite"><code class="language-c linenums">// lobject.h 126
+
+/* raw type tag of a TValue */
+#define rttype(o)   ((o)-&gt;tt_)
+
+/* tag with no variants (bits 0-3) */
+#define novariant(x)    ((x) &amp; 0x0F)
+
+/* type tag of a TValue (bits 0-3 for tags + variant bits 4-5) */
+#define ttype(o)    (rttype(o) &amp; 0x3F)
+
+/* type tag of a TValue with no variants (bits 0-3) */
+#define ttnov(o)    (novariant(rttype(o)))
+
+
+/* Macros to test type */
+#define checktag(o,t)       (rttype(o) == (t))
+#define checktype(o,t)      (ttnov(o) == (t))
+#define ttisnumber(o)       checktype((o), LUA_TNUMBER)
+#define ttisfloat(o)        checktag((o), LUA_TNUMFLT)
+#define ttisinteger(o)      checktag((o), LUA_TNUMINT)
+#define ttisnil(o)      checktag((o), LUA_TNIL)
+#define ttisboolean(o)      checktag((o), LUA_TBOOLEAN)
+#define ttislightuserdata(o)    checktag((o), LUA_TLIGHTUSERDATA)
+#define ttisstring(o)       checktype((o), LUA_TSTRING)
+#define ttisshrstring(o)    checktag((o), ctb(LUA_TSHRSTR))
+#define ttislngstring(o)    checktag((o), ctb(LUA_TLNGSTR))
+#define ttistable(o)        checktag((o), ctb(LUA_TTABLE))
+#define ttisfunction(o)     checktype(o, LUA_TFUNCTION)
+#define ttisclosure(o)      ((rttype(o) &amp; 0x1F) == LUA_TFUNCTION)
+#define ttisCclosure(o)     checktag((o), ctb(LUA_TCCL))
+#define ttisLclosure(o)     checktag((o), ctb(LUA_TLCL))
+#define ttislcf(o)      checktag((o), LUA_TLCF)
+#define ttisfulluserdata(o) checktag((o), ctb(LUA_TUSERDATA))
+#define ttisthread(o)       checktag((o), ctb(LUA_TTHREAD))
+#define ttisdeadkey(o)      checktag((o), LUA_TDEADKEY)
+</code></pre>
+
+<h4 id="_6">值类型别名<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p>看完值类型的判断，来看值类型的别名。值类型别名由 <code>lua_typename</code> 给出，定义如下：</p>
+<pre class="codehilite"><code class="language-c linenums">LUA_API const char *lua_typename (lua_State *L, int t) {
+  UNUSED(L);
+  api_check(L, LUA_TNONE &lt;= t &amp;&amp; t &lt; LUA_NUMTAGS, "invalid tag");
+  return ttypename(t);
+}
+
+// UNUSED
+/* macro to avoid warnings about unused variables */
+#if !defined(UNUSED)
+#define UNUSED(x)   ((void)(x))
+#endif
+
+// ttypename
+#define ttypename(x)    luaT_typenames_[(x) + 1]
+
+// luaT_typenames_
+static const char udatatypename[] = "userdata";
+
+LUAI_DDEF const char *const luaT_typenames_[LUA_TOTALTAGS] = {
+  "no value",
+  "nil", "boolean", udatatypename, "number",
+  "string", "table", "function", udatatypename, "thread",
+  "proto" /* this last case is used for tests only */
+};
+
+/*
+** number of all possible tags (including LUA_TNONE but excluding DEADKEY)
+*/
+#define LUA_TOTALTAGS   (LUA_TPROTO + 2)
+</code></pre>
+
+<p>其中，<code>UNUSED</code> 用于防止未使用变量提示警告；<code>api_check</code> 检查类型tag <code>t</code> 是否在指定范围 <code>[-1,9)</code> 内；<code>ttypename</code> 才是真正获取值类型别名的方法，我们看到它是一个宏定义，内部实际上使用了一个不可变长数组 <code>luaT_typenames_</code>，用于存储类型别名，数组中的元素分别对应到指定的基本类型；注意到 <code>LUA_TLIGHTUSERDATA</code> 和 <code>LUA_TUSERDATA</code> 被统一命名为 <code>userdata</code>，也就是说，在 <code>Lua</code> 层，对这两种类型是不做区分的；现在联系到 <code>LUA_NUMTAGS</code> 的计数范围 <code>[0,8]</code>，就可以理解 <code>8</code> 种基本类型的由来了。</p>
+<p>那为什么 <code>LUA_TNONE</code> 和 <code>LUA_TPROTO</code> 不算呢？我们注意到 <code>LUA_TPROTO</code> 的注释说明，它是额外的标记，本身不带任何值，因此也就不计算在值类型中。而 <code>LUA_TNONE</code> 则没有那么明确，于是 StackOverflow 找答案，找到一个：<a href="http://stackoverflow.com/questions/38562720/is-none-one-of-basic-types-in-lua?noredirect=1#comment64516259_38562720">Is 'none' one of basic types in Lua?</a>，回答说：</p>
+<blockquote>
+<p>No. It not a type. It is only for use with C API.</p>
+</blockquote>
+<p>也就是说，<code>LUA_TNONE</code> 是一个辅助类型标记，它仅供 C API 使用，对 <code>Lua</code> 层它是不可见的，因此也就不计入基本类型当中了。</p>
+<h3 id="_7">终了<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<ul>
+<li>勤思考，多动脑，纵使一时不解，也可加深理解，终能乘风破浪也。</li>
+<li>上下文联系是多么重要，语文没白学。</li>
+</ul></div></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright &copy; 2021 DoooReyn <a href="http://beian.miit.gov.cn" target="_blank">闽ICP备19014786号-1</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bat.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/c.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/cpp.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/lua.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/php.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/shell.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/typescript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

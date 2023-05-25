@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blog that records everything">
+    <meta name="author" content="DoooReyn">
+    <link rel="canonical" href="https://doooreyn.github.io/%E8%AF%AD%E8%A8%80/Python/Python%20%E7%88%AC%E5%8F%96%20gank.io%20%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%8E%A8/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Python 爬取 gank.io 今日力推 - DoooReynの星际航行日志</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">DoooReynの星际航行日志</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">关于我</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏城 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">游戏厅</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%A4%A7%E5%94%90%E7%9C%9F%E9%BE%99%E4%BC%A0/">大唐真龙传</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%85%83%E6%B0%94%E5%81%B6%E5%83%8F%E5%AD%A3/">元气偶像季</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E4%BC%A0%E5%A5%87%E7%B3%BB%E5%88%97/">传奇系列</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E7%94%B5%E5%A8%B1%E5%A4%A7%E5%8E%85/">电娱大厅</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%8D%B0%E5%B0%BC%E3%80%81%E6%B3%B0%E8%AF%AD%E6%A3%8B%E7%89%8C/">印尼/泰语棋牌</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">造轮子</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E7%9E%8E%E9%BC%93%E6%8D%A3%E6%BC%94%E7%A4%BA%E6%A1%88%E4%BE%8B/">瞎鼓捣演示案例</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/">手势识别与训练模型</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/PackManV2%E4%B8%80%E4%BD%93%E5%8C%96%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">PackManV2一体化打包工具</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20HTTP%20Server/">Cocos2d-x 嵌入本地 HTTP Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20WebSocket%20Server/">Cocos2d-x 嵌入本地 WebSocket Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E7%9B%AE%E5%BD%95%E7%9B%91%E8%A7%86%E5%99%A8/">Cocos2d-x 目录监视器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20FMOD%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Cocos2d-x FMOD 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E4%BD%BF%E7%94%A8%20spdlog%20%E6%97%A5%E5%BF%97%E5%BA%93/">Cocos2d-x 使用 spdlog 日志库</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E6%8E%A5%E5%85%A5%20lua-protobuf/">Cocos2d-x 接入 lua-protobuf</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Adjust%20%E7%AD%BE%E5%90%8D%E7%AC%AC%E4%BA%8C%E7%89%88%20Android%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Adjust 签名第二版 Android 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%96%B0%E6%B4%BB%E5%8A%A8%E4%B8%AD%E5%BF%83%E6%BC%94%E7%A4%BA/">新活动中心演示</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">知识点</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Cocos%20Creator%20Android%20%E6%89%93%E5%8C%85%E6%80%BB%E7%BB%93/">记一次 Cocos Creator Android 打包总结</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20Spine%20%C2%B7%20%E6%9B%B4%E6%8D%A2%E7%BA%B9%E7%90%86/">Cocos Creator Spine · 更换纹理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20%E6%BB%A4%E9%95%9C%20%C2%B7%20%E9%A9%AC%E8%B5%9B%E5%85%8B/">Cocos Creator 滤镜 · 马赛克</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20%E4%B8%AD%E7%9A%84%20Size/">Cocos 中的 Size</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Lua/Lua%20%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0/">Lua 数组实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/Lua%20HashMap%20%E5%AE%9E%E7%8E%B0/">Lua HashMap 实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/Lua%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC%E5%AE%9E%E7%8E%B0/">Lua 字符串插值实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%20lua%20%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81/">更简洁的 lua 逻辑代码</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua API 浅析</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20Basic%20Types/">Lua_API Basic Types</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_absindex/">Lua_API lua_absindex</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_Alloc/">Lua_API lua_Alloc</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_arith%20%281%29/">Lua_API lua_arith (1)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_arith%20%282%29/">Lua_API lua_arith (2)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_atpanic/">Lua_API lua_atpanic</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_call%20%26%20lua_callk/">Lua_API lua_call & lua_callk</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">JavaScript</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../JavaScript/Faker.js%20%E5%88%86%E6%9E%90/">Faker.js 分析</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Python</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC/">如何用 Python 实现字符串插值</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Pylint-%E4%BD%A0%E5%BE%88%E6%A3%92%EF%BC%8C%E4%BD%86%E6%88%91%E4%B8%8D%E6%83%B3%E8%B7%9F%E4%BD%A0%20PaPaPa/">Pylint-你很棒，但我不想跟你 PaPaPa</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Python 爬取 gank.io 今日力推</a>
+</li>
+
+        
+            
+<li >
+    <a href="../%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">我有干货，你敢收吗？</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第一部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第三部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第二部分）</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">PHP</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../PHP/Windows%20%E5%AE%89%E8%A3%85%20PHP7.4/">Windows 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/CentOS%20%E5%AE%89%E8%A3%85%20PHP7.4/">CentOS 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E6%9F%A5%E7%9C%8B%20php.ini%20%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80/">查看 php.ini 存放地址</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20Composer/">安装 Composer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20MixPhp/">安装 MixPhp</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20Swoole/">安装 Swoole</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">工具箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%BE%AE%E8%AF%BB%E8%87%AA%E5%8A%A8%E9%98%85%E8%AF%BB%E5%99%A8/">微读自动阅读器</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%B7%A5%E8%B5%84%E6%98%8E%E7%BB%86%E5%8A%A9%E6%89%8B/">工资明细助手</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/BMFont%20Toolbox%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">BMFont Toolbox 使用指南</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%20md5%20sha1%20sha256%20%E5%80%BC/">查看文件 md5 sha1 sha256 值</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">医药箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Android</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">ADB 常用指令</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E8%B0%83%E8%AF%95%E8%BF%9E%E6%8E%A5%E5%A4%9C%E7%A5%9E%E6%A8%A1%E6%8B%9F%E5%99%A8/">ADB 调试连接夜神模拟器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20NDK%20%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC/">Android NDK 历史版本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20SDK%20%E7%89%88%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">Android SDK 版本之间的关系</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20%E5%8D%A0%E7%94%A8%E6%9E%81%E5%A4%A7%E5%86%85%E5%AD%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Android Studio 占用极大内存的解决方法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20Clean%20%E4%B8%8E%20Rebuild%20%E7%9A%84%E5%8C%BA%E5%88%AB/">Android Studio Clean 与 Rebuild 的区别</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Mac</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/AppleScript%20%E6%90%AD%E9%85%8D%20Alfred%20%E7%9C%9F%E4%B9%83%E5%88%A9%E5%99%A8/">AppleScript 搭配 Alfred 真乃利器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E9%9F%B3%E9%87%8F%E5%BE%AE%E8%B0%83/">Mac 音量微调</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E5%BA%94%E7%94%A8%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">Mac 应用已损坏解决方案</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20nvm%20%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E6%8C%87%E5%8D%97/">Mac nvm 完全卸载指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20zsh%20%E7%B2%98%E8%B4%B4%E5%8A%A0%E9%80%9F/">Mac zsh 粘贴加速</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20autojump/">MacOS 安装 autojump</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20Pillow/">MacOS 安装 Pillow</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%8D%B8%E8%BD%BD%20Java9/">MacOS 卸载 Java9</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20Java%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">MacOS Java 版本管理</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Xcode error</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/your%20session%20has%20expired%2C%20please%20log%20in/">your session has expired, please log in</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Git</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/Git%20%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">Git 设置代理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/%E8%A7%A3%E5%86%B3%20Github%20%E8%B4%A1%E7%8C%AE%E5%80%BC%E4%B8%8D%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98/">解决 Github 贡献值不计算问题</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Interview</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/HR%20%E9%9D%A2/">HR 面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E6%8A%80%E6%9C%AF%E9%9D%A2/">技术面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E6%9F%A5%E7%9C%8B%20npm%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">查看 npm 安装位置</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E8%A7%A3%E5%86%B3%20Windows%20%E9%95%BF%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">解决 Windows 长路径问题</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">图书馆 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">算法</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法的时间与空间复杂度</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">查找算法直接及其算法实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%8F%8A%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93/">排序算法性能及选择总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">书籍</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/Github%E4%B8%8A%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/">Github上的电子书</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%BF%91%E4%B8%87%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%94%B5%E5%AD%90%E4%B9%A6%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/">近万本技术电子书免费下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%94%B5%E5%AD%90%E4%B9%A6%E4%B8%8B%E8%BD%BD/">游戏开发电子书下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/J%C2%B7%E5%B8%83%E7%BD%97%E5%85%8B%E6%9B%BC-%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%8D%81%E5%B9%B4/">J·布罗克曼-未来五十年</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8C%97%E5%B2%9B%E3%80%8A%E6%B3%A2%E5%85%B0%E6%9D%A5%E5%AE%A2%E3%80%8B/">北岛《波兰来客》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3%E3%80%8A%E4%BB%A3%E8%B0%A2%E5%A2%9E%E9%95%BF%E8%AE%BA%E3%80%8B/">陈平《代谢增长论》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3-%E8%87%AA%E7%94%B1%E7%9A%84%E5%AF%B9%E7%AB%8B%E9%9D%A2%E4%B8%8D%E6%98%AF%E4%B8%93%E6%94%BF%E6%98%AF%E8%87%AA%E5%BE%8B/">陈平-自由的对立面不是专政是自律</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9%20%E3%80%8A%E6%9B%BC%E5%B7%B4%E7%B2%BE%E7%A5%9E%EF%BC%9A%E7%A7%91%E6%AF%94%E8%87%AA%E4%BC%A0%E3%80%8B/">科比·布莱恩特 《曼巴精神:科比自传》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%82%AF%C2%B7%E7%BD%97%E5%AE%BE%E9%80%8A%20%E5%8D%A2%C2%B7%E9%98%BF%E7%BD%97%E5%B0%BC%E5%8D%A1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E6%95%99%E8%82%B2/">肯·罗宾逊 卢·阿罗尼卡-什么是最好的教育</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8A%B3%E4%BC%A6%E6%96%AF%C2%B7%E5%B8%83%E6%B4%9B%E5%85%8B-%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%85%AB%E7%99%BE%E4%B8%87%E7%A7%8D%E5%86%99%E6%B3%95/">劳伦斯·布洛克-小说的八百万种写法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%95%96-%E5%8C%97%E4%BA%AC%E6%B3%95%E6%BA%90%E5%AF%BA/">李敖-北京法源寺</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%B7%BC%C2%B7%E3%80%8A%E4%B8%89%E4%BD%93%E3%80%8B%E4%B8%AD%E7%9A%84%E7%89%A9%E7%90%86%E5%AD%A6/">李淼·《三体》中的物理学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7L.%E5%87%AF%E5%88%A9-%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E5%A7%8B/">罗伯特·L.凯利-第五次开始</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%90%95%E6%80%9D%E5%8B%89%E3%80%8A%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E3%80%8B%E7%BB%AA%E8%AE%BA/">吕思勉《中国通史》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%98%8E%E9%81%93-%E5%9B%BE%E8%A7%A3%E9%80%BB%E8%BE%91%E5%AD%A6/">明道-图解逻辑学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%9D%92%E5%B1%B1%E4%B8%83%E6%83%A0%E3%80%8A%20%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A5%BD%E5%A4%A9%E6%B0%94%E3%80%8B/">青山七惠·《一个人的好天气》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%85%E6%B0%B4%E8%8D%A3%E5%8F%B8%E3%80%8A%E8%AE%A4%E7%94%9F%E7%9A%84%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E3%80%8B/">清水荣司《认生的人:如何克服社交焦虑》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%91%9E%C2%B7%E8%BE%BE%E5%88%A9%E6%AC%A7%20%E3%80%8A%E5%8E%9F%E5%88%99%E3%80%8B/">瑞·达利欧 《原则》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8D%AB%E5%AE%AB%E5%A3%AB%E9%83%8E%20%E3%80%8AFateStay%20Night%20Unlimited%20Blade%20Works%E3%80%8B/">卫宫士郎 《FateStay Night Unlimited Blade Works》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%A9%E9%93%81%E5%86%9B%20%E3%80%8A%E4%B9%A1%E5%BB%BA%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%96%B0%E9%9D%92%E5%B9%B4%E4%B8%8E%E4%B9%A1%E6%9D%91%E7%9A%84%E7%94%9F%E5%91%BD%E5%AF%B9%E8%AF%9D%E3%80%8B/">温铁军 《乡建笔记:新青年与乡村的生命对话》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9%E3%80%8A%E6%9C%AA%E6%9D%A5%E7%AE%80%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E7%A5%9E%E3%80%8B/">尤瓦尔·赫拉利《未来简史:从智人到智神》</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../Pylint-%E4%BD%A0%E5%BE%88%E6%A3%92%EF%BC%8C%E4%BD%86%E6%88%91%E4%B8%8D%E6%83%B3%E8%B7%9F%E4%BD%A0%20PaPaPa/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#python_gankio">Python 爬取 gank.io 今日力推</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<div><h2 id="python_gankio">Python 爬取 gank.io 今日力推<a class="headerlink" href="#python_gankio" title="Permanent link">¶</a></h2>
+<p>这是入门级的基础训练,没用使用什么框架,所以代码很简单,就不说了,直接贴出来:</p>
+<pre class="codehilite"><code class="language-python linenums"># -*- encoding=utf-8 -*-
+
+import sys, re, os
+import urllib
+import urllib.request as request
+from collections import deque
+
+def scrapy_url(start_url):
+    cnt = 0
+    visited = set()
+    queue = deque()
+    queue.append(start_url)
+    tryagain = set()
+    log = list()
+
+
+    while True:
+        if len(queue) == 0:
+            print('no url to scrapy. well done!')
+            break
+        url = queue.popleft()
+        visited |= {url}
+
+        print('已经抓取: ' + str(cnt))
+        print('  正在抓取: ' + url)
+        cnt += 1
+
+        try:
+            resp = request.urlopen(url, timeout=100)
+            if 'html' not in resp.getheader('Content-Type'):
+                continue
+        except:
+            if url not in tryagain:
+                tryagain |= {url}
+                queue.append(url)
+            print('  open "{0}" err'.format(url))
+            continue
+
+        try:
+            data = resp.read().decode('utf-8')
+        except:
+            if url not in tryagain:
+                tryagain |= {url}
+                queue.append(url)
+            print('  "{0}" decode err'.format(url))
+            continue
+
+        linkre = re.compile('href=\"(/\d+/\d+/\d+)\"&gt;(.+?)&lt;/a&gt;')
+        for section in linkre.findall(data):
+            real_url = start_url+section[0]
+            if real_url not in visited and real_url not in queue:
+                queue.append(real_url)
+                print('  加入队列: [%s]' % (start_url+section[0]))
+                log.append('[%s](%s)' % (section[1], start_url+section[0]) )
+
+    write_path = os.path.join(os.getcwd(), 'log.md')
+    with open( write_path, 'wt', encoding='utf-8' ) as f:
+        lines = [ str(row+1)+'. '+line+'\n' for row, line in enumerate(log)]
+        f.writelines(lines)
+
+
+if __name__ == '__main__':
+    start_url = 'http://gank.io'
+    scrapy_url(start_url)
+</code></pre>
+
+<p>生成的<code>Markdown</code>结果如下:</p>
+<ol>
+<li><a href="http://gank.io/2016/11/29">今日力推：Fab 展开菜单 / iOS 平台键盘再也不会挡住输入控件 / iOS 信用卡效果 / Android 花式二维码</a></li>
+<li><a href="http://gank.io/2016/11/30">今日力推：iOS 内置小巧的终端 / Android 所有干货</a></li>
+<li><a href="http://gank.io/2016/11/28">今日力推：Vue 实现的 Markdown 编辑器 / Android 所有干货 / iOS 自动滚动 Label</a></li>
+<li><a href="http://gank.io/2016/11/25">今日力推：Yalantis 放出的一个新作品：ToDoList / 让 ajax 请求变得更简单 / 在没有越狱的情况下查看 APP 的 InfoPlist</a></li>
+<li><a href="http://gank.io/2016/11/24">今日力推：深入 Android 渲染机制 / iOS 自动切换图片的 View 效果</a></li>
+<li><a href="http://gank.io/2016/11/23">今日力推：Jack Wharton: Java 隐藏开销 / 简洁风格的日历 View / 完整的填图 App，做的很棒 / </a></li>
+<li><a href="http://gank.io/2016/11/22">Gank 推出全新功能：闲读 - 读那些值得读的资讯，快来看看吧！</a></li>
+<li><a href="http://gank.io/2016/11/21">今日力推：Android 两状态 或者 三状态 Switch 按钮 / 轻量级 Android 导航系统 / 将 Android 三大经典布局移植到 iOS</a></li>
+<li><a href="http://gank.io/2016/11/18">今日力推：ENViews, 一个华丽丽的动效控件库 / 通过网页来查看 Android 本机数据库和 SharedPreference 数据 / 轻轻松松使用 Android 自定义字体</a></li>
+<li><a href="http://gank.io/2016/11/17">今日力推：轻量级的 material design 图片选择器 / Katana，一个全新的 iOS 开发框架 / 安卓版圆形进度条 / 阮一峰总结的全栈工程师培训手册</a></li>
+<li><a href="http://gank.io/2016/11/16">今日力推：Android MP3 录制，波形显示 / 动画插值器的编辑器 / Swift Job 队列</a></li>
+<li><a href="http://gank.io/2016/11/15">今日力推：Dash 开源 iOS 版本 / TouchBar 开发 Demo / 强大日志库 xLog / 智能 Rating / 快速实现 @ 和话题功能</a></li>
+<li><a href="http://gank.io/2016/11/14">今日力推：RxJava 源码解读之旅 / 面向程序猿的数据科学与机器学习知识体系及资料合集 / 简诗 2.0</a></li>
+<li><a href="http://gank.io/2016/11/11">今日力推：用 Swift 开发属于自己的编程语言 / Android 事件分发原理(责任链模式) / Python 备忘手册  </a></li>
+<li><a href="http://gank.io/2016/11/10">今日力推：一个支持选词的 TextView / 通过浏览器管理 sqlite 数据库 / 为视图添加丝滑的水波纹  </a></li>
+<li><a href="http://gank.io/2016/11/09">今日力推：给软件工程师看的 Machine Learning 学习材料   / ReView 辅助设计师验证工具 / 更好的大图查看加载库</a></li>
+<li><a href="http://gank.io/2016/11/08">今日力推: Swift 随机数据生成 / 卡片视图的形式管理你的 Activity /Android 常见开源项目 proguard 集合</a></li>
+<li><a href="http://gank.io/2016/11/07">今日力推：App 备份和恢复 /仿三星桌面的浮动工具 / Swift Markdown 解析器 </a></li>
+<li><a href="http://gank.io/2016/11/04">今日力推：microG 计划 / 简单易用的可定制展开角度的 Button Menu / MotionEvent 详解</a></li>
+<li><a href="http://gank.io/2016/11/03">今日力推：Dex 文件结构解析以及其应用 / Swift Web Framework / 通过 elevation 阴影来创造更逼真的按下效果</a></li>
+<li><a href="http://gank.io/2016/11/02">今日力推：Android 性能优化典范 - 第 5 季 / React Native 控制 Touchbar / iOS 优化 App 启动时间  </a></li>
+<li><a href="http://gank.io/2016/11/01">今日力推：类似 Wallet 效果的卡片管理组件 / 实现系统通知拦截功能的 App / 给用户输入自动加上特定格式  </a></li>
+<li><a href="http://gank.io/2016/10/31">今日力推：Yalantis 出品：搜索过滤器交互效果 / RecyclerView 实现流式布局 / 支持多选的 RecyclerView</a></li>
+<li><a href="http://gank.io/2016/10/28">今日力推：微笑下拉刷新 / 一款完整的货币转换的 App / Android Support 25.0 中 Shortcut Demo 一例 </a></li>
+<li><a href="http://gank.io/2016/10/27">今日力推：穷富翁大作战 / 无需越狱，读取其他 App 的 InfoPlist 文件 / Android app 增量更新 / 气泡风格的过渡动画效果 / 一款轻量级的文件选择器 / Android 进程绝杀技</a></li>
+<li><a href="http://gank.io/2016/10/26">今日力推：让 RecyclerView 支持 Fast-Scroll / 漫谈 Android 增量更新 / 开源的 Android APM （应用性能监测） 工具 / 高仿微信视差手势滑动返回</a></li>
+<li><a href="http://gank.io/2016/10/25">今日力推：Android 程序员开发调试与测试工具 / 一篇文章读懂 Android 混淆 / 仿 Smartisan OneStep / 类似 iOS 10 Apple Music 一样效果的 浮起卡片过渡效果  </a></li>
+<li><a href="http://gank.io/2016/10/24">今日力推：Android 针对于移动流量劫持进行抓包 / Android 通话录音 / iOS 图片权重下载 </a></li>
+<li><a href="http://gank.io/2016/10/21">今日力推：基于 libtorrent 实现的客户端 / Multi-Selection （优雅多选框）/ Swift 下强大且易用的 矢量图 处理工具库</a></li>
+<li><a href="http://gank.io/2016/10/20">今日力推：风车效果的 LayoutManager / 以组件的方式维护列表加载状态 / iOS 10 风格的日历和时间选择器 / React native 实现的一款查看 GitHub 热门项目的 App</a></li>
+<li><a href="http://gank.io/2016/10/19">今日力推：带有滑动弹性效果 PageViewController，太漂亮了 / 教你用 Google Vision Api 实现的人脸检测效果 / 做的很棒的一个 Android 辐射数据统计效果 / 一款 PHPHub 社区第三方 Android 客户端 </a></li>
+<li><a href="http://gank.io/2016/10/18">今日力推：漂亮的 Swift 实现的 Message 通知 / 仿 即刻 App 风格的图片浏览效果   / 自定义 自动补充 email 的 EditText / Mac Google Material 取色盘</a></li>
+<li><a href="http://gank.io/2016/10/17">今日力推：Google 风格的 Page Indicator 效果 / Android 图片放大过渡效果 / 带有人脸位置感知的 UIImageView，更好的展示用户头像 / RxJava 复杂场景（二）：调度 / 从输入 URL 到页面显示的过程</a></li>
+<li><a href="http://gank.io/2016/10/14">今日力推：教你用 Sketch 画 icon / Google 开源了一个专为 VR 设计的相机 App / JS 实现的 60 多种语言的 OCR 库 / Random-ideas，有什么想法，就在这里发 issue 吧！</a></li>
+<li><a href="http://gank.io/2016/10/13">今日力推：Swift 生成随机用户数据 / 支持特定文字高亮的 Text / 方便简洁的 BottomDialog / 快速生成 Add to Google Calendar 按钮</a></li>
+<li><a href="http://gank.io/2016/10/12">今日力推：仿 Cuto 的加载动画 / Xcode 8 快速注释和取消注释插件 / 支持自动计数的 EditText / 转换 QQ 微信语音格式转为 mp3</a></li>
+<li><a href="http://gank.io/2016/10/11">今日力推：把图片变成沙画风格 / 当 Rxjava 遇上 databinding / 支持自动高亮关键字的 TextView / 支持下滑反馈的 iOS 键盘组件 / 超酷的一个 Swift 日期和时间操作库</a></li>
+<li><a href="http://gank.io/2016/10/10">今日力推：豆瓣移动混合开发实践总结 / UISegmentedControl 动画过度效果 / Android 指纹识别身份验证 Demo / Bottom Sheet 选择器 / 带有动态效果的表单引导进度条</a></li>
+<li><a href="http://gank.io/2016/10/09">今日力推：基于 Force Touch 实现的图片模糊效果 / 一个简洁的汇率转换软件 / 又一个显示 recycleview 复杂效果的库 / 番剧记录工具 Bgm38</a></li>
+<li><a href="http://gank.io/2016/10/08">今日力推：VR 开发者资源汇总 / 编写高质量 Readme / Android Pager 过渡效果 / 拆轮子-唯美细腻的夕阳海浪动画 / 超漂亮的 Animation Scale 动画设置效果 / Xcode 省事插件，在任何地方都可以随意 import</a></li>
+<li><a href="http://gank.io/2016/09/30">今日力推：Spotify 开源组件驱动开发工具箱 / Android 轻便 Router 框架 / 自动给 TextView 增加超链接 </a></li>
+<li><a href="http://gank.io/2016/09/29">今日力推：实战-Fluxion 与 wifi 热点伪造、钓鱼、中间人攻击、wifi 破解 / 支持 at 别人效果的 EditText，很实用 / Android7.0 适配教程 / iOS 直接调用 ionicons 图标集合 </a></li>
+<li><a href="http://gank.io/2016/09/28">今日力推：iOS 模拟色盲看到的 App 世界，很有爱的一个库 / Android 下雪效果 / Chrome 插件，双击高亮关键字，看代码不能更爽</a></li>
+<li><a href="http://gank.io/2016/09/27">今日力推：Android Color Preference / Android 蛛网分析图 / MDCC2016 Android 演讲稿 / 如何开发 iOS 10 表情包 / Android 高性能实时模糊</a></li>
+<li><a href="http://gank.io/2016/09/26">今日力推：在网页里激活一个类 Spotlight Chrome 插件 / Toolbar 组件展示 Banner 图片效果 / 一个小工具业余项目，如何做到月赚 8 万人民币 </a></li>
+<li><a href="http://gank.io/2016/09/23">今日力推：iOS 浮动视差效果 / MD 风格的投票效果 / 轮盘效果的 Fragment / 程序员需要了解的开源协议</a></li>
+<li><a href="http://gank.io/2016/09/22">今日力推：Android 类 Telegram 图片选择器和优惠券效果的 View / iOS 音频频谱展示，类似 Apple Music / Swift 画中画播放视频</a></li>
+<li><a href="http://gank.io/2016/09/21">今日力推：Swift 毛笔字效果 / Android 搜索过渡效果 / App 瘦身实践 / 超漂亮的 Material 引导页 / 仿微信滑动返回</a></li>
+<li><a href="http://gank.io/2016/09/20">今日力推：基于 InstantRun 实现的一个热修复 Demo / UMiss 开源 / SVG 闹钟效果 / Mac 12306 客户端</a></li>
+<li><a href="http://gank.io/2016/09/19">今日力推：iOS 开发辅助工具：快速跳转到目标文件夹 / Android 你所需了解的推送相关知识 / 带有色彩渐变的新功能引导页 / 双面 View 效果 </a></li>
+<li><a href="http://gank.io/2016/09/18">今日推荐：程序员的第一次约会 / Android matrix-3d-camera 教程 /Android 音乐播放器 / React Native 游戏引擎</a></li>
+<li><a href="http://gank.io/2016/09/14">今日推荐：iOS 带有进度效果的 Label 和 Button / iOS 10 炫酷 Sample / Android 仿锤子闹钟 / 夜间模式切换渐变效果</a></li>
+<li><a href="http://gank.io/2016/09/13">今日力推：跨平台的 React native 组件工具箱 / iOS 下辅助询问权限的工具库 / Android 超级漂亮的一个高亮功能提醒效果！/ Chrome 全文搜索历史浏览的插件</a></li>
+<li><a href="http://gank.io/2016/09/12">强烈推荐：性苦闷者的呐喊 / Android 代码高亮 View / Android Item 视差效果 / 为 React 开发的动画引擎库 </a></li>
+<li><a href="http://gank.io/2016/09/09">今日力推：学习 CMake 最好的资源 / 基于 BottomSheet 实现的图片选择器 / 带波动效果的索引侧边栏 / iOS 用代码生成 PDF / 番茄工作法 App</a></li>
+<li><a href="http://gank.io/2016/09/08">今日力推：完整的电影 App / 类似快传 App / 又一款炫酷的分享组件 / AndroidSDK Support 自带夜间、日间模式切换详解</a></li>
+<li><a href="http://gank.io/2016/09/07">今日力推：iOS 波纹效果，超酷！/ iOS 过渡色背景 / Android 图片浏览组件 / Android 崩溃现场恢复库</a></li>
+<li><a href="http://gank.io/2016/09/06">今日力推：ReactNative 实现的 WhatsApp 客户端 / 很有设计感的 Day Night Switch 切换按钮 / 用 TextKit 显示复杂数学公式 / 可跟随手指滑动，进行响应式滑动的背景效果 </a></li>
+<li><a href="http://gank.io/2016/09/05">今日推荐：iOS 简单转场框架 / iOS 滑动 Tab 效果 / Android 代码阅读器， / 使用 Transition FrameWork 实现有意义的转场动画</a></li>
+<li><a href="http://gank.io/2016/09/02">今日推荐：Android 滑动删除 Item 组件 / RecyclerView Snap 边缘停止效果 / React Native Material Design / iOS 梯度色彩</a></li>
+<li><a href="http://gank.io/2016/09/01">今日力推：iOS 超棒的图片选择器和高效 Gif Apng 图片引擎 / Android Matrix 详解 / Android 安全存储 SharedPreference 解决方案 </a></li>
+<li><a href="http://gank.io/2016/08/31">今日力推：iOS 屏幕亮度监控 / Android 类似 Facebook 闪烁式的 Load View / Android7.0 新特性添之快速设定 </a></li>
+<li><a href="http://gank.io/2016/08/30">今日力推：Android 漂亮的画廊效果 / Android 着色器和过滤器详解 / Canvas 粒子动画 / iOS 轻量级 Note 开元项目 Dropnote</a></li>
+<li><a href="http://gank.io/2016/08/29">今日力推：利用深度学习恢复马赛克图片 / 一套完整的开源推送解决方案 / 基于 1 万小时理论开发的完整 App / Android 大话插件 - 动态加载插件</a></li>
+<li><a href="http://gank.io/2016/08/26">今日力推：iOS 功能完整的图片上传 UIImageView 扩展 / Android 环形进度条类似 apple watch 健身记录 / Android 开发代码规范 / Instagram 跨平台桌面客户端</a></li>
+<li><a href="http://gank.io/2016/08/25">今日力推：iOS 图片转场效果 / Auto Layout 设计美学 / Android 拼图支持库，轻松实现 Instagram Layout 效果 / Linux 优秀软件资源大全中文版 </a></li>
+<li><a href="http://gank.io/2016/08/24">今日力推：使用 ASDK 性能调优 - 提升 iOS 界面的渲染性能 / iOS 带有过度效果的夜间模式切换效果 / Android 蛛网评分组件 / Android 上下滑动的 ViewPager，漂亮！</a></li>
+<li><a href="http://gank.io/2016/08/23">今日力推：Android 概念化注册设计效果 / Android 仿支付宝笑脸加载条 / Android 仿 Google Space 导航栏 / Swift 展开菜单按钮</a></li>
+<li><a href="http://gank.io/2016/08/22">今日力推：Swift 实现 OCR 扫描身份证 / Android 类似 Duolinguo 卡片滑动效果 / Zxing Android 简化使用流程库</a></li>
+<li><a href="http://gank.io/2016/08/19">今日力推：基于 Floating Button 实现的菜单展开效果 / Android 概念化进度条 / Android 面试题收集 / iOS 引导页面 和 云朵效果</a></li>
+<li><a href="http://gank.io/2016/08/18">今日力推：iOS 漂亮的一个视察画廊效果库 / Mac 下一个使用简单的 Android 反编译工具 / 用最简单的方式来自动构建和发布你的 iOS 和 Android 应用程序</a></li>
+<li><a href="http://gank.io/2016/08/17">今日力推：iOS 崩溃自动截屏收集 / RxSwift Marble 图学习辅助工具 / Android LowPoly 风格图生成工具 / React 优秀组件收集</a></li>
+<li><a href="http://gank.io/2016/08/16">今日力推：Python 机器学习最好的教程 / 程序安全防范核对手册 / 在你的 Mac 上接收 Android 设备的通知消息 / iOS 通过 JSON 来配置你的组件属性</a></li>
+<li><a href="http://gank.io/2016/08/15">今日力推：漂亮的 Android 图表库 / 那些超棒的 Linux 软件 / 一张图看懂 Javascript / 又一个漂亮的 iOS 动画库</a></li>
+<li><a href="http://gank.io/2016/08/12">今日力推：Simplenote 所有版本 App 开源 / 水滴汇集下载效果 / Android 一分钟学会实现动态模糊</a></li>
+<li><a href="http://gank.io/2016/08/11">今日力推：安卓音频录制 / 雅虎开源一系列 iOS UI 组件 / iOS 页面切换指示器 / Android Header 自动随滑动浮动</a></li>
+<li><a href="http://gank.io/2016/08/10">今日力推：Linus TED 演讲 / iOS 图片剪裁辅助工具 / iOS 文件变化监测 / Android Loading 动画效果 / 漂亮的 Android 引导效果框架</a></li>
+<li><a href="http://gank.io/2016/08/09">今日力推：利用 Camera 和 Matrix 实现有趣的卡片效果 / 人工智能、机器学习、深度学习合体的图片资源识别库 / 漂亮的 iOS 图片裁切工具库 </a></li>
+<li><a href="http://gank.io/2016/08/08">今日推荐：利用双面镜实现一个酷酷的家庭智能镜面终端 / iOS 交互效果很棒的图片选择器 / 仿 Evernote 下拉弹性效果 / Android 摄像头实时滤镜 / 优雅的 Android Checkbox 动画效果</a></li>
+<li><a href="http://gank.io/2016/08/05">今日力推：类似 Moom 的开源项目(见 App) / Android 图片滤镜算法和 MD 风格登录框 以及 复杂的多类型列表视图新写法/ iOS 全新交互的 Tab 切换效果</a></li>
+<li><a href="http://gank.io/2016/08/03">今日力推：iOS 自带字体快速预览 / Android 眼前一亮的 Toast / 一起来学习 Lambda </a></li>
+<li><a href="http://gank.io/2016/08/02">今日力推：iOS Google Inbox 下拉 Cell 展开效果 / iOS Checkbox 动画 / 50 条 Gradle 使用建议 / RecyclerView 支持玩儿游戏的下拉刷新</a></li>
+<li><a href="http://gank.io/2016/08/01">今日力推：Mac 智能自动屏幕亮度调节 / iOS 智能人脸居中 / Android 分层视差效果 / Android 聊天样式表</a></li>
+<li><a href="http://gank.io/2016/07/29">今日力推：iOS 滑动 Nav Bar 效果 / iOS 手写电子签名 / Android JobScheduler 和新晋 API 讲解 / 来自 Flipboard 的漂亮 Banner / 基于 Picasso 的人脸检测自动裁图</a></li>
+<li><a href="http://gank.io/2016/07/28">今日力推：iOS 完整相机贴纸 App / Android 原生 Markdown 解析器 / Android MD 风格 Search Bar / 4 分钟，感受 Web Design 优化的艺术</a></li>
+<li><a href="http://gank.io/2016/07/27">今日力推：动态修改 C 语言函数的实现 / Swift Vapor 项目中的网络层库 / Android 消息处理机制 / OpenGL ES 从入门到进阶</a></li>
+<li><a href="http://gank.io/2016/07/26">今日力推：Google I/O 2016 笔记之 Espresso 进阶 / iOS/Android App Jenkins CI 打包平台搭建详细流程 / 白话函数式编程</a></li>
+<li><a href="http://gank.io/2016/07/25">今日力推：Wire 开源全套 IM 方案 / PathMeasure 之迷径追踪 / iOS 简洁漂亮的层叠菜单</a></li>
+<li><a href="http://gank.io/2016/07/22">今日力推：Android 中文字体压缩神器 / 详解 AIDL in、out、inout / React Native 实现的 GMTC 客户端 / iOS 可用的设备信息工具库</a></li>
+<li><a href="http://gank.io/2016/07/21">今日力推：iPic Mac 上的快速传图工具 / 阶梯范围选择组件 </a></li>
+<li><a href="http://gank.io/2016/07/20">今日力推：自定义 Behavior 实现 Android 知乎首页 / Awesome-Mac / 各门类好书 top 100</a></li>
+<li><a href="http://gank.io/2016/07/19">今日力推：Swift Monad 深入浅出 / 完整跑步记录 App / Android 3D 立体旋转容器</a></li>
+<li><a href="http://gank.io/2016/07/18">今日力推：iOS VR 开源播放器 / Android 透明状态栏研究与兼容 / 利用 Node CSS JS 实现的一款超帅 Terminal ！</a></li>
+<li><a href="http://gank.io/2016/07/15">今日力推：Dropbox 开源超强无损压缩算法 / iOS 碎纸机动画效果 / 饿了么开源更实用 Android 跨进程通信框架</a></li>
+<li><a href="http://gank.io/2016/07/14">ATM 机不吐钞票却吐出了更多的惊喜和感动。</a></li>
+<li><a href="http://gank.io/2016/07/13">真正的俄罗斯 GTA (敖厂长新视频</a></li>
+<li><a href="http://gank.io/2016/07/12">虾看什么 -- 乡巴佬大战脑残之如果爱有天意（见休息视频</a></li>
+<li><a href="http://gank.io/2016/07/11">黄渤演讲：谁会拒绝一个幽默的人。（见休息视频）</a></li>
+<li><a href="http://gank.io/2016/07/08">哈哈哈哈，报告老板这集太逗了，小时代又被黑了一遍~</a></li>
+<li><a href="http://gank.io/2016/07/07">BBC - 神秘的混沌理论 ( 见休息视频</a></li>
+<li><a href="http://gank.io/2016/07/06">8 分钟看完权力的游戏第六季（强力剧透）</a></li>
+<li><a href="http://gank.io/2016/07/05">Gank 的内容要进阶啦，伴随你一同成长~</a></li>
+<li><a href="http://gank.io/2016/07/04">写了这么久代码，第一台 PC 的故事，你知道吗？（见休息视频）</a></li>
+<li><a href="http://gank.io/2016/07/01">万万没想到你是酱紫的刘备（看了又看）</a></li>
+<li><a href="http://gank.io/2016/06/30">最近的干货看着舒服嘛？</a></li>
+<li><a href="http://gank.io/2016/06/29">无损音乐下载哪里好，音乐网站 app 大评比</a></li>
+<li><a href="http://gank.io/2016/06/28">人类最后的生存防线 斯瓦尔巴全球种子库（居然真的有这么一个地方）</a></li>
+<li><a href="http://gank.io/2016/06/27">来，感受下配图效果如何（还在测试阶段...）</a></li>
+<li><a href="http://gank.io/2016/06/24">下周起，所有的干货都会有配图啦~ 给大家一个更直观的体验~</a></li>
+<li><a href="http://gank.io/2016/06/23">给大家推荐一部超好看的俄剧：《我是如何成为俄罗斯人的》</a></li>
+<li><a href="http://gank.io/2016/06/22">当这些极限运动遇到神曲《Fade》，一下子就让你清醒起来！</a></li>
+<li><a href="http://gank.io/2016/06/21">你的耳机音质到底如何？教你如何选耳机（见休息视频）</a></li>
+<li><a href="http://gank.io/2016/06/20">老外对辣条的初体验 <em>(:3</em>∠)_ (见休息视频</a></li>
+<li><a href="http://gank.io/2016/06/17">有没有觉得最近干货质量超高的！一首 Every Time 结束这疲惫的一周~</a></li>
+<li><a href="http://gank.io/2016/06/16">游泳时不小心摸到别人的小弟弟怎么办？！</a></li>
+<li><a href="http://gank.io/2016/06/15">你还记得那个你毕业季分手的那个姑娘么？（见休息视频</a></li>
+<li><a href="http://gank.io/2016/06/14">昨天的 Apple WWDC2016 你怎么看？</a></li>
+<li><a href="http://gank.io/2016/06/13">快来试试你的耳朵，mp3 与无损差别测试~</a></li>
+<li><a href="http://gank.io/2016/06/12">8 分钟速读《魔兽》电影原著（见休息视频）</a></li>
+<li><a href="http://gank.io/2016/06/08">昨天的魔兽首映，去看了吗！</a></li>
+<li><a href="http://gank.io/2016/06/07">高考是你们走上人生巅峰的第一步，考生们，加油！</a></li>
+<li><a href="http://gank.io/2016/06/06">高考要来了，祝福各位学子们。</a></li>
+<li><a href="http://gank.io/2016/06/03">九分钟看完日本历史（见休息视频</a></li>
+<li><a href="http://gank.io/2016/06/02">再来看一次《当幸福来敲门》</a></li>
+<li><a href="http://gank.io/2016/06/01">宠物小精灵 和 GBA 就是我的童年，你的童年呢？</a></li>
+<li><a href="http://gank.io/2016/05/31">一年一度的高考和毕业季要来了</a></li>
+<li><a href="http://gank.io/2016/05/30">有些事只有女生才能做，男生做的话会（韩国版</a></li>
+<li><a href="http://gank.io/2016/05/27">那些女生做起来很正常，男生做起来很奇怪的事...</a></li>
+<li><a href="http://gank.io/2016/05/26">昨天陆家嘴视频害的 Tumblr 都被河蟹了，因小失大啊，老司机们！</a></li>
+<li><a href="http://gank.io/2016/05/25">程序员该如何挑选合适的耳机（见：今日视频</a></li>
+<li><a href="http://gank.io/2016/05/24">Gank 一定是客户端最多的网站！！再次分享两款客户端，感谢大家的开源精神！！</a></li>
+<li><a href="http://gank.io/2016/05/23">8 分钟混剪，看尽电影世界里的哲学（PS：今天的干货超棒</a></li>
+<li><a href="http://gank.io/2016/05/20">快来看昨天妹子的正脸，感觉好像刘亦菲</a></li>
+<li><a href="http://gank.io/2016/05/19">昨天的 Google IO 看了么？感觉如何？</a></li>
+<li><a href="http://gank.io/2016/05/18">今晚，Google IO Extend，欢迎一起来 High！</a></li>
+<li><a href="http://gank.io/2016/05/17">施瓦辛格的励志演讲</a></li>
+<li><a href="http://gank.io/2016/05/16">猜不透的结局，套路何其多!</a></li>
+<li><a href="http://gank.io/2016/05/13">今天的休息视频不要公放...不要怪我没提醒你...</a></li>
+<li><a href="http://gank.io/2016/05/12">Gank 里程碑：真人妹子投稿第一期 -- 元气满满的冬菇酱！</a></li>
+<li><a href="http://gank.io/2016/05/11">秒拍牛人大集合，看到哪个你跪了</a></li>
+<li><a href="http://gank.io/2016/05/10">男女朋友不要轻易的说分手……这结局套路有点深</a></li>
+<li><a href="http://gank.io/2016/05/09">有人的地方，就有江湖，KTV 也是如此。如果把 K 歌拍成武侠…… </a></li>
+<li><a href="http://gank.io/2016/05/06">给大家看个狼性团队视频（很好奇视频是怎么被拍出来的</a></li>
+<li><a href="http://gank.io/2016/05/05">莆田系医院网站提醒-Chrome 插件 （见瞎推荐，赶紧给父母的浏览器装一个</a></li>
+<li><a href="http://gank.io/2016/05/04">泰国网红的心酸日常》：凄美的浪漫，虚无与真实</a></li>
+<li><a href="http://gank.io/2016/05/03">搞笑动画短片《水手与死神》，现在的死神啊，一言不合就开始卖萌！</a></li>
+<li><a href="http://gank.io/2016/04/29">假期要来了，准备好出去玩儿了么？还是打算宅起来。</a></li>
+<li><a href="http://gank.io/2016/04/28"> 从今天开始，我的梦想是做一名人质。</a></li>
+<li><a href="http://gank.io/2016/04/27">小明一出手，便知有没有！</a></li>
+<li><a href="http://gank.io/2016/04/26">励志滑板短片[梦想] </a></li>
+<li><a href="http://gank.io/2016/04/25">你还记得这些画面吗？(暴露年龄系列</a></li>
+<li><a href="http://gank.io/2016/04/22">每天一秒钟，成为新自己</a></li>
+<li><a href="http://gank.io/2016/04/21">不要吝惜你的爱心，你一次不经意的付出，说不定会有满满的回报</a></li>
+<li><a href="http://gank.io/2016/04/20">Useless box 升级了，你有没有感觉到强烈的愤怒，哈哈哈哈哈</a></li>
+<li><a href="http://gank.io/2016/04/19">《疯狂动物城》纪录片《Imagining Zootopia》带你探秘制作历程</a></li>
+<li><a href="http://gank.io/2016/04/18">一则风靡全球的短片 爸爸是个骗子。</a></li>
+<li><a href="http://gank.io/2016/04/15">科比赛后演讲。这个男人到最后也没有说一句道别的话，只留下一句 mamba out！</a></li>
+<li><a href="http://gank.io/2016/04/14">男生的最强反击：让女生猜猜这些女优是谁？(见休息视频</a></li>
+<li><a href="http://gank.io/2016/04/13">这个胖子的脱口秀好好玩儿（口技满分</a></li>
+<li><a href="http://gank.io/2016/04/12">沈腾和小岳岳联袂说相声，太好玩儿啦，一定要看</a></li>
+<li><a href="http://gank.io/2016/04/11">这脑洞太大我已无力承受，你能想明白其中的逻辑么？（见休息视频</a></li>
+<li><a href="http://gank.io/2016/04/08">治愈动画短片：松鼠的历险</a></li>
+<li><a href="http://gank.io/2016/04/07">一个超漂亮的 Android Tab 导航实现</a></li>
+<li><a href="http://gank.io/2016/04/06">Yalantis 又推出新库！ 简直好看到爆！</a></li>
+<li><a href="http://gank.io/2016/04/05">或许你身边一个不起眼的小人物就是某个领域的超级大神</a></li>
+<li><a href="http://gank.io/2016/04/01">干货集中营获得 200 万人民币天使投资</a></li>
+<li><a href="http://gank.io/2016/03/31">中国版的电梯摸男人手</a></li>
+<li><a href="http://gank.io/2016/03/30">北京姑娘一首《幸亏没生在古代》（抱歉今天发晚啦</a></li>
+<li><a href="http://gank.io/2016/03/29">如果是你，你会帮助这个小男孩吗？</a></li>
+<li><a href="http://gank.io/2016/03/28">Google StudyJams 学习班开始报名啦！</a></li>
+<li><a href="http://gank.io/2016/03/25">许巍新歌 《生活不止眼前的苟且》MV 出来了！</a></li>
+<li><a href="http://gank.io/2016/03/24">left-pad 这样的 module 到底意义何在呢？</a></li>
+<li><a href="http://gank.io/2016/03/23">熊本熊蠢萌视频合集（快来看休息视频轻松一下</a></li>
+<li><a href="http://gank.io/2016/03/22">证明爱的方式只有一种，那就是为它付出时间，为它做点什么</a></li>
+<li><a href="http://gank.io/2016/03/21">超屌发明手写臂！小时候被发抄作业，有这个就好了。</a></li>
+<li><a href="http://gank.io/2016/03/18">墨墨姑娘开了个 Gank 周边小店~ </a></li>
+<li><a href="http://gank.io/2016/03/17">匠心写作发表新文章：《RxJava 与 Retrofit 结合的最佳实践》</a></li>
+<li><a href="http://gank.io/2016/03/16">儿子第一次带女同学回家写作业，结果遭到老爸神助攻！</a></li>
+<li><a href="http://gank.io/2016/03/15">今天开奖呐！开完奖结果会在网站公布，大家随时关注哇！</a></li>
+<li><a href="http://gank.io/2016/03/14">这演技真是贱出水平了，大哥出去笑一会儿就回来了。（文松演技要上天了，哈哈哈哈</a></li>
+<li><a href="http://gank.io/2016/03/11">Gank 一周年生日快乐！带了一波福利给大家！</a></li>
+<li><a href="http://gank.io/2016/03/10">papi 酱《张总教你做电影》，哈哈哈哈笑死了...哎呀我操...虐死了...太虐了（见今日视频</a></li>
+<li><a href="http://gank.io/2016/03/09">别太任性了，别赌气对抗了；你能伤害到的的，都是最爱你的人</a></li>
+<li><a href="http://gank.io/2016/03/08">程序媛们，节日快乐！</a></li>
+<li><a href="http://gank.io/2016/03/07">一句话惹怒设计师，程序员们快来看看，以防被你司设计师砍...</a></li>
+<li><a href="http://gank.io/2016/03/04">一位叫 Muharrem 的失聪男子，为了给他完美的一天，小镇里的所有人都学会了手语</a></li>
+<li><a href="http://gank.io/2016/03/03">承认问题的存在，才是解决问题的第一步。（见休息视频</a></li>
+<li><a href="http://gank.io/2016/03/02">《你比你想象的更美丽》：推荐给程序媛或者你身边的妹纸看。</a></li>
+<li><a href="http://gank.io/2016/03/01">小李子终于拿到奥斯卡了! 而且小李子在台上的讲话真的很赞啊！</a></li>
+<li><a href="http://gank.io/2016/02/29">拜托给小李子一个小金人吧！拜托。</a></li>
+<li><a href="http://gank.io/2016/02/26">当所有的人生疑问都能得到回答，那些爱过的遗忘的所有的，答案。（见今日视频</a></li>
+<li><a href="http://gank.io/2016/02/25">每个人都值得以某种方式被人深爱。喜欢你，就想给你拍照片！</a></li>
+<li><a href="http://gank.io/2016/02/24">来看看耿直 Boy 薛之谦如何宣传自己的专辑...(哈哈哈，好耿直，快来中午休息下）</a></li>
+<li><a href="http://gank.io/2016/02/23">国外网友自制创意短片《纸片人入侵》，大片即视感分分钟脑洞大开！</a></li>
+<li><a href="http://gank.io/2016/02/22">一段感人的告白，阳光总在风雨后，单身狗竟然也看得津津有味</a></li>
+<li><a href="http://gank.io/2016/02/19">财大气粗的华为拍的微电影，全部由真人故事改编。不算精致，但热泪盈眶！( 其实正是现在年轻人的青春</a></li>
+<li><a href="http://gank.io/2016/02/18">90 后，扪心又淡淡地问自己，老了么？( 话说：我也开始拒绝听新歌了</a></li>
+<li><a href="http://gank.io/2016/02/17">Kotlin 1.0 发布啦，另外强烈推荐 两篇 Android 逆向分析的文章，写的超赞！</a></li>
+<li><a href="http://gank.io/2016/02/16">央视禁播的内部晚会，比春晚精彩 100 倍</a></li>
+<li><a href="http://gank.io/2016/02/15">开工大吉！干货回来啦！</a></li>
+<li><a href="http://gank.io/2016/02/04">史上最强撕逼大战（马云演讲，王健林拆台）</a></li>
+<li><a href="http://gank.io/2016/02/03">德国汉堡微缩景观世界 （目瞪口呆状，好想去看）</a></li>
+<li><a href="http://gank.io/2016/02/02">感动：有时候，失去也可以是一种成全。</a></li>
+<li><a href="http://gank.io/2016/02/01">回家的方向 (过年了, 早点回家)</a></li>
+<li><a href="http://gank.io/2016/01/29">Facebook 要关闭 Parse 了，然后开源了 Server 端的代码！感觉可以做很多事情呢！</a></li>
+<li><a href="http://gank.io/2016/01/28">早上 GitHub 无法访问持续两小时，对此，你怎看？</a></li>
+<li><a href="http://gank.io/2016/01/27">妹子和喵应该算是多数程序员的最爱... 另外今天视频也不错哦！</a></li>
+<li><a href="http://gank.io/2016/01/26">程序员的衣柜都是只有一件衣服么...</a></li>
+<li><a href="http://gank.io/2016/01/25">想要有女朋友，必须这么做！！（见休息视频</a></li>
+<li><a href="http://gank.io/2016/01/22">最近风大，大家要注意保暖</a></li>
+<li><a href="http://gank.io/2016/01/21">記憶月台（见休息视频）</a></li>
+<li><a href="http://gank.io/2016/01/20">缅怀：一部关于“哈利·波特”选角、拍摄花絮、访谈等的纪录片</a></li>
+<li><a href="http://gank.io/2016/01/19">《我是如何毁了我的大学》千千万万大学生真实写照。</a></li>
+<li><a href="http://gank.io/2016/01/18">这老司机的车开的也是没谁了（哈哈哈哈哈</a></li>
+<li><a href="http://gank.io/2016/01/15">那些年，在网吧和小伙伴一起联机的游戏（满满的回忆）</a></li>
+<li><a href="http://gank.io/2016/01/14">善言暖心，恶语似刀。不要对孩子使用语言暴力（见今日视频</a></li>
+<li><a href="http://gank.io/2016/01/13">多帮助一些人，不要穷的只剩下钱！</a></li>
+<li><a href="http://gank.io/2016/01/12">霍炬写文章喷百度了</a></li>
+<li><a href="http://gank.io/2016/01/11">一起来抵制百度吧！</a></li>
+<li><a href="http://gank.io/2016/01/08">周末有国内第一场 Swift 大会，欢迎大家来面基</a></li>
+<li><a href="http://gank.io/2016/01/07">会跳舞的姑娘不能更好看啊！</a></li>
+<li><a href="http://gank.io/2016/01/06">朝鲜已经会放氢弹了</a></li>
+<li><a href="http://gank.io/2016/01/05">超赞的飞机近景视频</a></li>
+<li><a href="http://gank.io/2016/01/04">依稀记得第一次听《六月的雨》，第一次看《武林外传》时候的场景，俨然已经十年过去了。</a></li>
+<li><a href="http://gank.io/2015/12/31">今天是 2015 年最后一天，许个 2016 年的心愿吧~</a></li>
+<li><a href="http://gank.io/2015/12/30">锤子今年的远程协助功能真的很煽情啊</a></li>
+<li><a href="http://gank.io/2015/12/29">少年心：KG 回家恍如隔日，15 年后梦回当年</a></li>
+<li><a href="http://gank.io/2015/12/28">常小兵被调查会带来什么社会影响？</a></li>
+<li><a href="http://gank.io/2015/12/25">圣诞节快乐！今天晚上约人了么？！</a></li>
+<li><a href="http://gank.io/2015/12/24">虐菜好爽：欧文扮老头打街球四部大合集（见今日视频</a></li>
+<li><a href="http://gank.io/2015/12/23">读书的意义：读书不是为了考试，而是为了成为一个出色的人。（今日视频</a></li>
+<li><a href="http://gank.io/2015/12/22">答完最后这一道题，他就能拿到一百万美金</a></li>
+<li><a href="http://gank.io/2015/12/21">德国圣诞广告《回家》，好感人，求 BGM</a></li>
+<li><a href="http://gank.io/2015/12/18">还记得 Atom 的那个字体炸裂效果么？Xcode 也能支持这个效果了！</a></li>
+<li><a href="http://gank.io/2015/12/17">今天献给大家一个暖心而让人心酸的视频，朋友们，常回家看看，过年回家的车票买好了么？</a></li>
+<li><a href="http://gank.io/2015/12/16">第一次带女友回家，老爸爆笑神助攻</a></li>
+<li><a href="http://gank.io/2015/12/15">关于 minggeJS ，你怎么看？</a></li>
+<li><a href="http://gank.io/2015/12/14">雾霾好大，想起柴静的视频</a></li>
+<li><a href="http://gank.io/2015/12/11">求助大神这是什么歌</a></li>
+<li><a href="http://gank.io/2015/12/10">心理学视频：压抑的来源（今天的视频很有意思，值得一看</a></li>
+<li><a href="http://gank.io/2015/12/09">如果以前有人问我特效烂，我能不能将就，我一定会说不能，但看了这位小哥的表演以后我会说，能，我绝对能！(见休息视频</a></li>
+<li><a href="http://gank.io/2015/12/08">说好的打爆下路，哈哈哈被配音笑尿了！！</a></li>
+<li><a href="http://gank.io/2015/12/07">西游记要被人玩儿坏啦~</a></li>
+<li><a href="http://gank.io/2015/12/04">Swift 开源了！ 会不会成为下一个 Javascript 呢？</a></li>
+<li><a href="http://gank.io/2015/12/03">公益广告：女孩是不能暴力对待的，即使你手捧鲜花</a></li>
+<li><a href="http://gank.io/2015/12/02">VICE.CN 最近拍了陈冠希的纪录片，你们怎么看？</a></li>
+<li><a href="http://gank.io/2015/12/01">震撼而感动：努力是没有借口的</a></li>
+<li><a href="http://gank.io/2015/11/30">今天的视频笑死我了，哈哈哈哈哈哈哈</a></li>
+<li><a href="http://gank.io/2015/11/27"> 干了这碗鸡汤然后就去过周末！</a></li>
+<li><a href="http://gank.io/2015/11/26">第一次瞅见雪的狗狗们</a></li>
+<li><a href="http://gank.io/2015/11/25">那些年我们看过的香港电影，这剪辑，让人热血沸腾</a></li>
+<li><a href="http://gank.io/2015/11/24">姗姗来迟。</a></li>
+<li><a href="http://gank.io/2015/11/23">帝都的雪景真的很漂亮！</a></li>
+<li><a href="http://gank.io/2015/11/20">不知不觉还是中了圈套 -。- 今日话题：你妈给你介绍对象了吗？</a></li>
+<li><a href="http://gank.io/2015/11/19">突然的感动：一句我爱你，戳中多少中国人的泪点</a></li>
+<li><a href="http://gank.io/2015/11/18">最熟悉的陌生人——周星驰</a></li>
+<li><a href="http://gank.io/2015/11/17">匿名者组织对 ISIS 宣战了</a></li>
+<li><a href="http://gank.io/2015/11/16">人生低谷又怎样，要相信总有一扇门为你敞开，照亮希望。而缘分也许就不期而遇，遇见就不要错过（见今日鸡汤视频</a></li>
+<li><a href="http://gank.io/2015/11/13">这两天雾霾大成狗！！让不让人活了！！</a></li>
+<li><a href="http://gank.io/2015/11/12">永不放弃的心，比钻石更珍贵（虽然视频看了很多次，但是每次都很感动</a></li>
+<li><a href="http://gank.io/2015/11/11">光棍节来玩儿抽奖吧！感谢大家一直以来对干货集中营的支持！我爱你们！！</a></li>
+<li><a href="http://gank.io/2015/11/10">匠心写作发新文章啦：给 JavaScript 初心者的 ES2015 实战</a></li>
+<li><a href="http://gank.io/2015/11/09">昨天 GDG 干货群友合影出来啦，你们猜下哪个是我？</a></li>
+<li><a href="http://gank.io/2015/11/06">GDG 周日在北京举办 Devfest，大家记得要来哟！</a></li>
+<li><a href="http://gank.io/2015/11/05">史诗般的人鹅大战</a></li>
+<li><a href="http://gank.io/2015/11/04">无与伦比的 Hello 翻唱~ </a></li>
+<li><a href="http://gank.io/2015/11/03">中国农业大学最开辩论赛— 农大男生寂寞还是女生寂寞</a></li>
+<li><a href="http://gank.io/2015/11/02">得入暴雪门，无悔游人生</a></li>
+<li><a href="http://gank.io/2015/10/30">万圣节要来啦~ 准备好出去浪了么？</a></li>
+<li><a href="http://gank.io/2015/10/29">那一晚，上帝借给了他 35 秒，却要他用一生来还！</a></li>
+<li><a href="http://gank.io/2015/10/28">当老板说今天不来了的时候，员工们的反应时这样的，你是不是中枪了...（见视频</a></li>
+<li><a href="http://gank.io/2015/10/27">林志玲的励志演讲（见鸡汤视频</a></li>
+<li><a href="http://gank.io/2015/10/26">奇酷手机不是说很安全么？怎么被攻破了？这脸打的啪啪响~</a></li>
+<li><a href="http://gank.io/2015/10/23">维秘模特都开始写代码了，你还有什么理由不努力！（最后附一碗鸡汤，大家周末愉快</a></li>
+<li><a href="http://gank.io/2015/10/22">BAT 齐缩招，你怎么看？</a></li>
+<li><a href="http://gank.io/2015/10/21">Google 是不是被骗了？！</a></li>
+<li><a href="http://gank.io/2015/10/20">到现在想起昨天小米发布会内容... 满脑子都是这张图...</a></li>
+<li><a href="http://gank.io/2015/10/19">每天一秒钟 （见鸡汤视频</a></li>
+<li><a href="http://gank.io/2015/10/16">周末要来了！</a></li>
+<li><a href="http://gank.io/2015/10/15">以后干货里新增一个小版块 - App 板块</a></li>
+<li><a href="http://gank.io/2015/10/14"> csdn mdcc 明天有移动开发相关的讲座，欢迎大家来面基。</a></li>
+<li><a href="http://gank.io/2015/10/13">戴尔 670 亿美元收购 EMC，太可怕了。</a></li>
+<li><a href="http://gank.io/2015/10/12">干货集中营新品发布 - 匠心写作</a></li>
+<li><a href="http://gank.io/2015/10/10">再给大家灌输一天鸡汤，希望大家从国庆节假期里振作起来。（见视频</a></li>
+<li><a href="http://gank.io/2015/10/09">感觉没有动力的时候，来看看今天的短片吧！</a></li>
+<li><a href="http://gank.io/2015/10/08">​ 节后就是不想上班班（不要问我班班是谁！</a></li>
+<li><a href="http://gank.io/2015/09/30">国庆来了，争取回家！！（被今天的视频看哭了...</a></li>
+<li><a href="http://gank.io/2015/09/29">柴静专访周星驰（今日视频</a></li>
+<li><a href="http://gank.io/2015/09/28">这逼装的，我给满分（ 休息视频</a></li>
+<li><a href="http://gank.io/2015/09/25">今天朋友圈都是晒 6s 开箱的。</a></li>
+<li><a href="http://gank.io/2015/09/24">支付宝的同学也是会玩儿！ --- 支付宝乐队励志新歌《小小的蚂蚁》</a></li>
+<li><a href="http://gank.io/2015/09/23">和女生谈恋爱，男生必须得先明白的一些事情！</a></li>
+<li><a href="http://gank.io/2015/09/22">“重磅！王岐山怎么看中国社会的“不平等”问题”</a></li>
+<li><a href="http://gank.io/2015/09/21">谷歌发邀请函在 29 日举行 Android 发布会</a></li>
+<li><a href="http://gank.io/2015/09/18">周末来了，周末的安排是？</a></li>
+<li><a href="http://gank.io/2015/09/17">据说 Facebook 准备推出 “不赞” 按钮了，国内社交网络要赶紧跟进！（（ 好期待大家在社交网络撕逼翻脸的样子</a></li>
+<li><a href="http://gank.io/2015/09/16">昨天，热爱开源的 Android 开发者们齐聚一堂，逗比了一夜。</a></li>
+<li><a href="http://gank.io/2015/09/15">大家有去电影院看 碟中谍 5 么？</a></li>
+<li><a href="http://gank.io/2015/09/14">疑似周杰豪赌欠债后人间蒸发</a></li>
+<li><a href="http://gank.io/2015/09/11">模特圈的漂亮妹子开始混码农圈了 （竞争太激烈了，，再不学习充电就要没工作了！细节看图！</a></li>
+<li><a href="http://gank.io/2015/09/10">今日话题：买还是不买？</a></li>
+<li><a href="http://gank.io/2015/09/09">来给今天的妹子打个分</a></li>
+<li><a href="http://gank.io/2015/09/08">苹果发布会要来了，我还是很期待 iSoap... 你最期待什么？</a></li>
+<li><a href="http://gank.io/2015/09/07">军训要开始了，还记得你当年的军训么？我现在回想起来还像昨天发生的一样。</a></li>
+<li><a href="http://gank.io/2015/09/06">今天马路上好像一下子挤起来了~</a></li>
+<li><a href="http://gank.io/2015/09/02">Google 今天换了 Logo， 你觉得好看么？</a></li>
+<li><a href="http://gank.io/2015/09/01">哪一年的开学让你印象深刻？</a></li>
+<li><a href="http://gank.io/2015/08/31">京东和淘宝天猫，你看好哪个？</a></li>
+<li><a href="http://gank.io/2015/08/28">曾经给一个日本女歌手写过一封 Email 表达对她的支持和喜爱，后来居然还收到了她的回复。说说你干过如今依然觉得美好的事情吧！</a></li>
+<li><a href="http://gank.io/2015/08/27">公交车一车都是托儿，包括司机，去整搞一位正常乘客（戳休息视频</a></li>
+<li><a href="http://gank.io/2015/08/26">看完今天的搞笑视频，衍生出来的今日话题：你们第一次买套套尴尬么？</a></li>
+<li><a href="http://gank.io/2015/08/25">晚上有锤子的发布会，大家不要错过了！</a></li>
+<li><a href="http://gank.io/2015/08/24">从海龟鼻子里取出人类留下的吸管 - 看的我好难受...</a></li>
+<li><a href="http://gank.io/2015/08/21">昨天你有采取行动么？ 有没有什么七夕好玩儿的事儿和大家分享的？</a></li>
+<li><a href="http://gank.io/2015/08/20">每个单身的人，或许心里都藏着一个不可能的人吧。</a></li>
+<li><a href="http://gank.io/2015/08/19">谁知道今天视频里妹子的微博... 我要去 fo！！！</a></li>
+<li><a href="http://gank.io/2015/08/18">你造吗？ Android M ( 棉花糖 )来了。</a></li>
+<li><a href="http://gank.io/2015/08/17">干货集中营新品发布会 - 不许无聊俱乐部</a></li>
+<li><a href="http://gank.io/2015/08/14">今日话题：到 30 岁时，你希望自己会是什么样的？（ 麻痹，差点儿被今天的视频看哭。 </a></li>
+<li><a href="http://gank.io/2015/08/13">即便是人祸，也要挺过去。</a></li>
+<li><a href="http://gank.io/2015/08/12">乐视自行车 3999 - 39999</a></li>
+<li><a href="http://gank.io/2015/08/11">腾讯昨天把 360 云盘举报了。</a></li>
+<li><a href="http://gank.io/2015/08/10">你能认出今天的妹子么？</a></li>
+<li><a href="http://gank.io/2015/08/07">今天周五两发福利，休息视频包你笑的合不拢腿！</a></li>
+<li><a href="http://gank.io/2015/08/06">今日话题：你有痔疮么？</a></li>
+<li><a href="http://gank.io/2015/08/05">干货集中营支持搜索啦！</a></li>
+<li><a href="http://gank.io/2015/08/04">太热啦，太热啦。</a></li>
+<li><a href="http://gank.io/2015/08/03">广场舞要是都是这样的小苹果，我完全不会反对，你会吗？（戳休息视频看韩国性感版小苹果</a></li>
+<li><a href="http://gank.io/2015/07/31">心心念的周五来了！</a></li>
+<li><a href="http://gank.io/2015/07/30"> 一年一度的 ChinaJoy 又开始了... 没了疯狂 ShowGirl ，一下子好像没了气氛</a></li>
+<li><a href="http://gank.io/2015/07/29">我给大家送萝莉来了~</a></li>
+<li><a href="http://gank.io/2015/07/28">小学生之间的一场世纪骂战 TF Boy VS EXO</a></li>
+<li><a href="http://gank.io/2015/07/27">大新闻：主机游戏生产与销售全面解禁！！！</a></li>
+<li><a href="http://gank.io/2015/07/24">恶心打开电脑，看了一眼今天中午的视频，然后恶心死了。</a></li>
+<li><a href="http://gank.io/2015/07/23">听说昨天一群斯巴达在三里屯被北京公安制服了... </a></li>
+<li><a href="http://gank.io/2015/07/22">看完视频，发现成功拖了后腿</a></li>
+<li><a href="http://gank.io/2015/07/21">戳休息视频，学习表白新技能</a></li>
+<li><a href="http://gank.io/2015/07/20">老子，孙子，孔夫子 VS 尼采，苏格拉底，伏尔泰</a></li>
+<li><a href="http://gank.io/2015/07/17">4 年了，乔杉一直想来次大宝剑，最后一集来真格他却懵逼了 #心疼乔杉#</a></li>
+<li><a href="http://gank.io/2015/07/16">昨天另一件大事：新视野号探测器近距离飞过冥王星。 你对未来的生活有没有什么幻想？</a></li>
+<li><a href="http://gank.io/2015/07/15">对于优衣库事件，你怎么看？</a></li>
+<li><a href="http://gank.io/2015/07/14">早上地铁差点儿把我挤成照片儿。</a></li>
+<li><a href="http://gank.io/2015/07/13">看完今天的休息视频，你第一个想到了谁？</a></li>
+<li><a href="http://gank.io/2015/07/10">学了个新单词：Ladyboy</a></li>
+<li><a href="http://gank.io/2015/07/09">今天的休息视频不适合单身狗...</a></li>
+<li><a href="http://gank.io/2015/07/08">你们要的大尺度来了，点开需谨慎。</a></li>
+<li><a href="http://gank.io/2015/07/07">推荐一部新的 Geek 剧 -- 《黑客军团》</a></li>
+<li><a href="http://gank.io/2015/07/06">跑男大结局了，大家有什么其他好看的综艺节目推荐么？</a></li>
+<li><a href="http://gank.io/2015/07/03">如果再给你放一次暑假，你会去做些什么？</a></li>
+<li><a href="http://gank.io/2015/07/02">今天给大家推荐一个纽约黑帮纪录片，超赞！</a></li>
+<li><a href="http://gank.io/2015/07/01">时隔多年，机器人大战这个节目重新开启了！</a></li>
+<li><a href="http://gank.io/2015/06/30">今天帮妹子搬家了，所以干货发晚了！</a></li>
+<li><a href="http://gank.io/2015/06/29"> 一篇流水账 - 记旧金山 DockerCon 之旅。</a></li>
+<li><a href="http://gank.io/2015/06/26">我胡汉三又回来啦！换种说法就是你们朝思暮想的妹子图回来啦！</a></li>
+<li><a href="http://gank.io/2015/06/19">端午节要到了！你们公司有啥福利么？快来 Gank.IO 晒福利~ </a></li>
+<li><a href="http://gank.io/2015/06/18">今天“大”有看点，大家看妹子的时候扭扭脖子休息下。</a></li>
+<li><a href="http://gank.io/2015/06/17">周三了，眼睛各种睁不开</a></li>
+<li><a href="http://gank.io/2015/06/16">今天的视频精神污染太严重了...</a></li>
+<li><a href="http://gank.io/2015/06/15">今天是清新小妹一枚~ </a></li>
+<li><a href="http://gank.io/2015/06/12">今天看到一张图，感觉好有爱，大家有类似的推荐么？</a></li>
+<li><a href="http://gank.io/2015/06/11">大家有没有什么美剧推荐的？</a></li>
+<li><a href="http://gank.io/2015/06/10">你们那会儿高考结束后，都在做什么？</a></li>
+<li><a href="http://gank.io/2015/06/09">昨天的 WWDC 居然没有出 iSoap，简直太失望了..</a></li>
+<li><a href="http://gank.io/2015/06/08">晚上 WWDC，我们一起约看！</a></li>
+<li><a href="http://gank.io/2015/06/05">今天的妹子质量很高，不信你自己看。</a></li>
+<li><a href="http://gank.io/2015/06/04">芝麻信用分可以直接申请申根签证啦！</a></li>
+<li><a href="http://gank.io/2015/06/03">昨天魅族发布了魅蓝 Note2，只要 799，你怎么看？</a></li>
+<li><a href="http://gank.io/2015/06/02">又听说 Google 要入华</a></li>
+<li><a href="http://gank.io/2015/06/01">大朋友们，儿童节快乐</a></li>
+<li><a href="http://gank.io/2015/05/29">今天的休息视频一定要看...哈哈哈哈哈....找这样的女朋友也是醉了...</a></li>
+<li><a href="http://gank.io/2015/05/28">破天荒！！今天有两个妹子！！</a></li>
+<li><a href="http://gank.io/2015/05/27">开启连载模式，带你认识「干货集中营」的编辑们。</a></li>
+<li><a href="http://gank.io/2015/05/26">全新的干货归档页面，现在启动！</a></li>
+<li><a href="http://gank.io/2015/05/25">進擊の干货集中营</a></li>
+<li><a href="http://gank.io/2015/05/22">今天是个异国风情的妹子~ 眼睛真的会勾人魂魄~</a></li>
+<li><a href="http://gank.io/2015/05/21">妹子图看多了，感觉自己的审美能力也有所上升。</a></li>
+<li><a href="http://gank.io/2015/05/20">为什么最近北京的天气好的像巴厘岛？</a></li>
+<li><a href="http://gank.io/2015/05/19">记住，记住，晚上八点。</a></li>
+<li><a href="http://gank.io/2015/05/18">上周的时候，有个人回复邮件问我，为什么要给每个邮件加个妹子图，你说我该怎么回复他...</a></li>
+<li><a href="http://gank.io/2015/05/15">周五到了，周末还会远么？</a></li>
+<li><a href="http://gank.io/2015/05/14">iOS 编辑队伍又添新丁，编辑队伍不断扩大。</a></li>
+<li><a href="http://gank.io/2015/05/13">今天的干货妹子，真的好清纯...</a></li>
+<li><a href="http://gank.io/2015/05/12">送干货程序员</a></li>
+<li><a href="http://gank.io/2015/05/11">晚上有妹子给你做饭么？</a></li>
+<li><a href="http://gank.io/2015/05/08">周五上班时候的心态最微妙了</a></li>
+<li><a href="http://gank.io/2015/05/07">周五上班时候的心态最微妙了</a></li>
+<li><a href="http://gank.io/2015/05/06">周三的累一定要靠休息视频来缓解下</a></li>
+<li><a href="http://gank.io/2015/05/04">周三的累一定要靠休息视频来缓解下</a></li>
+<li><a href="http://gank.io/2015/04/30">五一要来了，你准备好了么？</a></li>
+<li><a href="http://gank.io/2015/04/29">昨天搬家导致断网干货无法及时送达，今天一切都安排妥当了！</a></li>
+<li><a href="http://gank.io/2015/04/27">今天最低温度 16°，最高温度 31°</a></li>
+<li><a href="http://gank.io/2015/04/24">周五了，我有点儿躁动。</a></li>
+<li><a href="http://gank.io/2015/04/23">最近天气干燥，要多喝水</a></li>
+<li><a href="http://gank.io/2015/04/22">干货出版社发来特刊</a></li>
+<li><a href="http://gank.io/2015/04/21">出门可以换上短袖了，亲测不冷</a></li>
+<li><a href="http://gank.io/2015/04/20">又是一个美好的周一</a></li>
+<li><a href="http://gank.io/2015/04/17">咚咚咚，你好，我是送干货的快递员！开门开门。</a></li>
+<li><a href="http://gank.io/2015/04/16">一首《下沙》送给昨天在北京的朋友们</a></li>
+<li><a href="http://gank.io/2015/04/15">被女上司壁咚了...</a></li>
+<li><a href="http://gank.io/2015/04/14">我们在计划搞个好玩儿的东西！</a></li>
+<li><a href="http://gank.io/2015/04/13">周一到了，干货君又复活了</a></li>
+<li><a href="http://gank.io/2015/04/10">周末要到了，约好妹子了么？</a></li>
+<li><a href="http://gank.io/2015/04/09">最近网上又不安生了，出了好多事情</a></li>
+<li><a href="http://gank.io/2015/04/08">周三症候群大爆发</a></li>
+<li><a href="http://gank.io/2015/04/07">放假出去玩儿了吧！是不是挤成狗！</a></li>
+<li><a href="http://gank.io/2015/04/03">周末要来了，看完干货，愉快的去玩耍吧！</a></li>
+<li><a href="http://gank.io/2015/04/02">最近降温了，大家注意保暖呐！</a></li>
+<li><a href="http://gank.io/2015/04/01">干货分享团队决定送你一台 iPhone 6 Plus，以感谢你这么长时间来的支持。</a></li>
+<li><a href="http://gank.io/2015/03/31">以后干货会越来越多，因为昨晚我们搞了个大新闻！</a></li>
+<li><a href="http://gank.io/2015/03/30">周六周天怎么过的？开心伐？</a></li>
+<li><a href="http://gank.io/2015/03/26">难道说得发点儿福利才有撑到周五的勇气么？</a></li>
+<li><a href="http://gank.io/2015/03/25">周三了，保持呼吸，不要停。</a></li>
+<li><a href="http://gank.io/2015/03/24">北京好像没有地铁三号线</a></li>
+<li><a href="http://gank.io/2015/03/23">樱花开了</a></li>
+<li><a href="http://gank.io/2015/03/20">我觉得周五应该发福利，你觉得呢？</a></li>
+<li><a href="http://gank.io/2015/03/19">微软要发飙了</a></li>
+<li><a href="http://gank.io/2015/03/18">昨天好像是很平凡的一天，什么大新闻都没有...</a></li>
+<li><a href="http://gank.io/2015/03/17">今天雾霾大成狗了...</a></li>
+<li><a href="http://gank.io/2015/03/16">勤劳的一周要开始了！</a></li>
+<li><a href="http://gank.io/2015/03/13">嘻嘻嘻，到周五啦，明天安排好去哪里玩儿了么？！</a></li>
+<li><a href="http://gank.io/2015/03/12">中午前，要安排好下午的工作</a></li>
+<li><a href="http://gank.io/2015/03/11">早上安排的工作做完了嘛？</a></li>
+</ol></div></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright &copy; 2021 DoooReyn <a href="http://beian.miit.gov.cn" target="_blank">闽ICP备19014786号-1</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bat.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/c.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/cpp.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/lua.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/php.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/shell.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/typescript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

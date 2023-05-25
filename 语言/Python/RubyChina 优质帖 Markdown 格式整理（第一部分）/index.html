@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blog that records everything">
+    <meta name="author" content="DoooReyn">
+    <link rel="canonical" href="https://doooreyn.github.io/%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>RubyChina 优质帖 Markdown 格式整理（第一部分） - DoooReynの星际航行日志</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">DoooReynの星际航行日志</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">关于我</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏城 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">游戏厅</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%A4%A7%E5%94%90%E7%9C%9F%E9%BE%99%E4%BC%A0/">大唐真龙传</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%85%83%E6%B0%94%E5%81%B6%E5%83%8F%E5%AD%A3/">元气偶像季</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E4%BC%A0%E5%A5%87%E7%B3%BB%E5%88%97/">传奇系列</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E7%94%B5%E5%A8%B1%E5%A4%A7%E5%8E%85/">电娱大厅</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%8D%B0%E5%B0%BC%E3%80%81%E6%B3%B0%E8%AF%AD%E6%A3%8B%E7%89%8C/">印尼/泰语棋牌</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">造轮子</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E7%9E%8E%E9%BC%93%E6%8D%A3%E6%BC%94%E7%A4%BA%E6%A1%88%E4%BE%8B/">瞎鼓捣演示案例</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/">手势识别与训练模型</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/PackManV2%E4%B8%80%E4%BD%93%E5%8C%96%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">PackManV2一体化打包工具</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20HTTP%20Server/">Cocos2d-x 嵌入本地 HTTP Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20WebSocket%20Server/">Cocos2d-x 嵌入本地 WebSocket Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E7%9B%AE%E5%BD%95%E7%9B%91%E8%A7%86%E5%99%A8/">Cocos2d-x 目录监视器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20FMOD%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Cocos2d-x FMOD 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E4%BD%BF%E7%94%A8%20spdlog%20%E6%97%A5%E5%BF%97%E5%BA%93/">Cocos2d-x 使用 spdlog 日志库</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E6%8E%A5%E5%85%A5%20lua-protobuf/">Cocos2d-x 接入 lua-protobuf</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Adjust%20%E7%AD%BE%E5%90%8D%E7%AC%AC%E4%BA%8C%E7%89%88%20Android%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Adjust 签名第二版 Android 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%96%B0%E6%B4%BB%E5%8A%A8%E4%B8%AD%E5%BF%83%E6%BC%94%E7%A4%BA/">新活动中心演示</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">知识点</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Cocos%20Creator%20Android%20%E6%89%93%E5%8C%85%E6%80%BB%E7%BB%93/">记一次 Cocos Creator Android 打包总结</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20Spine%20%C2%B7%20%E6%9B%B4%E6%8D%A2%E7%BA%B9%E7%90%86/">Cocos Creator Spine · 更换纹理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20%E6%BB%A4%E9%95%9C%20%C2%B7%20%E9%A9%AC%E8%B5%9B%E5%85%8B/">Cocos Creator 滤镜 · 马赛克</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20%E4%B8%AD%E7%9A%84%20Size/">Cocos 中的 Size</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Lua/Lua%20%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0/">Lua 数组实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/Lua%20HashMap%20%E5%AE%9E%E7%8E%B0/">Lua HashMap 实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/Lua%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC%E5%AE%9E%E7%8E%B0/">Lua 字符串插值实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%20lua%20%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81/">更简洁的 lua 逻辑代码</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua API 浅析</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20Basic%20Types/">Lua_API Basic Types</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_absindex/">Lua_API lua_absindex</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_Alloc/">Lua_API lua_Alloc</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_arith%20%281%29/">Lua_API lua_arith (1)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_arith%20%282%29/">Lua_API lua_arith (2)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_atpanic/">Lua_API lua_atpanic</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Lua/LUA_API%20lua_call%20%26%20lua_callk/">Lua_API lua_call & lua_callk</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">JavaScript</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../JavaScript/Faker.js%20%E5%88%86%E6%9E%90/">Faker.js 分析</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Python</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC/">如何用 Python 实现字符串插值</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Pylint-%E4%BD%A0%E5%BE%88%E6%A3%92%EF%BC%8C%E4%BD%86%E6%88%91%E4%B8%8D%E6%83%B3%E8%B7%9F%E4%BD%A0%20PaPaPa/">Pylint-你很棒，但我不想跟你 PaPaPa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Python%20%E7%88%AC%E5%8F%96%20gank.io%20%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%8E%A8/">Python 爬取 gank.io 今日力推</a>
+</li>
+
+        
+            
+<li >
+    <a href="../%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">我有干货，你敢收吗？</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">RubyChina 优质帖 Markdown 格式整理（第一部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第三部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第二部分）</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">PHP</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../PHP/Windows%20%E5%AE%89%E8%A3%85%20PHP7.4/">Windows 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/CentOS%20%E5%AE%89%E8%A3%85%20PHP7.4/">CentOS 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E6%9F%A5%E7%9C%8B%20php.ini%20%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80/">查看 php.ini 存放地址</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20Composer/">安装 Composer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20MixPhp/">安装 MixPhp</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../PHP/%E5%AE%89%E8%A3%85%20Swoole/">安装 Swoole</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">工具箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%BE%AE%E8%AF%BB%E8%87%AA%E5%8A%A8%E9%98%85%E8%AF%BB%E5%99%A8/">微读自动阅读器</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%B7%A5%E8%B5%84%E6%98%8E%E7%BB%86%E5%8A%A9%E6%89%8B/">工资明细助手</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/BMFont%20Toolbox%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">BMFont Toolbox 使用指南</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%20md5%20sha1%20sha256%20%E5%80%BC/">查看文件 md5 sha1 sha256 值</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">医药箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Android</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">ADB 常用指令</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E8%B0%83%E8%AF%95%E8%BF%9E%E6%8E%A5%E5%A4%9C%E7%A5%9E%E6%A8%A1%E6%8B%9F%E5%99%A8/">ADB 调试连接夜神模拟器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20NDK%20%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC/">Android NDK 历史版本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20SDK%20%E7%89%88%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">Android SDK 版本之间的关系</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20%E5%8D%A0%E7%94%A8%E6%9E%81%E5%A4%A7%E5%86%85%E5%AD%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Android Studio 占用极大内存的解决方法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20Clean%20%E4%B8%8E%20Rebuild%20%E7%9A%84%E5%8C%BA%E5%88%AB/">Android Studio Clean 与 Rebuild 的区别</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Mac</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/AppleScript%20%E6%90%AD%E9%85%8D%20Alfred%20%E7%9C%9F%E4%B9%83%E5%88%A9%E5%99%A8/">AppleScript 搭配 Alfred 真乃利器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E9%9F%B3%E9%87%8F%E5%BE%AE%E8%B0%83/">Mac 音量微调</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E5%BA%94%E7%94%A8%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">Mac 应用已损坏解决方案</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20nvm%20%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E6%8C%87%E5%8D%97/">Mac nvm 完全卸载指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20zsh%20%E7%B2%98%E8%B4%B4%E5%8A%A0%E9%80%9F/">Mac zsh 粘贴加速</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20autojump/">MacOS 安装 autojump</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20Pillow/">MacOS 安装 Pillow</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%8D%B8%E8%BD%BD%20Java9/">MacOS 卸载 Java9</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20Java%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">MacOS Java 版本管理</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Xcode error</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/your%20session%20has%20expired%2C%20please%20log%20in/">your session has expired, please log in</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Git</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/Git%20%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">Git 设置代理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/%E8%A7%A3%E5%86%B3%20Github%20%E8%B4%A1%E7%8C%AE%E5%80%BC%E4%B8%8D%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98/">解决 Github 贡献值不计算问题</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Interview</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/HR%20%E9%9D%A2/">HR 面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E6%8A%80%E6%9C%AF%E9%9D%A2/">技术面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E6%9F%A5%E7%9C%8B%20npm%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">查看 npm 安装位置</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E8%A7%A3%E5%86%B3%20Windows%20%E9%95%BF%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">解决 Windows 长路径问题</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">图书馆 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">算法</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法的时间与空间复杂度</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">查找算法直接及其算法实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%8F%8A%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93/">排序算法性能及选择总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">书籍</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/Github%E4%B8%8A%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/">Github上的电子书</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%BF%91%E4%B8%87%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%94%B5%E5%AD%90%E4%B9%A6%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/">近万本技术电子书免费下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%94%B5%E5%AD%90%E4%B9%A6%E4%B8%8B%E8%BD%BD/">游戏开发电子书下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/J%C2%B7%E5%B8%83%E7%BD%97%E5%85%8B%E6%9B%BC-%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%8D%81%E5%B9%B4/">J·布罗克曼-未来五十年</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8C%97%E5%B2%9B%E3%80%8A%E6%B3%A2%E5%85%B0%E6%9D%A5%E5%AE%A2%E3%80%8B/">北岛《波兰来客》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3%E3%80%8A%E4%BB%A3%E8%B0%A2%E5%A2%9E%E9%95%BF%E8%AE%BA%E3%80%8B/">陈平《代谢增长论》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%99%88%E5%B9%B3-%E8%87%AA%E7%94%B1%E7%9A%84%E5%AF%B9%E7%AB%8B%E9%9D%A2%E4%B8%8D%E6%98%AF%E4%B8%93%E6%94%BF%E6%98%AF%E8%87%AA%E5%BE%8B/">陈平-自由的对立面不是专政是自律</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9%20%E3%80%8A%E6%9B%BC%E5%B7%B4%E7%B2%BE%E7%A5%9E%EF%BC%9A%E7%A7%91%E6%AF%94%E8%87%AA%E4%BC%A0%E3%80%8B/">科比·布莱恩特 《曼巴精神:科比自传》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E8%82%AF%C2%B7%E7%BD%97%E5%AE%BE%E9%80%8A%20%E5%8D%A2%C2%B7%E9%98%BF%E7%BD%97%E5%B0%BC%E5%8D%A1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E6%95%99%E8%82%B2/">肯·罗宾逊 卢·阿罗尼卡-什么是最好的教育</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8A%B3%E4%BC%A6%E6%96%AF%C2%B7%E5%B8%83%E6%B4%9B%E5%85%8B-%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%85%AB%E7%99%BE%E4%B8%87%E7%A7%8D%E5%86%99%E6%B3%95/">劳伦斯·布洛克-小说的八百万种写法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%95%96-%E5%8C%97%E4%BA%AC%E6%B3%95%E6%BA%90%E5%AF%BA/">李敖-北京法源寺</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%9D%8E%E6%B7%BC%C2%B7%E3%80%8A%E4%B8%89%E4%BD%93%E3%80%8B%E4%B8%AD%E7%9A%84%E7%89%A9%E7%90%86%E5%AD%A6/">李淼·《三体》中的物理学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7L.%E5%87%AF%E5%88%A9-%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E5%A7%8B/">罗伯特·L.凯利-第五次开始</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%90%95%E6%80%9D%E5%8B%89%E3%80%8A%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E3%80%8B%E7%BB%AA%E8%AE%BA/">吕思勉《中国通史》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%98%8E%E9%81%93-%E5%9B%BE%E8%A7%A3%E9%80%BB%E8%BE%91%E5%AD%A6/">明道-图解逻辑学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%9D%92%E5%B1%B1%E4%B8%83%E6%83%A0%E3%80%8A%20%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A5%BD%E5%A4%A9%E6%B0%94%E3%80%8B/">青山七惠·《一个人的好天气》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%85%E6%B0%B4%E8%8D%A3%E5%8F%B8%E3%80%8A%E8%AE%A4%E7%94%9F%E7%9A%84%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E3%80%8B/">清水荣司《认生的人:如何克服社交焦虑》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%91%9E%C2%B7%E8%BE%BE%E5%88%A9%E6%AC%A7%20%E3%80%8A%E5%8E%9F%E5%88%99%E3%80%8B/">瑞·达利欧 《原则》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%8D%AB%E5%AE%AB%E5%A3%AB%E9%83%8E%20%E3%80%8AFateStay%20Night%20Unlimited%20Blade%20Works%E3%80%8B/">卫宫士郎 《FateStay Night Unlimited Blade Works》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E6%B8%A9%E9%93%81%E5%86%9B%20%E3%80%8A%E4%B9%A1%E5%BB%BA%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%96%B0%E9%9D%92%E5%B9%B4%E4%B8%8E%E4%B9%A1%E6%9D%91%E7%9A%84%E7%94%9F%E5%91%BD%E5%AF%B9%E8%AF%9D%E3%80%8B/">温铁军 《乡建笔记:新青年与乡村的生命对话》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%9B%BE%E4%B9%A6%E9%A6%86/%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9%E3%80%8A%E6%9C%AA%E6%9D%A5%E7%AE%80%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E7%A5%9E%E3%80%8B/">尤瓦尔·赫拉利《未来简史:从智人到智神》</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#rubychinamarkdown">RubyChina优质帖Markdown格式整理（第一部分）</a></li>
+        <li class="first-level "><a href="#1600">文章列表（1~600）</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<div><h2 id="rubychinamarkdown">RubyChina优质帖Markdown格式整理（第一部分）<a class="headerlink" href="#rubychinamarkdown" title="Permanent link">¶</a></h2>
+<hr>
+<blockquote>
+<p>花了一晚上玩起了Python爬虫，这次把 <a href="https://ruby-china.org/topics/popular">RubyChina</a> 的优质帖子作为练手目标，将全部优质帖子的文章标题和超链接都爬下来，保存为<code>Markdown</code>文件，还顺带做了一个<code>AlfredWorkFlow</code>的插件。现将完稿发出来，给有需要的朋友。
+由于简书编辑器的篇幅限制，而文章列表过长，就分成了三个部分。请大家谅解。</p>
+</blockquote>
+<h2 id="1600">文章列表（1~600）<a class="headerlink" href="#1600" title="Permanent link">¶</a></h2>
+<hr>
+<ol>
+<li><strong><a href="https://ruby-china.org/topics/28953">Ruby China 官方 iOS 客户端已发布上线</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28963">Rails 中乐观锁与悲观锁的使用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28948">微信开发 wechat-starter</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28951">Nginx + Rails 下如何进行文件的安全下载？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28922">產品的系統性成長 ( Growth ) 方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28935">已升级到 Rails 5，用上了 ActionCable</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28858">对所有已登录的用户开放 rack-mini-profiler 统计结果</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28945">[上海] 英语流利说招聘 Ruby、Web 前端、Devops 等一大波工程师！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28754">Ruby China on PostgreSQL</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28817">我们将会在 2016-01-23 (本周六) 对服务器停机升级</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28629">全新的站内搜索上线</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28746">RubyCritic-一款不错的检测代码质量工具</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28882">Rails ：ActiveRecord 查询的小贴士</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28553">通过「刻意练习」，你才能成为顶尖的程序员</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28854">Rails &amp; Ruby Best Practice</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28583">Happy 2016! AMA - Ask Me Anything :)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28760">Rails sanitize allowed_attributes 不安全</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28538">Breaking Up a Monolithic Rails App Without MicroService</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28799">[上海][2016年01月22日] OpenRedis 创始人分享 Redis 的不同用法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28550">Phoenix render 迷思</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28604">命令行的艺术</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28802">101 Ruby Code Factoids (搬运)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28788">Rails 10 週年：網站改版、新 Logo、書以及視頻</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28797">This is fine</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28736">现在开始为 jQuery 编写插件</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28740">[年末福利] 部署 Cloud Insight，拿京东购物卡</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28607">送几本《AngularJS 学习手册》</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28390">[上海][2016年01月19日] Ruby Tuesday 聚会召集</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28727">Ruby Hook Methods</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28453">Bundler 到底是怎么工作的 (暨 Ruby 依赖管理历史回顾)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28480">DHH 亲自给你演示, 如何用 Action Cable 做一个实时的聊天 app</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28708">关于 Ruby URL escape 场景 URI 与 CGI 的区别</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28715">[转] Ruby 2015 年回顾</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28712">理解 Ruby 中的 include 和 prepend</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28666">Ruby on Rails 网站大型化之静态资源 CDN 架构</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28561">闯过这 54 关，点亮你的 Git 技能树</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28467">Rails 中如何集成带图片上传功能的 simditor 编辑器</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28544">Ruby 练习题：打战舰</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28616">大规模 I18n 实践</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28571">GIF 图片转视频</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28355">测试的主要作用和必要体现在哪？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28501">Ruby 2.3 new feature 之一:  多行字符串更优美的写法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28415">无人知晓的 GIL</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28522">2.3.0 悄无声息的发布了？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28339">[澳大利亚] PixelForce 招聘 Ruby on Rails 工程师 2 人 (15 – 35k＋免费住宿与澳大利亚工作签证担保)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28516">最近，所有国内 DNS 出现随机解析失败，修改为国际知名 DNS 即可解决</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28551">解决大家看讲稿的问题 ---再度萌芽的讲稿网</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28549">Teahour #82 发布, 这次请到了论坛里的隐藏高手 Jan</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28246">[杭州] 为你朋友争取多一个月工资，The Plant 继续招聘 Rails，Go 等多名程序员</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28230">[Thinking in Ember 2] 组件化的探索——路漫漫其修远兮，还得 Up &amp; Down 啊～</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28295">Ember Data 概述</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28279">[西安 / 成都] 金数据招聘 Ruby 开发人员</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28212">Write a TCP stack in Ruby</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28460">Rails-5-0-beta1</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28448">一键安装 Nginx 和 Passenger</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28445">2013-2015年 RubyChina 招聘数据关键词统计</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28466">Web is The Future</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28399">Rails Girls China Volunteers，谢谢你们！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28367">微信网页 UI 现在有新的 Gem，weui-rails</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28402">一个 String 类型处理不当导致的性能问题，在导出 CSV 文件等场景不注意就会中招</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28356">Heroku-style config management with capistrano and dotenv</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28256">一款日程管理 App 正在邀请内测</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28127">画说 Ruby 与 Python 垃圾回收</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28209">为什么 Ruby 程序员应该了解和掌握 Docker</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28040">Ruby 是如何解释运行程序的</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28017">使用 Nginx 优化面向侧面的架构</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28137">RubyConf 2015 视频</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28107">[上海] [2015 年 11 月 24 日] Ruby 聚会召集</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28130">[北京·中关村][2015/12/6] 分享：加入创业团队前你需要知道的事情</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28309">推荐三篇关于处理 Ruby 内存泄露的文章</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28307">[开坑] RubyMotion 开源 App 和常用 Gem 等资源索引, 欢迎一起来完善</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28251">Rails (3&amp;4) 预加载 (preload) 的 3 种方式</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28260">忙活了两个月的结果，做出一个新的系统服务监控产品，马上要正式版上线了，欢迎大家给提意见。</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28055">自制监控服务接收 NewRelic RPM 数据</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28104">千万别构建超过 23 个字符的 Ruby 字符串</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27939">Redis 实现 Cache 系统实践</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27907">React vs Ember by Alex Matchneer at EmberNYC meetup</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27832">完美的 Ruby 图形验证码 Gem - RuCaptcha</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27900">谨防 ActiveSupport::Cache::Store 缓存 nil 值</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28076">准备着手翻译出版《Rebuilding Rails》，有人愿意买吗？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27761">存在内存泄露的 Gem 列表</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27737">推荐一个 Rails 插件 - rails_db</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28072">Teahour.FM #81 和微软的爱恨情仇</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27956">用 Ruby 快速开发一个静态服务全过程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28065">Rails 路由-解决多子域名问题</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28094">请务必注意 Redis 安全配置，否则将导致轻松被入侵</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28010">[杭州][2015年11月17日] 第二次 Ruby Tuesday 聚会召集</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27834">怎样管理 Linux / Mac 的配置文件</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28080">Rails 小项目的一些分享</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28015">Redis 实现自动输入完成</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28050">Ruby China 手机客户端 UI 设计稿</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27855">DIY Ruby CPU 分析 [更新到 Part IV]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28046">编程第一条法则：永远都是你的错</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28033">使用 Ruby 编写了另一个 damned 包管理器</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28048">Ruby China React Native for Android 新鲜出炉</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27985">Cjsx 还是挺好使的...</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27736">阅读 God 源码心得</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/28000">11 款开放中文分词引擎大比拼</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27974">更简单灵活地管理 Ruby 版本</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27912">How Minitest works</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27634">RubyConf China 2015 资源汇总</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27960">React for Rails 入门</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27657">欢迎 3 位新的 Ruby China 社区管理员</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27861">[杭州][2015年11月03日] Ruby Tuesday 聚会召集</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27592">Rails 开发微信支付的一些总结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27829">Use MySQL stream for large datasets</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27647">噫，我们有了 RubyMotion 节点了～</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27867">下线 Gravatar 头像功能，改由 letter_avatar 代替，并且没上传头像不允许发帖了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27644">构建 Rack-based 框架 (Rails/Grape/Sinatra) 的几个 Tricks</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27700">我为什么要使用哈希</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27654">RubyConf China 2015 大会照片收集贴</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27857">Ruby China 生日快乐~</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27830">开源 BI 工具 Metabase 简介</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27530">整合 ElasticSearch 到现有 Rails 项目</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27745">阿里云首期开源众包计划，Rubyist 居然没人？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27636">为什么要参加 RubyConf China</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27491">记录使用 typhoeus 调用 360 HTTPS API 时碰到的坑</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27615">為什麼要 Bundle Update？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27549">给女朋友的 iOS 开发教程 iOS With Girlfriend</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27691">搭建 Ruby China 开发环境 (Vagrant)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27500">评论 Why I wouldn’ t use rails for a new company</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27455">基于 Docker － 5 分钟科学上网</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27537">Rails 配置 webpack</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27525">RubyConfChina 2015 大会主题介绍以及日程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27258">[Tips on Ember 2] UI 布局与应用状态的关系处理</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27521">[翻译] 在 Ruby 上什么时候用 freeze 和 frozen？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27265">2015 最新调查：现在的前端工程师都用什么？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27231">向社区的朋友推荐自己的书《Rails 实践》</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27407">Spree 扩展机制分析</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27310">又一个 MessageVerifier 的使用场景</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27499">JavaScript 原型系统的变迁，以及 ES6 class</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27523"> Rails Log Process</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27162">工作也旅行 - 工作日常</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27350">Puppet Hacking Guide —— Puppet 的启动：子命令</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27243">《Ruby 元编程》读书笔记 (一)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27176">0 基础怎样开始学习做网站 (Ruby on Rails)?</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27248">2.5 个人如何开发一款跨终端的产品？[Ruby Tuesday 的分享]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27418">Some common gems for we build Ruby on Rails applications</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27293">前后分离架构的探索之路</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27002">源码阅读系列 - connection_pool</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27040">在 Ruby 中使用 DATA 和 <strong>END</strong> 将代码和数据混合</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27239">最近用了一下 RubyMotion，一些使用心得</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26954">Rails 4-2-stable 参考手册 (Beta)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27246">[Tips on Ember 2] Ember CLI 和 Sass (及其周边) 的协同工作</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27078">RubyConfChina 2015 大会官网，报名网址，博客上线</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27155">[Tips on Ember 2] 如何尝试 angle-bracket component</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27245">使用 Turbolinks 实现网页进度条</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27218">初次尝试用 Rails 做一个网站</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26996">Bootstrap 4 alpha 发布</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26944">还在纠结 Flux 或 Relay，或许 Redux 更适合你</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27121">Apdex——衡量服务器性能的标准</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27057">关于 Ruby 内存使用的一些优化和探索</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/27004">MySQL 慢查询的特征表现及优化方式</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26839">中国电信提速降价后，官方已确认无法上外网的问题 (有图有真相)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26873">Schema 与数据类型优化小技巧</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26952">Teahour.fm 78 期发布， 和 Vue.js 框架的作者聊聊热到着火的前端技术</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26738">[Teahour.FM#77] 专访原 JavaEye 的创始人 Robbin (终于复播了)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26785">[12 台减至 3 台] 用 Golang 重写 Sidekiq 的 worker</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26655">Gemfile 详解</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26758">Unicorn 是如何与 Nginx 通讯的——介绍 Ruby 中的 Unix Socket</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26561">[北京] FreeWheel 招聘高级 Ruby 开发工程师，年薪 35w 起~~</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26781">提高 Ruby 程序员效率的 rc 文件</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26946">雪球在股市风暴下的高可用架构改造分享 | 首席架构师亲述应对 30 倍峰值历程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26757">周六在公司举办了一场 Rails Girls</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26529">Ruby 版 Leetcode，已水完 100 题，求同好 Review</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26890">这是我读过关于 constant lookup 讲的最好的文章，不要问我为什么</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26871">初探 MySQL 的 Binlog</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26866">Rails 源码分析之 eager_load! 篇</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26443">[微信开发] 开发环境搭建</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26718">Ruby map、each、select、inject、collect 、detect reference</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26761">Common Network Exception in Ruby (1)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26352">MySQL 为什么需要一个主键</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26661">利用 Mina 自动部署 Rails + Sidekiq + Unicorn</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26711">使用 Redis 处理 Rails Model 缓存</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26323">Rails Scopes 预加载</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26354">《支付宝收款集成》开源项目 + 视频课程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26314">无需更改 Gemfile，让 bundle 使用淘宝源</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26257">Ruby China iOS App 发布！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26337">RubyConf China 2015 将于 10月10日-11日 于深圳举办 (内附讲师征集链接)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26377">Ruby on Rails 学习资源整理 (欢迎补充) </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26651">基于 docker 的高可用 Rails 集群方案探索</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26221">吞吐率、吞吐量、TPS、性能测试，纸上不谈兵----一步一步构建高性能 Web 站点</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26519">[北京][2015年7月25日] Ruby on FreeWheel 技术交流分享</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26502">Rails 项目 Gem 依赖的社交关系网络关系图及其生成</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26609">Rails 里四个单字符长的辅助方法 (h, j, l, t)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26212">RAILS API TO BE PART OF RAILS 5</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26138">[微信开发系列] 使用 JS API 实现微信支付功能 </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26157">Docker 在 Coding WebIDE 项目中的运用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26120">Rails 项目里的三大毒瘤</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26327">weapon，为已有项目，配置 mina 部署，i18n 定制，rails_settings_ui</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26324">Ruby Profiler 详解之 StackProf-CPU 和对象分配的采样剖析</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26402">rails 开发中必备的 gem 推荐</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26191">Rails 在 Windows 下的完整开发环境压缩包 (Ruby 2.1.7 和 2.2.3)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26231">[分享] Rails 下实时生成多尺寸图</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25988">[北京] Fiberead Web 前端和后端工程师 (Ruby) 各一名，20K 起 + 期权_7.17 更新</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26303">Ruby 基础 - RubyGem，如何测试 Gem</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26292">Ruby 基础 - RubyGem，如何开发一个自己的 Gem</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26245">eager_group 修复 n+1 聚合函数问题</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25908">Redis 实战之薄荷 timeline 的优化</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25822">使用 Rails 构建 API 实践</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26208">理解 ActiveSupport::Concern </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25956">Ember.JS 编写的 Ruby China 客户端</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25804">[北京][可远程] MakeHave 每刻风物程序员需求计划「2015.8.25 更新」</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26034">Rails 中的类加载机制</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25802">前端架构分享</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25728">如何在源码阶段写出更快的 Ruby</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25856">Ruby 中的 Profiling 工具</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26132">Ruby on Rails 部署方案 Nginx + Mina + Puma</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25706">基础 Ruby 中 Include, Extend, Load, Require 的使用区别</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25707">元编程 进一步理解 metaclass</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25691">元编程 基础方法整理</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/26091">谁来个微信开发学习资源大全？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25741">Rails 5 - 将会有更快的 render collection 以及优化小细节</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25749">[远程] Ruby 中文官网徵求志工</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25959">Ruby Profiler 详解之 ruby-prof（I）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25547">为什么国外的创业公司更喜欢 Rails?</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25512">Rails 利用 cancan 实现一个优雅可扩展的角色管理系统</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25843">Ruby 本色 — 31 篇深入理解 Ruby 的博文</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25772">缓存使用的 N+1 问题 - 缓存使用陷阱 1 </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25584">Ruby 的内存陷阱</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25529">Rails 中自动布署工具 mina 的经验谈</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25756">写了一个只有 100 行的 mini 版的 Rails</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25397">Ruby 中一些重要的钩子方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25640">[北京][2015年5月30日] UPYUN Open Talk NO.8 移动应用技术架构的解读</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25753">解读 Rails - 适配器模式</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25565">分享给同是新手的 Rubyists，简单说明了些 Ruby 基础知识</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25410">微信开放平台 Omniauth 探索</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25524">[北京][2015年5月23日] Ruby Saturday「活动召集」</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25276">Ruby 服务器对比</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25427">Rails 中的事务处理</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25648">Sinatra 中文文档</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25630">API V3 上线，实现  OAuth 2 认证，以及完善之前一直欠缺的 API 接口</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25209">Rails 4.2 中 ActiveJob 的使用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25530">Bundler 的作用及原理</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25579">敬告各位发招聘的公司注意！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25528">How to Growth Hack?</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25477">Gulp 基础任务配置 [好的吧~这样会不会好一些~]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25325">总结一下 Ruby 中的对象和类模型</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25389">Ruby 中的函数式编程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25511">Rails Conf 2015 心得</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25444">RailsConf 2015 视频 720p</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25084">[珠海] 魅族招聘 Ruby 工程师（可实习）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25464">Grunt 前端自动化构建工具 [方便懒得看英文文档的新同学]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25295">手把手将 Vim 打造成开发 Ruby 和 Rails 的强大 IDE</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25364">最近写了一些关于分布式数据库的博文</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25480">[北京] 诚邀有旅行梦想的 iOS &amp; Android &amp; Ruby 工程师，为实现让更多人走出去看世界而努力</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25313">用 Ruby 写的开源文字游戏《创业者的游戏： 中关村启示录》，欢迎群众演员！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25145">ETL with Ruby</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25167">2015年3月29日 Rubyist 上海聚会 《React.js in Strikingly》PPT</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25080">重新思考找回忘记密码解决方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25289">How to write a template engine in less than 30 lines of code</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25006">新主题上线</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25227">RailsConf 2015 讨论 [更新播放列表]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24903">10 个 Ruby 技巧提升你的代码</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24914">利用 ActiveSupport::Notifications 在 Rails 中实现 PUB/SUB 模式</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25314">新手简单整理一下 RailsConf2015 大会 Day1 内容，方便没看视频的浏览一下</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25116">Data Warehouse Schema Design</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25262">安装和配置 Postfix</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25115">Data Warehouse Concepts and Overview</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25088">[上海][张江] Ruby 开发工程师 和 HTML5 前端</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25310">UJS + SJR + Assets Pipeline + Turbolinks 资料</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25137">《搬进 Github》：一本图解 Github 使用的入门级小书</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25023">Vim 插件：UltiSnips 让 Vim 飞起来</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25253">旧爱 Bootstrap，新欢 Materialize</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24783">透彻理解 Ruby 中的 return</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25009">Web 开发后端缓存思路</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25104">[楼主经历分享] 自由职业的第一步: 200 元与 200 美刀</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25194">Active Job 指南译文</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24897">申请以及集成 Stripe 的 Alipay 支付方案</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24742">Rails 开发：那些年，我们一起踩过的坑 (剧终)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25098">CSS A to Z：一个非常好的涨 CSS 技能的视频系列 (可 iTunes 免费订阅)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24908">发布 / 订阅模式</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24780">Service Object: What? Why? and How?</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/25021">ActiveSupport::Autoload 学习</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24996">Rails 3 和 Rails 4 中 ETags 工作原理</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24646">求 Ember.js 开发经验的分享</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24971">[远程] Bindo Labs 请人 - Senior Ruby on Rails Developer</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24635">Rails 与安全</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24916">2015年3月29日 Rubyist 上海聚会 《Ruby 服务间通信模式》PPT</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24840">一则 Ruby 和 OpenSSL CA 证书的问题</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24538">[深圳] DJI 大疆创新公司招聘 Ruby on Rails 工程师 3 名（内推 15-30k）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24851">alipay 0.6.0 和 alipay-demo 项目 [已发布]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24606">我如何读书</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24472">Spree 源码导读</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24693">阿里云 Rails 项目调整 RDS MySQL 编码为 utf8mb4 的详细步骤</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24509">MySQL 用 UUID 作为主键，实际使用中有什么问题</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24865">介绍几本 Rails 进阶书</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24855">API 海外访问速度优化尝试——云梯软广</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24828">开源一个股权众筹平台 - 创业赢</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24785">Docker 入门</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24540">求一份全职远程的 Android 工作，内附作品演示</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24378">Puma 源代码分析 － 概述</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24369">一个基于 Rails 的 RESTful API 框架: Lina</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24773">一个用 Rails 做 API server 的好例子</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24697">Grape 片段缓存</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24325">《提问的智慧》</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24654">Puma 源代码分析 － HTTP 协议解析</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24626">starry.so 开源出来了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24393">Puma 源代码分析 － 启动流程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24242">Ruby 2.2 中的增量式垃圾回收</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24138">[远程办公][12-20K] 彩程设计招聘 Ruby 工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24111">使用 AngularJS 从零构建大型应用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23848">高手对决 -- 博客服务器被黑的故事</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23795">Ruby 自学书单</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24136">经验分享，程序员行外补脑 ING..</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24246">程序员的好玩具 - Lego EV3</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24225">技术帖分享: 当你浏览我的博客时计算机干了什么</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24079">自己开的介绍 Web 开发（偏 Rails）的微信订阅号</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24166">初步深入 Rack (一)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23822">微信开发简介</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23985">Jekyll 小书</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23654">类似 Ruby Grape 项目的 Elixir RESTFul 框架 Maru</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23677">[上海][2015年01月20日] 2015年 第一次月中聚会 技术聚会</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23663">Ruby Shanghai 2014 年 终聚会 总结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23924">容错和速错</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23984">10 Most Common Rails Mistakes</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23945">开发资源总结, 都是干货 ~ 2015-10-26 更新</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23506">[上海] 薄荷诚邀 Ruby 好手（新传图片，薄荷 girl 向你招手，是否考虑换个不一样的环境呢）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23684">[北京 / 远程] 墨刀 (MockingBot) 招聘 Rails 全栈工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23718">一个简单的评论过滤系统的实现</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/24012">[转] Linux 云主机幽灵漏洞修复建议（glibc gethostbyname 缓冲区溢出漏洞）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23904">要你命三千——老代码中的那些坑</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23784">[译] Five Ruby Methods You Should Be Using</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23509">大格局, 大使命 -- 2014年 度总结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23932">新手做网站的准备，入门贴</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23447">How search and index works (Ruby 语言描述)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23907">没有用心设计的代码，一样可以通过测试，然后就这样了……</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23892">Service Object 整理和小结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23442">使用 Slack &amp; exception_notification 监控 Rails 异常</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23881">US 2014 RubyConf 视频分享</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23767">【前端知识】Flexbox，更优雅的布局</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23470">InfluxDB + Grafana 快速搭建自己的 NewRelic，分析应用运行情况</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23449">囚徒健身网站，欢迎吐槽</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23365">2014 年 Web 高手都在做什么 -- 一个 Rails 开发者的视角</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23496">Ting 一个用 Semantic-UI 写的音乐社交网站</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23766"> Sidekiq：导致 Frozen Worker 的两个风险</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23439">我兑现了一个月前的承诺</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23633"> (译) 闭包--- 简明解释 (使用 Ruby)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23579">阅读 Sinatra 源码的感悟（水平不高，纯属纪录）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23588">Rails 对请求的处理过程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23606">[译] Ruby 2.0 Works Hard So You Can Be Lazy</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23481">看懂这个视频相当于学会了一半的 Ruby</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23504">抛砖引玉，我的 2014 年度总结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23056">[广州] 招聘 Ruby 工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23523">ActiveRecord Object Instantiate</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23499">rails-perftest - 分析你的 Rails 应用的性能</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23468">Sails - 构建 Thrift Server 实现跨语言之间调用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23443">Ruby 2.2 新方法一览</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23308">我轻断食的经历</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23116">单机数据抓取性能提升总结篇</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23323">Rails 4.2 发布记</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22948">Hack News 上一篇帖子，吐槽搞 Rails 多年后，发现工作越来越难找了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23176">使用 Monit＋Mina 监控服务器</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23298">茶叶学院 HTTP 这本书已经翻译完毕</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23030">Ruby 扩展库两种写法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22876">PlainSite：A Truly Hackable Static Site Generator！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23103">分享两个博客，其中有提到两个重要的安全漏洞</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22761">Redis 作为缓存服务器的配置</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23012">如何科学使用青云的秒级计费</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23193">Rails/Nginx 与 Weak Etag</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22714">用 Ruby 开发命令行工具的一些 tips</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23074">MiniTest 的正确使用姿势</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22742">也谈如何构建高性能服务端程序</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23014">我想翻译茶叶学院的书：Introduction to Http</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22759">Rails 3 与 Rails 4 中 try 方法的不同</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23123">RailsPacific 2014 影片全數壓制完成</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23083">W3School 教程整理</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22715">Leetcode 电子书</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22564">AngularJS 2.0 正在路上..</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/23057">irb, bundle exec irb, bundle console, rails console 的区别</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22726">Rails 路由系统源码探索</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22636">[译] 为什么我们开发的 Raptor 比 Unicorn 快 4 倍，比 Puma，Torquebox 快 2 倍</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22440">[上海][张江高科][微客来] 一大波 Rails 职位等你来……</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22820">推荐一本书：《我编程，我快乐》</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22947">Side-project story</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22681">《 Rails 10 日谈》课程上线啦</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22429">Coding，做一个有情怀的产品</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22760">从 300 到 300 万，一个远程外包团队的发展历程和经验</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22499">理解红黑树</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22386">试译 Ruby 源码解读</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22806">让你的 Android 应用拥有微信一样的实时沟通体验</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22530">移动 IM 学习笔记</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22634">Rails 中利用 YAML 文件完成数据对接</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22809">ActiveRecord 中的 Callback 浅析</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22479">企业微信 gem 发布: qy_wechat、qy_wechat_api</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22737">推荐新手学习资源：茶叶学院的开放书架</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22332">Rails 中用 RabbitMQ 做消息队列 [译]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22558">Is Rails Slow? by Akira Matsuda</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22753">最近写的几个小 gem</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22379"> 性能监控的好工具 - NewRelic 简介</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22595">你所不知道的 console 对象的五个函数（功能）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22449">爬虫获取 ruby-china 职位地区分布数量统计</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22647">发福利，整理了一份关于 “资源汇总” 的汇总</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22192">ActiveRecord 的三种数据预加载形式 - includes, preload, eager_load</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22510">域名免备案的解决方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22120">升级 Yosemite 的常见问题解决办法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22609">在 VPS 上一键部署 VPN</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22416">RubyMotion Workshop Beijing 资料总结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22603">微信支付 Gem</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22494">浅谈 Underscore.js 中 <em>.throttle 和 </em>.debounce 的差异</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22531">全文搜索 sunspot</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22179">Rails 重构: 利用 Service 优化 Fat Model</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22508">让 Mongoid 4.0.0 支持 belongs_to eager load</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21970">友好速搭的技术栈 for Ruby off Rails</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22392">写完了，天快亮了，81 页</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22201">Ruby on Rails 实战圣经全面升级了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22016">用 Block 重构代码的几种方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21831">《Linux 命令行》中文版 PDF 上线了，epub 也上了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22158">一个贴读懂 RubyConf China 2014</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22164">Ruby | Rails - 浅拷贝 | 深拷贝</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22253">do_you_mean - 帮助你纠正错误函数拼写调用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21946">[广州][2014年10月25日] GZRUBY 第 20 次聚会 - 15:00 (已更新场地信息)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22004">Docker 介绍以及其相关术语、底层原理和技术</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22124">Happycasts: 105-vagrant 用 Vagrant 搭建开发环境</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22171">我是如何进行『创作』的</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22059">基于地址位置，查询附近的人 ，解决方案及性能分析【已更新， 详见下面的结论】</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22003">FactoryGirl 的两个技巧: trait 和 association</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22156">为什么 React 这么牛</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22140">Enumerator::Lazy 是干什么的？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21667">编写 Ruby 的 C 扩展</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22010">[转] 互联网招聘文案的正确解读方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21933">程序员的 Burnout 与 Depression 抑郁症</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22082">AsciiDoc 简介</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21625">happypeter 的 Linux For Developers 课程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/22024">你需要将 CarrierWave 的删除旧文件功能禁用掉！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21870">Rails Pacific 2014 籌辦祕辛與心得</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21922">How Did Tenderlove and Others Speed Up Rails?</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21517">为什么我们需要 Rack ?</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21498">Ruby 2.2 的 可回收 symbol</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21951">《 Rails 10 日谈》请教社区意见</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21460">简单处理掉所有 Rails ActionController::RoutingError 的错误</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21520">Erlang 真的很好！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21617">Ruby 中的 OpenStruct 详解</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21488">说说 Rails 的套娃缓存机制</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21473">Sunspot 学习笔记</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21748">Rails 3.2 升级到 Rails 4 中遇到的问题</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21540">Rails 4.1.5 开始 where 查询也有类似 Mass Assignment 保护了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21821">Rails 中消失的 CSRF token</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21380">计时攻击原理以及 Rails 对应的防范</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21331">我的第一个 Rails 网站：极简优雅的笔记工具－Raysnote</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21265">[北京] 同心医疗：互联网软件开发经理 招聘 1 人 20k-30k</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21489">Rails Variants Tips</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21508">从头开始写一个 Rails-like web 框架</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21354">God 使用手册</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21523">如何理解 form_for 和 form_tag </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21104">the_scrap - 提取了个网页抓取的 Gem</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21144">[杭州] 阿里巴巴 Ruby 工程师 3 名 [已结束]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21304">Ruby 的方法查找与 method_missing</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21525">我用 Sketch 做的简历和其它临摹.</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21092">Rails 4.2 新增后端任务框架 - Active Job</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21136">[全职 Remote] 秒视 CatchChat 招 Rubyist，开发大规模实时短视频 IM 后端 （上线一周拿到 A 轮）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21049">Elixir 有了长足的发展啊</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21501">ruby include extend prepend 使用方法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21390">从 rack-cache 到 varnish，200 倍性能提升达成！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21413">Rails 中如何自定义 Error Pages</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21416">Elasticsearch Analyzer 的内部机制</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21166">【传教向】LiveScript，不仅仅是 JavaScript</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21370">PostgreSQL 的异步操作接口，以及 Ruby 中对应实现</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21294">rails s 启动过程</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20842">[成都] 2014年8月23日，Ruby 社区聚会！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21188">Fork 开源项目之后</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20723">一张图理解 Git 对象模型</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20836">RVM 与 Bundler 的爱恨情仇</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20921">Google Analytics Debug Tips</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20698">推荐给当下或是将来的团队领袖们</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20701">[上海] 七周七语言之 Ruby － 2014年8月16日</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/21094">Ruby 2.0 Timeout 的内部实现 </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20865">一套 Ruby 网游服务器框架</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20569">经典排序算法资料及 ruby 实现</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20496">Rails 中文指南新位置</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20933">如何量化沟通能力</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20904">如何优雅地安装和部署 Rails 生产环境</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20920">一份 ruby web 进阶的名词和问题，欢迎补充</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20809">ElixirConf 2014 Slide 已经出来了</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20598">为什么我从 MongoDB 迁移到 PostgreSQL</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20805">Yay, GIL will be removed</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20827">一个比较神奇的 vimrc</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20691">Miclle.com 摄影照片分享站  已开源</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20385">Install Ruby The "Postmodern" Way</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20452">[上海][2014年7月20日]2014年7月 周末聚会 (需报名)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20620">Redis 常见使用模式分析 - 周日上海 Ruby 活动 ppt</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20367">聊聊 MRI Ruby Concurrent [未完成]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20699">Rails 做服务端，请问移动端的用户验证一般是用什么？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20209">安装 GitLab 需要注意的地方</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20174">辞职做 Freelance 能养活自己和家人么？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20489">文案排版指南</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20378">使用 Rails 的方式来开发移动应用 (iOS/Android) </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20217">RubyConf Taiwan 2014 汇总</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20128">MongoDB 那些坑</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19891">Sidekiq 精通 36 分钟</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20034">2014 六月 Linode vs DO 不严谨 15 分钟性能比较</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20275">推荐 Ruby ＆ Rails 内部实现文集</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19890">[北京] 貔貅开源组招聘靠谱的 Ruby 程序员和前端工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19914">Introduction to Programming with Ruby - 给 Ruby 新手写的免费电子书</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20117">一张图理解 Strong Parameters</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20291">淘宝实现前后端分离了？而且还在 Java 和前端 JS 间架了 NodeJS？</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20311">几个鲜为人知的 ActiveRecord Associations 小技巧 (译)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20130">全新的 Ruby Web 框架：Lotus</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20219">你不知道的 New Relic</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20259">荐书：Redis 设计与实现</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20154">提高生产力的 10 个终端命令</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19949">另外一本寫給 Rails 開發新手的新書 : Rails 102</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20244">最近项目里需要用到城市数据，遂写了个 Gem 用来取得最新数据。</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19961">[经验之谈] 转行做程序员的 8 个月</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20115">MacDown - 开源的 Markdown 编辑器</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19958">用 Rails 写了个新 blog</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19806">Rails Console Tips</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19689">Ruby 程序员写 Swift 毫无压力</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20058">使用 HTTP 缓存机制提升系统性能</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19499">[你还不用 pg?] 坑爹的 MySQL 事务</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19520">多台机器上 Unicorn 共享 Session</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19453">学以致用，2048 的记录反查</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/20038">良好的用户界面设计</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19736"> [深圳] 大疆创新科技有限公司 (DJI) 招聘  Ruby 开发工程师 6 名</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19990">分享几个前端开发的网站</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19356">我对待技术学习的态度</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19812">ActiveSupport::Concern 小结</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19436">Cache 在 Ruby China 里面的应用</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19880">改 hosts 和 DNS，要小心钓鱼风险</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19375">怎样成为一个优秀的初级开发者</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19315">(纯干活) Rails 高效开发工具 vim 指南</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19389">总结 Web 应用中常用的各种 Cache</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19578">怎样快速学习一门新技术</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19735">Swift 和 Ruby 差别还是挺大的...</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19686">Rails 101 now free</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19745">RubyChinaSPA by Anugarjs 发布</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19685">Apple 发明新语言了 Swift</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19800">Ruby's done this since 1.9</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19134">[有图] 女神奔着 Ruby 和我合租~</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19576">[提醒通知] [成都][2014年6月7日] NodeJS Workshop</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19737">程序员向美剧《硅谷》第一季完结，槽点挺多，推荐。</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19290">[北京][上海][远程] Doorder 招聘 Ruby on Rails 高级开发工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19396">学习编程没有捷径，需要的是热情与毅力 [抛砖引玉，小秀成果][5/20 小小更新一个图]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19649">电子书五折优惠</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19664">用 Docker 部署 Rails app</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19437">使用 Rails Asset Pipeline 配合 Nginx 的 gzip_static 优化 tips</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19538">MockingBot 2.0 - 极简且快的移动应用原型工具</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19508">现在 Ruby China 主站开启 SSL</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19349">【干货】《How to Read an Engineering Research Paper》笔记</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19121">当你用上了 codeclimate 和 RuboCop，重构根本停不下来</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19302">免费的 RubyMotion</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19425">Rails or Django? This one settles it</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19365">我有特殊的 Github 运用技巧</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19357">基于 WebSocket 写了一个简单实时的 pusher 工具：SimplePusher</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19041">Rails 2014 Conf 心得 </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18693">分享一些我在使用中的 SublimeText 插件</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19254">Octotree - 樹形瀏覽 GitHub 瀏覽器插件 (Chrome, Safari and Firefox)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19207">Performance Differences in Ruby</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18809">DHH: TDD is dead. Long live testing.</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19157">感谢一个人，同时有几点收获</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19187">Railsconf 2014 官方演讲录像集</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18735">ruby.taobao.org 启用 SSL(非强制跳转)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19200">SelfStore，数字内容创作者的在线商店</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18834">RailsConf 2014 DHH 做的开幕主题演讲视频</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18625">你的公司开始远程办公了没? 谈谈它.</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18904">一个基于 SocketIO 的 WEB 即时通讯聊天室</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18922">Ruby 中的 clone 和 dup 比较</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19118">Teahour.FM #53：跟 ThoughtWorks 的面试官聊聊面试这件事</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/19110">一个处理短信发送及验证的 Gem - smart_sms</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18616">Capistrano 3 实现 Rails 自动化部署</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18512">Ruby 里的 %Q, %q, %W, %w, %x, %r, %s, %i (译)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18504">Rails 4.1 的新特性（译）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18982"><ruby>思维导图 1</ruby></a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18780">Railsconf 2014 最新资料汇总 -- Rails 十年与你同行，且行且珍惜！</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18995">Pomotodo for iOS</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18983"><ruby>思维导图 2(对象模型)</ruby></a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18397">用 CSS 写了几个 hover 特效，求拍砖</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18337">wechat-rails 微信 DSL for ruby</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18511">在 OpenSSL 心脏攻击中 Rubyist 该怎么办</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18439">微信相关的几个 Gem，按需自取</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18152">开源 Tower 的编辑器 Simditor</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18052">领略一下快排的魅力</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18403">想用 Rails 独立建博客吗? 试试 WBlog 作为起点吧</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18543">庆祝 elixir 节点建立,先发一点资料,之后会有干货提供</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18253">之前问学 Ruby on Rails 需要些什么东东的可以看看这个</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18164">反面模式：用迭代循环来构建集合（译自 thoughtbot）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18418">〈转〉重构臃肿 ActiveRecord 模型的 7 种方式[翻译]</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18547">Keeping it Simple: Migrating to Pundit from CanCan 中文版</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17866">Preload、 Eagerload、 Includes 和 Joins</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17926">[上海] 薄荷科技寻找靠谱的 Ruby，Web 前端，iOS 和 Android 工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18046">用 re 模块以化整为零的方式构建正则表达式</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18458">啊哈，最美的快排算法</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17792">还有类似 Railscasts, Nsscreencasts, Laracasts 的短而精的视频推荐吗? </a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18359">万万没想到竟然排到了 Github Ruby Trends 今天的第一名，国内 ruby 开发社区真是强悍</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17742">Ruby 中那些你绕不过的「坑」(译)</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18300">强烈推荐一本书 Engineering Software as a Service</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17621">跟大家分享一个管理 Github Star 的 OSX App - Oh My Star</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17778">RubyConf Taiwan 2014 新聞稿</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18292">简单介绍一下 sinatra</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17576">[上海][张江] [微客来]  Ruby on Rails 开发工程师</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18165">Ruby 实现的简易推荐系统（译）</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18120">synvert = syntax + convert</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18157">Deploy Rails App With Docker</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17597">从士兵到程序员再到 SOHO 程序员 (三) - 游击战与阻力</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17706">Campo 3 发布</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/18084">同时使用 GitHub 与 GitCafe 托管博客</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17617">[调查] 关于服务端的 log 的疑问</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17901">[分享][精美 PDF]《七天学会 NodeJS》2014.04.20 增加 epub 版本</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17612">请教如何让 ActiveRecord 的查询按照某个虚拟字段排序</a></strong></li>
+<li><strong><a href="https://ruby-china.org/topics/17940">Teahour 47 期发布，说好的 Lisp 终于来了，采访 Lisp 大神田春 (冰河)</a></strong></li>
+</ol></div></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright &copy; 2021 DoooReyn <a href="http://beian.miit.gov.cn" target="_blank">闽ICP备19014786号-1</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bat.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/c.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/cpp.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/lua.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/php.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/shell.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/typescript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blog that records everything">
+    <meta name="author" content="DoooReyn">
+    <link rel="canonical" href="https://doooreyn.github.io/%E5%9B%BE%E4%B9%A6%E9%A6%86/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>算法的时间与空间复杂度 - DoooReynの星际航行日志</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">DoooReynの星际航行日志</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">关于我</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏城 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">游戏厅</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%A4%A7%E5%94%90%E7%9C%9F%E9%BE%99%E4%BC%A0/">大唐真龙传</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%85%83%E6%B0%94%E5%81%B6%E5%83%8F%E5%AD%A3/">元气偶像季</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E4%BC%A0%E5%A5%87%E7%B3%BB%E5%88%97/">传奇系列</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E7%94%B5%E5%A8%B1%E5%A4%A7%E5%8E%85/">电娱大厅</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E6%B8%B8%E6%88%8F%E5%8E%85/%E5%8D%B0%E5%B0%BC%E3%80%81%E6%B3%B0%E8%AF%AD%E6%A3%8B%E7%89%8C/">印尼/泰语棋牌</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">造轮子</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E7%9E%8E%E9%BC%93%E6%8D%A3%E6%BC%94%E7%A4%BA%E6%A1%88%E4%BE%8B/">瞎鼓捣演示案例</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/">手势识别与训练模型</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/PackManV2%E4%B8%80%E4%BD%93%E5%8C%96%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">PackManV2一体化打包工具</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20HTTP%20Server/">Cocos2d-x 嵌入本地 HTTP Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E5%B5%8C%E5%85%A5%E6%9C%AC%E5%9C%B0%20WebSocket%20Server/">Cocos2d-x 嵌入本地 WebSocket Server</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E7%9B%AE%E5%BD%95%E7%9B%91%E8%A7%86%E5%99%A8/">Cocos2d-x 目录监视器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20FMOD%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Cocos2d-x FMOD 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E4%BD%BF%E7%94%A8%20spdlog%20%E6%97%A5%E5%BF%97%E5%BA%93/">Cocos2d-x 使用 spdlog 日志库</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Cocos2d-x%20%E6%8E%A5%E5%85%A5%20lua-protobuf/">Cocos2d-x 接入 lua-protobuf</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/Adjust%20%E7%AD%BE%E5%90%8D%E7%AC%AC%E4%BA%8C%E7%89%88%20Android%20%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/">Adjust 签名第二版 Android 集成指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E9%80%A0%E8%BD%AE%E5%AD%90/%E6%96%B0%E6%B4%BB%E5%8A%A8%E4%B8%AD%E5%BF%83%E6%BC%94%E7%A4%BA/">新活动中心演示</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">知识点</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Cocos%20Creator%20Android%20%E6%89%93%E5%8C%85%E6%80%BB%E7%BB%93/">记一次 Cocos Creator Android 打包总结</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20Spine%20%C2%B7%20%E6%9B%B4%E6%8D%A2%E7%BA%B9%E7%90%86/">Cocos Creator Spine · 更换纹理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20Creator%20%E6%BB%A4%E9%95%9C%20%C2%B7%20%E9%A9%AC%E8%B5%9B%E5%85%8B/">Cocos Creator 滤镜 · 马赛克</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E7%9F%A5%E8%AF%86%E7%82%B9/Cocos%20%E4%B8%AD%E7%9A%84%20Size/">Cocos 中的 Size</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">语言 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/Lua%20%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0/">Lua 数组实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/Lua%20HashMap%20%E5%AE%9E%E7%8E%B0/">Lua HashMap 实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/Lua%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC%E5%AE%9E%E7%8E%B0/">Lua 字符串插值实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%20lua%20%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81/">更简洁的 lua 逻辑代码</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Lua API 浅析</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20Basic%20Types/">Lua_API Basic Types</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_absindex/">Lua_API lua_absindex</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_Alloc/">Lua_API lua_Alloc</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_arith%20%281%29/">Lua_API lua_arith (1)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_arith%20%282%29/">Lua_API lua_arith (2)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_atpanic/">Lua_API lua_atpanic</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Lua/LUA_API%20lua_call%20%26%20lua_callk/">Lua_API lua_call & lua_callk</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">JavaScript</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/JavaScript/Faker.js%20%E5%88%86%E6%9E%90/">Faker.js 分析</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Python</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC/">如何用 Python 实现字符串插值</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/Pylint-%E4%BD%A0%E5%BE%88%E6%A3%92%EF%BC%8C%E4%BD%86%E6%88%91%E4%B8%8D%E6%83%B3%E8%B7%9F%E4%BD%A0%20PaPaPa/">Pylint-你很棒，但我不想跟你 PaPaPa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/Python%20%E7%88%AC%E5%8F%96%20gank.io%20%E4%BB%8A%E6%97%A5%E5%8A%9B%E6%8E%A8/">Python 爬取 gank.io 今日力推</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/%E6%88%91%E6%9C%89%E5%B9%B2%E8%B4%A7%EF%BC%8C%E4%BD%A0%E6%95%A2%E6%94%B6%E5%90%97%EF%BC%9F/">我有干货，你敢收吗？</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第一部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第三部分）</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/Python/RubyChina%20%E4%BC%98%E8%B4%A8%E5%B8%96%20Markdown%20%E6%A0%BC%E5%BC%8F%E6%95%B4%E7%90%86%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">RubyChina 优质帖 Markdown 格式整理（第二部分）</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">PHP</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/Windows%20%E5%AE%89%E8%A3%85%20PHP7.4/">Windows 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/CentOS%20%E5%AE%89%E8%A3%85%20PHP7.4/">CentOS 安装 PHP7.4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E6%9F%A5%E7%9C%8B%20php.ini%20%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80/">查看 php.ini 存放地址</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E5%AE%89%E8%A3%85%20Composer/">安装 Composer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E5%AE%89%E8%A3%85%20MixPhp/">安装 MixPhp</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E8%AF%AD%E8%A8%80/PHP/%E5%AE%89%E8%A3%85%20Swoole/">安装 Swoole</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">工具箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%BE%AE%E8%AF%BB%E8%87%AA%E5%8A%A8%E9%98%85%E8%AF%BB%E5%99%A8/">微读自动阅读器</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%B7%A5%E8%B5%84%E6%98%8E%E7%BB%86%E5%8A%A9%E6%89%8B/">工资明细助手</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/BMFont%20Toolbox%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">BMFont Toolbox 使用指南</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%B7%A5%E5%85%B7%E7%AE%B1/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%20md5%20sha1%20sha256%20%E5%80%BC/">查看文件 md5 sha1 sha256 值</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">医药箱 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Android</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">ADB 常用指令</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/ADB%20%E8%B0%83%E8%AF%95%E8%BF%9E%E6%8E%A5%E5%A4%9C%E7%A5%9E%E6%A8%A1%E6%8B%9F%E5%99%A8/">ADB 调试连接夜神模拟器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20NDK%20%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC/">Android NDK 历史版本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20SDK%20%E7%89%88%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">Android SDK 版本之间的关系</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20%E5%8D%A0%E7%94%A8%E6%9E%81%E5%A4%A7%E5%86%85%E5%AD%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">Android Studio 占用极大内存的解决方法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Android/Android%20Studio%20Clean%20%E4%B8%8E%20Rebuild%20%E7%9A%84%E5%8C%BA%E5%88%AB/">Android Studio Clean 与 Rebuild 的区别</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Mac</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/AppleScript%20%E6%90%AD%E9%85%8D%20Alfred%20%E7%9C%9F%E4%B9%83%E5%88%A9%E5%99%A8/">AppleScript 搭配 Alfred 真乃利器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E9%9F%B3%E9%87%8F%E5%BE%AE%E8%B0%83/">Mac 音量微调</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20%E5%BA%94%E7%94%A8%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">Mac 应用已损坏解决方案</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20nvm%20%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E6%8C%87%E5%8D%97/">Mac nvm 完全卸载指南</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/Mac%20zsh%20%E7%B2%98%E8%B4%B4%E5%8A%A0%E9%80%9F/">Mac zsh 粘贴加速</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20autojump/">MacOS 安装 autojump</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%AE%89%E8%A3%85%20Pillow/">MacOS 安装 Pillow</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20%E5%8D%B8%E8%BD%BD%20Java9/">MacOS 卸载 Java9</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/MacOS%20Java%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">MacOS Java 版本管理</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Xcode error</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Mac/your%20session%20has%20expired%2C%20please%20log%20in/">your session has expired, please log in</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Git</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/Git%20%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">Git 设置代理</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Git/%E8%A7%A3%E5%86%B3%20Github%20%E8%B4%A1%E7%8C%AE%E5%80%BC%E4%B8%8D%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98/">解决 Github 贡献值不计算问题</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Interview</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/HR%20%E9%9D%A2/">HR 面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E6%8A%80%E6%9C%AF%E9%9D%A2/">技术面</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/Interview/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E6%9F%A5%E7%9C%8B%20npm%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">查看 npm 安装位置</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E8%A7%A3%E5%86%B3%20Windows%20%E9%95%BF%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">解决 Windows 长路径问题</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">图书馆 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">算法</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">算法的时间与空间复杂度</a>
+</li>
+
+        
+            
+<li >
+    <a href="../%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">查找算法直接及其算法实现</a>
+</li>
+
+        
+            
+<li >
+    <a href="../%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%8F%8A%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93/">排序算法性能及选择总结</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">书籍</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Github%E4%B8%8A%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/">Github上的电子书</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E8%BF%91%E4%B8%87%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%94%B5%E5%AD%90%E4%B9%A6%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/">近万本技术电子书免费下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%94%B5%E5%AD%90%E4%B9%A6%E4%B8%8B%E8%BD%BD/">游戏开发电子书下载</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../J%C2%B7%E5%B8%83%E7%BD%97%E5%85%8B%E6%9B%BC-%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%8D%81%E5%B9%B4/">J·布罗克曼-未来五十年</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E5%8C%97%E5%B2%9B%E3%80%8A%E6%B3%A2%E5%85%B0%E6%9D%A5%E5%AE%A2%E3%80%8B/">北岛《波兰来客》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E9%99%88%E5%B9%B3%E3%80%8A%E4%BB%A3%E8%B0%A2%E5%A2%9E%E9%95%BF%E8%AE%BA%E3%80%8B/">陈平《代谢增长论》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E9%99%88%E5%B9%B3-%E8%87%AA%E7%94%B1%E7%9A%84%E5%AF%B9%E7%AB%8B%E9%9D%A2%E4%B8%8D%E6%98%AF%E4%B8%93%E6%94%BF%E6%98%AF%E8%87%AA%E5%BE%8B/">陈平-自由的对立面不是专政是自律</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9%20%E3%80%8A%E6%9B%BC%E5%B7%B4%E7%B2%BE%E7%A5%9E%EF%BC%9A%E7%A7%91%E6%AF%94%E8%87%AA%E4%BC%A0%E3%80%8B/">科比·布莱恩特 《曼巴精神:科比自传》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E8%82%AF%C2%B7%E7%BD%97%E5%AE%BE%E9%80%8A%20%E5%8D%A2%C2%B7%E9%98%BF%E7%BD%97%E5%B0%BC%E5%8D%A1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E6%95%99%E8%82%B2/">肯·罗宾逊 卢·阿罗尼卡-什么是最好的教育</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E5%8A%B3%E4%BC%A6%E6%96%AF%C2%B7%E5%B8%83%E6%B4%9B%E5%85%8B-%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%85%AB%E7%99%BE%E4%B8%87%E7%A7%8D%E5%86%99%E6%B3%95/">劳伦斯·布洛克-小说的八百万种写法</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E6%9D%8E%E6%95%96-%E5%8C%97%E4%BA%AC%E6%B3%95%E6%BA%90%E5%AF%BA/">李敖-北京法源寺</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E6%9D%8E%E6%B7%BC%C2%B7%E3%80%8A%E4%B8%89%E4%BD%93%E3%80%8B%E4%B8%AD%E7%9A%84%E7%89%A9%E7%90%86%E5%AD%A6/">李淼·《三体》中的物理学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7L.%E5%87%AF%E5%88%A9-%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E5%A7%8B/">罗伯特·L.凯利-第五次开始</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E5%90%95%E6%80%9D%E5%8B%89%E3%80%8A%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E3%80%8B%E7%BB%AA%E8%AE%BA/">吕思勉《中国通史》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E6%98%8E%E9%81%93-%E5%9B%BE%E8%A7%A3%E9%80%BB%E8%BE%91%E5%AD%A6/">明道-图解逻辑学</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E9%9D%92%E5%B1%B1%E4%B8%83%E6%83%A0%E3%80%8A%20%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A5%BD%E5%A4%A9%E6%B0%94%E3%80%8B/">青山七惠·《一个人的好天气》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E6%B8%85%E6%B0%B4%E8%8D%A3%E5%8F%B8%E3%80%8A%E8%AE%A4%E7%94%9F%E7%9A%84%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E3%80%8B/">清水荣司《认生的人:如何克服社交焦虑》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E7%91%9E%C2%B7%E8%BE%BE%E5%88%A9%E6%AC%A7%20%E3%80%8A%E5%8E%9F%E5%88%99%E3%80%8B/">瑞·达利欧 《原则》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E5%8D%AB%E5%AE%AB%E5%A3%AB%E9%83%8E%20%E3%80%8AFateStay%20Night%20Unlimited%20Blade%20Works%E3%80%8B/">卫宫士郎 《FateStay Night Unlimited Blade Works》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E6%B8%A9%E9%93%81%E5%86%9B%20%E3%80%8A%E4%B9%A1%E5%BB%BA%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%96%B0%E9%9D%92%E5%B9%B4%E4%B8%8E%E4%B9%A1%E6%9D%91%E7%9A%84%E7%94%9F%E5%91%BD%E5%AF%B9%E8%AF%9D%E3%80%8B/">温铁军 《乡建笔记:新青年与乡村的生命对话》</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9%E3%80%8A%E6%9C%AA%E6%9D%A5%E7%AE%80%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E7%A5%9E%E3%80%8B/">尤瓦尔·赫拉利《未来简史:从智人到智神》</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../../../%E5%8C%BB%E8%8D%AF%E7%AE%B1/%E8%A7%A3%E5%86%B3%20Windows%20%E9%95%BF%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%E5%8F%8A%E5%85%B6%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">算法的时间与空间复杂度</a></li>
+            <li class="second-level"><a href="#_2">一、时间复杂度</a></li>
+                
+                <li class="third-level"><a href="#11_o1">1.1 常数阶 O(1)</a></li>
+                <li class="third-level"><a href="#12_on">1.2 线性阶 O(n)</a></li>
+                <li class="third-level"><a href="#13_ologn">1.3 对数阶 O(logN)</a></li>
+                <li class="third-level"><a href="#14_onlogn">1.4 线性对数阶 O(nlogN)</a></li>
+                <li class="third-level"><a href="#15_on2">1.5 平方阶 O(n²)</a></li>
+                <li class="third-level"><a href="#16_on3k_onk">1.6 立方阶 O(n³)、K 次方阶 O(n^k)</a></li>
+            <li class="second-level"><a href="#_3">二、空间复杂度</a></li>
+                
+                <li class="third-level"><a href="#21_o1">2.1 空间复杂度 O(1)</a></li>
+                <li class="third-level"><a href="#22_on">2.2 空间复杂度 O(n)</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<div><h2 id="_1">算法的时间与空间复杂度<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p><strong>算法（Algorithm）</strong> 是指用来操作数据、解决程序问题的一组方法。对于同一个问题，使用不同的算法，也许最终得到的结果是一样的，但在过程中消耗的资源和时间却会有很大的区别。</p>
+<p>那么我们应该如何去衡量不同算法之间的优劣呢？</p>
+<p>主要还是从算法所占用的 <strong>「时间」</strong> 和 <strong>「空间」</strong> 两个维度去考量。</p>
+<ul>
+<li>时间维度：是指执行当前算法所消耗的时间，我们通常用「时间复杂度」来描述。</li>
+<li>空间维度：是指执行当前算法需要占用多少内存空间，我们通常用「空间复杂度」来描述。
+    因此，评价一个算法的效率主要是看它的时间复杂度和空间复杂度情况。然而，有的时候时间和空间却又是「鱼和熊掌」，不可兼得的，那么我们就需要从中去取一个平衡点。</li>
+</ul>
+<p>下面我来分别介绍一下「时间复杂度」和「空间复杂度」的计算方式。</p>
+<h3 id="_2">一、时间复杂度<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>我们想要知道一个算法的「时间复杂度」，很多人首先想到的的方法就是把这个算法程序运行一遍，那么它所消耗的时间就自然而然知道了。</p>
+<p>这种方式可以吗？当然可以，不过它也有很多弊端。
+这种方式非常容易受运行环境的影响，在性能高的机器上跑出来的结果与在性能低的机器上跑的结果相差会很大。而且对测试时使用的数据规模也有很大关系。再者，并我们在写算法的时候，还没有办法完整的去运行呢。</p>
+<p>因此，另一种更为通用的方法就出来了：<strong>「 大 O 符号表示法 」</strong>，即 <strong>T(n) = O(f(n))</strong></p>
+<p>我们先来看个例子：</p>
+<pre class="codehilite"><code class="linenums">for(i=1; i&lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+</code></pre>
+
+<p>通过 <strong>「 大 O 符号表示法 」</strong>，这段代码的时间复杂度为：<strong>O(n)</strong> ，为什么呢?</p>
+<p>在 <strong>大 O 符号表示法</strong>中，时间复杂度的公式是： <strong>T(n) = O( f(n) )</strong> ，<strong>其中 f(n) 表示每行代码执行次数之和，而 O 表示正比例关系</strong>，这个公式的全称是：<strong>算法的渐进时间复杂度</strong>。</p>
+<p>我们继续看上面的例子，假设每行代码的执行时间都是一样的，我们用 1 颗粒时间 来表示，那么这个例子的第一行耗时是 1 个颗粒时间，第三行的执行时间是 n 个颗粒时间，第四行的执行时间也是 n 个颗粒时间（第二行和第五行是符号，暂时忽略），那么总时间就是 1 颗粒时间 + n 颗粒时间 + n 颗粒时间 ，即 (1+2n)个颗粒时间，即： T(n) = (1+2n)*颗粒时间，从这个结果可以看出，这个算法的耗时是随着 n 的变化而变化，因此，我们可以简化的将这个算法的时间复杂度表示为：T(n) = O(n)</p>
+<p>为什么可以这么去简化呢，<strong>因为大 O 符号表示法并不是用于来真实代表算法的执行时间的，它是用来表示代码执行时间的增长变化趋势的。</strong></p>
+<p>所以上面的例子中，如果 n 无限大的时候，T(n) = time(1+2n)中的常量 1 就没有意义了，倍数 2 也意义不大。因此直接简化为 T(n) = O(n) 就可以了。</p>
+<p>常见的时间复杂度量级有：</p>
+<ul>
+<li>常数阶 O(1)</li>
+<li>对数阶 O(logN)</li>
+<li>线性阶 O(n)</li>
+<li>线性对数阶 O(nlogN)</li>
+<li>平方阶 O(n²)</li>
+<li>立方阶 O(n³)</li>
+<li>K 次方阶 O(n^k)</li>
+<li>指数阶(2^n)
+    上面从上至下依次的时间复杂度越来越大，执行的效率越来越低。</li>
+</ul>
+<p>下面选取一些较为常用的来讲解一下（没有严格按照顺序）：</p>
+<h4 id="11_o1">1.1 常数阶 O(1)<a class="headerlink" href="#11_o1" title="Permanent link">¶</a></h4>
+<p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是 O(1)，如：</p>
+<pre class="codehilite"><code class="linenums">int i = 1;
+int j = 2;
+++i;
+j++;
+int m = i + j;
+</code></pre>
+
+<p>上述代码在执行的时候，它消耗的时间并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用 O(1)来表示它的时间复杂度。</p>
+<h4 id="12_on">1.2 线性阶 O(n)<a class="headerlink" href="#12_on" title="Permanent link">¶</a></h4>
+<p>这个在最开始的代码示例中就讲解过了，如：</p>
+<pre class="codehilite"><code class="linenums">for(i=1; i&lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+</code></pre>
+
+<p>这段代码，for 循环里面的代码会执行 n 遍，因此它消耗的时间是随着 n 的变化而变化的，因此这类代码都可以用 O(n)来表示它的时间复杂度。</p>
+<h4 id="13_ologn">1.3 对数阶 O(logN)<a class="headerlink" href="#13_ologn" title="Permanent link">¶</a></h4>
+<p>还是先来看代码：</p>
+<pre class="codehilite"><code class="linenums">int i = 1;
+while(i&lt;n)
+{
+    i = i * 2;
+}
+</code></pre>
+
+<p>从上面代码可以看到，在 while 循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。我们试着求解一下，假设循环 x 次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2^n
+也就是说当循环 log2^n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(logn)。</p>
+<h4 id="14_onlogn">1.4 线性对数阶 O(nlogN)<a class="headerlink" href="#14_onlogn" title="Permanent link">¶</a></h4>
+<p>线性对数阶 O(nlogN) 其实非常容易理解，将时间复杂度为 O(logn)的代码循环 N 遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了 O(nlogN)。</p>
+<p>就拿上面的代码加一点修改来举例：</p>
+<pre class="codehilite"><code class="linenums">for(m=1; m&lt;n; m++)
+{
+    i = 1;
+    while(i&lt;n)
+    {
+    }
+}
+</code></pre>
+
+<h4 id="15_on2">1.5 平方阶 O(n²)<a class="headerlink" href="#15_on2" title="Permanent link">¶</a></h4>
+<p>平方阶 O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²) 了。
+举例：</p>
+<pre class="codehilite"><code class="linenums">for(x=1; i&lt;=n; x++)
+{
+   for(i=1; i&lt;=n; i++)
+    {
+       j = i;
+       j++;
+    }
+}
+</code></pre>
+
+<p>这段代码其实就是嵌套了 2 层 n 循环，它的时间复杂度就是 O(n*n)，即 O(n²)
+如果将其中一层循环的 n 改成 m，即：</p>
+<pre class="codehilite"><code class="linenums">for(x=1; i&lt;=m; x++)
+{
+   for(i=1; i&lt;=n; i++)
+    {
+       j = i;
+       j++;
+    }
+}
+</code></pre>
+
+<p>那它的时间复杂度就变成了 O(m*n)</p>
+<h4 id="16_on3k_onk">1.6 立方阶 O(n³)、K 次方阶 O(n^k)<a class="headerlink" href="#16_on3k_onk" title="Permanent link">¶</a></h4>
+<p>参考上面的 O(n²) 去理解就好了，O(n³)相当于三层 n 循环，其它的类似。</p>
+<p>除此之外，其实还有 平均时间复杂度、均摊时间复杂度、最坏时间复杂度、最好时间复杂度 的分析方法，有点复杂，这里就不展开了。</p>
+<h3 id="_3">二、空间复杂度<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>既然时间复杂度不是用来计算程序具体耗时的，那么我也应该明白，空间复杂度也不是用来计算程序实际占用的空间的。</p>
+<p>空间复杂度是对一个算法在运行过程中临时占用存储空间大小的一个量度，同样反映的是一个趋势，我们用 S(n) 来定义。</p>
+<p>空间复杂度比较常用的有：O(1)、O(n)、O(n²)，我们下面来看看：</p>
+<h4 id="21_o1">2.1 空间复杂度 O(1)<a class="headerlink" href="#21_o1" title="Permanent link">¶</a></h4>
+<p>如果算法执行所需要的临时空间不随着某个变量 n 的大小而变化，即此算法空间复杂度为一个常量，可表示为 O(1)
+举例：</p>
+<pre class="codehilite"><code class="linenums">int i = 1;
+int j = 2;
+++i;
+j++;
+int m = i + j;
+</code></pre>
+
+<p>代码中的 i、j、m 所分配的空间都不随着处理数据量变化，因此它的空间复杂度 S(n) = O(1)</p>
+<h4 id="22_on">2.2 空间复杂度 O(n)<a class="headerlink" href="#22_on" title="Permanent link">¶</a></h4>
+<p>我们先看一个代码：</p>
+<pre class="codehilite"><code class="linenums">int[] m = new int[n]
+for(i=1; i&lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+</code></pre>
+
+<p>这段代码中，第一行 new 了一个数组出来，这个数据占用的大小为 n，这段代码的 2-6 行，虽然有循环，但没有再分配新的空间，因此，这段代码的空间复杂度主要看第一行即可，即 S(n) = O(n)。</p>
+<p>以上，就是对算法的时间复杂度与空间复杂度基础的分析。</p></div></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright &copy; 2021 DoooReyn <a href="http://beian.miit.gov.cn" target="_blank">闽ICP备19014786号-1</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bat.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/c.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/cpp.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/lua.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/php.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/shell.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/typescript.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
